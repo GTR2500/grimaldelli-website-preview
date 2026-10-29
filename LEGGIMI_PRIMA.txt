@@ -1,0 +1,23 @@
+GRIMALDELLI — SITO VETRINA, VERSIONE FINALE DI ANTEPRIMA PRIVATA
+
+APERTURA
+1. Estrai l'intero archivio ZIP, mantenendo la cartella assets.
+2. Apri index.html con Chrome, Edge oppure Opera.
+3. Per visualizzare la fotografia reale della sede in homepage è necessaria una connessione Internet: l'immagine è caricata direttamente dal sito ufficiale Grimaldelli. Le fotografie storiche del catalogo sono invece incluse nel pacchetto.
+
+CONTENUTI
+Homepage con fotografia della sede a Salvirola, Azienda, Soluzioni, Catalogo, Realizzazioni, Dicono di noi, Contatti, Lavora con noi.
+Motion: ingressi su scroll, trasformazioni fotografiche leggere, microinterazioni, transizioni. Preferenza "riduci movimento" rispettata.
+Logo e colori originali Grimaldelli, fotografie storiche contenute nell'archivio, cinque social ufficiali (LinkedIn, YouTube, Instagram, Facebook, WhatsApp).
+
+PROVENIENZA FOTOGRAFIA SEDE
+https://www.glcgrimaldelli.com/wp-content/uploads/2019/04/14608710_546150492261299_4874517992908070430_o.jpg
+Foto originale del sito web attuale: ingresso, edifici, capannoni e insegna Grimaldelli a Salvirola.
+
+ATTENZIONE
+Questa è una versione finale *di concept privato* e non un sito autorizzato alla messa in produzione.
+I form sono dimostrativi, non trasmettono o archiviano dati: il percorso reale per le candidature è il sito attualmente pubblicato.
+I testi di recensione dei clienti non verificabili non sono stati inventati; pagina Dicono di noi con fonti editoriali linkate.
+Le fotografie recenti dei social non sono state importate (accesso media non disponibile); il sito presenta fotografie aziendali storiche.
+Verificare privacy, cookie, licenze delle foto, contenuti commerciali e backend di invio prima di un eventuale deploy.
+Nessuna modifica al dominio o al sito in produzione.
