@@ -1,6 +1,7 @@
 /* GRIMALDELLI V3 - private editorial prototype; forms never submit or store files. */
 (()=>{
 'use strict';
+if (!document.querySelector('link[href*="press-editorial.css"]')) { const p = document.createElement('link'); p.rel = 'stylesheet'; p.href = 'press-editorial.css?v=20261030'; document.head.appendChild(p); }
 const D=window.GRIMALDELLI_DATA||{categories:[]};
 const products=D.categories||[];
 const $=s=>document.querySelector(s);
