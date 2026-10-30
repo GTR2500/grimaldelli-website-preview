@@ -46,15 +46,101 @@ const officialSocials=[
 ];
 function socialLinks(){return officialSocials.map(x=>`<a class="social-pill" href="${x.url}" target="_blank" rel="noopener noreferrer" aria-label="Grimaldelli su ${x.name}"><span>${x.abbr}</span>${x.name}<b aria-hidden="true">&#8599;</b></a>`).join('');}
 const coverage=[
-  {kind:'RICONOSCIMENTI · 20 MARZO 2026',source:'Cremaoggi',title:'Grimaldelli tra le imprese premiate in Lombardia',summary:'La testata riporta il riconoscimento Industria Felix conferito all’azienda nel corso dell’evento tenuto a Palazzo Lombardia.',quote:'tra le 70 imprese più competitive della regione',href:'https://www.cremaoggi.it/2026/03/20/grimaldelli-srl-lazienda-di-salvirola-tra-le-70-imprese-piu-competitive-della-regione/'},
-  {kind:'APPROFONDIMENTO · 2025',source:'Associazione Industriali Cremona',title:'Dal 1921 a fianco degli allevatori',summary:'Un ritratto della storia aziendale, delle competenze progettuali e delle attività nell’ambito delle strutture metalliche e della zootecnia.',quote:'DAL 1921 A FIANCO DEGLI ALLEVATORI',href:'https://www.assind.cr.it/allegati/MAG-INDUSTRIALI-_-GRIMALDELLI-1.pdf'}
+  {
+    "kind": "ARTICOLO · 20 MARZO 2026",
+    "source": "Cremaoggi",
+    "title": "Grimaldelli premiata tra le 70 imprese lombarde",
+    "summary": "Articolo dedicato al riconoscimento Industria Felix. Riporta le dichiarazioni di Claudio Grimaldelli sul risultato, sul team e sugli investimenti futuri.",
+    "quote": "tra le 70 imprese più competitive della regione",
+    "href": "https://www.cremaoggi.it/2026/03/20/grimaldelli-srl-lazienda-di-salvirola-tra-le-70-imprese-piu-competitive-della-regione/"
+  },
+  {
+    "kind": "INTERVISTA · 15 NOVEMBRE 2025",
+    "source": "La Provincia di Cremona e Crema",
+    "title": "Dal 1921 a fianco degli allevatori",
+    "summary": "Servizio di Vite d'impresa (pp. 23–24) dedicato a Claudio Grimaldelli, alla storia della famiglia, alla progettazione digitale e alle soluzioni zootecniche. Una copia del servizio è disponibile anche presso Associazione Industriali Cremona.",
+    "quote": "Abbiamo una storia importante alle nostre spalle",
+    "href": "https://edicola.laprovinciacr.it/vnprovincia/books/impresa/2025/20251115impresa/pdf/issue.pdf"
+  },
+  {
+    "kind": "ARTICOLO · APRILE 2026",
+    "source": "inPRIMAPAGINA",
+    "title": "Grimaldelli tra le imprese più competitive della Lombardia",
+    "summary": "Il settimanale anticipa un servizio sul riconoscimento Industria Felix alla Grimaldelli e rinvia al numero del 2 aprile 2026. La pagina online è una notizia breve, non l'intero approfondimento cartaceo.",
+    "quote": "Grimaldelli Srl tra le 70 imprese più competitive della Lombardia",
+    "href": "https://inprimapagina.com/node/33538"
+  },
+  {
+    "kind": "COMUNICATO STAMPA · 17 MARZO 2026",
+    "source": "ANSA / Industria Felix",
+    "title": "Il decennale lombardo di Industria Felix",
+    "summary": "Comunicato pubblicato su ANSA, attribuito al Centro Studi Industria Felix: elenca Grimaldelli come unica azienda della provincia di Cremona tra le 70 realtà selezionate. Contenuto promozionale, non un articolo redazionale autonomo.",
+    "quote": "Cremona (1): Grimaldelli S.r.l.",
+    "href": "https://www.ansa.it/pressrelease/economia/2026/03/17/industria-felix-il-decennale-della-lombardia-con-70-imprese-competitive_5bef40b7-e0ce-4bd4-b2a5-2182a56a7ff8.html"
+  },
+  {
+    "kind": "ARTICOLO · 23 NOVEMBRE 2019",
+    "source": "Il Nuovo Torrazzo",
+    "title": "PMI Day 2019: studenti in visita alla Grimaldelli",
+    "summary": "Nella cronaca del PMI Day 2019 il giornale include una fotografia e una didascalia degli studenti in visita alla Grimaldelli. È una menzione documentata nell'articolo collettivo.",
+    "quote": "studenti alla Grimaldelli",
+    "href": "https://ilnuovotorrazzo.it/wp-content/uploads/2019/12/23-novembre-2019.pdf"
+  },
+  {
+    "kind": "SERVIZIO · DICEMBRE 2018",
+    "source": "Mondo Business / Associazione Industriali",
+    "title": "PMI Day: una visita alla Grimaldelli",
+    "summary": "Servizio dedicato al PMI Day con riferimento e fotografia degli studenti in visita all'azienda. È una presenza all'interno di un articolo più ampio sulle imprese coinvolte.",
+    "quote": "Grimaldelli Srl",
+    "href": "https://www.assind.cr.it/allegati/user_upload/20181205_MB7.pdf"
+  },
+  {
+    "kind": "ARTICOLO · 19 NOVEMBRE 2015",
+    "source": "Mondo Padano",
+    "title": "Pmi Day, edizione da record",
+    "summary": "La testata include Grimaldelli Srl di Salvirola tra le aziende che partecipano all'iniziativa di apertura delle imprese agli studenti. Si tratta di una menzione nell'elenco, non di un'intervista.",
+    "quote": "Grimaldelli Srl – Salvirola",
+    "href": "https://www.mondopadano.it/news/attualita/pmi-day-edizione-da-record/11986"
+  },
+  {
+    "kind": "RICONOSCIMENTO · MARZO 2026",
+    "source": "Industria Felix",
+    "title": "Industria Felix: Grimaldelli unica premiata di Cremona",
+    "summary": "Resoconto ufficiale dell'organizzatore sulla premiazione delle 70 imprese lombarde: Grimaldelli è indicata come unica azienda della provincia di Cremona. È un riferimento primario all'evento, non una notizia aggiuntiva.",
+    "quote": "Cremona (1): Grimaldelli S.r.l.",
+    "href": "https://www.industriafelix.it/industria-felix-in-lombardia-premiate-70-imprese-guida-milano-seguita-da-bergamo-lecco-e-pavia/"
+  },
+  {
+    "kind": "STUDIO · SETTEMBRE 2012",
+    "source": "Università Cattolica / CERSI",
+    "title": "Osservatorio sull'imprenditorialità: caso Grimaldelli",
+    "summary": "Il Rapporto 2012 sulle imprese manifatturiere cremonesi dedica il Box 7, da pagina 116, alla storia dell'azienda, a Claudio Grimaldelli e alla diversificazione delle attività.",
+    "quote": "BOX 7: GRIMALDELLI SRL",
+    "href": "https://centridiricerca.unicatt.it/cersi-20120920_Testo_OSSERVATORIO_2012.pdf"
+  },
+  {
+    "kind": "CONVEGNO · 12 DICEMBRE 2018",
+    "source": "Regione Lombardia / progetto Lastaben",
+    "title": "Claudio Grimaldelli relatore sul benessere bovino",
+    "summary": "La Regione annuncia un incontro tecnico sulle attrezzature per stalle da latte indicando Claudio Grimaldelli come relatore. È una fonte istituzionale sull'intervento, non un'intervista.",
+    "quote": "la scelta delle attrezzature delle stalle da latte",
+    "href": "https://psr.regione.lombardia.it/it/pc1420/psr-2014-2022/archivio-eventi-2/stalle-da-latte-attrezzature-e-benessere-delle-bovine"
+  },
+  {
+    "kind": "CATALOGO DI SETTORE · 2025",
+    "source": "Consorzio Italiano Biogas",
+    "title": "Grimaldelli nel catalogo soci Biogas Italia",
+    "summary": "Profilo aziendale nel catalogo associativo: progettazione e costruzione di impianti biogas e biometano, con Claudio Grimaldelli indicato come referente. È una scheda di settore, non un articolo giornalistico.",
+    "quote": "Grimaldelli, da tre generazioni",
+    "href": "https://www.consorziobiogas.it/wp-content/uploads/2025/01/web-BI-catalogo-soci-24-1.pdf"
+  }
 ];
 function officialPhotoWall(){let imgs=[
  ['stalle',2,'Stalle e allevamenti'],['strutture-industriali',2,'Carpenteria metallica'],['autocatture',4,'Attrezzature zootecniche'],['pensiline',1,'Strutture e coperture'],['battifianco',5,'Dettagli e comfort animale'],['raschiatori-asporta-letame',4,'Soluzioni per la gestione della stalla']
  ];return `<div class="social-photo-wall">${imgs.map((item,i)=>`<a class="social-photo-tile" href="#/prodotto/${item[0]}" aria-label="Scopri ${item[2]}"><img loading="lazy" src="${image(item[0],item[1])}" alt="${item[2]} - foto d’archivio aziendale"><span>0${i+1} <small>${item[2]}</small><b>&#8599;</b></span></a>`).join('')}</div>`;}
 function socialTeaser(){return `<section class="section social-teaser-section"><div class="section-container">${top('LA NOSTRA COMUNITÀ','L’azienda, <span class="serif accent">ogni giorno.</span>','Seguici nei cantieri, nelle lavorazioni e nelle realizzazioni raccontate dai canali ufficiali.')}<div class="social-teaser-layout"><div class="social-teaser-image reveal">${photo(image('stalle',2),'Stalla e animali - archivio fotografico Grimaldelli')}<span>ARCHIVIO AZIENDALE / PROVENIENZA VERIFICATA</span></div><div class="social-teaser-copy reveal delay-1"><div class="eyebrow">STORIE, IMMAGINI, PROGETTI</div><h3>Il lavoro prende<br><em>forma</em> ogni giorno.</h3><p>Le fotografie e gli aggiornamenti più recenti sono pubblicati sui profili ufficiali Grimaldelli. Le immagini di questa anteprima provengono dall’archivio aziendale: il nuovo materiale social sarà integrato dopo verifica dei file originali.</p><div class="social-links compact">${socialLinks()}</div>${action('Dicono di noi','#/dicono-di-noi','button-outline')}</div></div></div></section>`;}
 function sedeSection(){return `<section class="section sede-section"><div class="section-container sede-layout"><div class="sede-copy reveal">${eyebrow('SEDE / SALVIROLA')}<h2>La sede di<br><span class="serif accent">Salvirola.</span></h2><p>A Salvirola, in provincia di Cremona, la nostra storia industriale incontra ogni giorno le esigenze di chi progetta, costruisce e produce. È da qui che prende forma il nostro lavoro.</p><div class="sede-meta"><div><small>INDIRIZZO</small><strong>Strada Provinciale 20<br>26010 Salvirola (CR)</strong></div><div><small>CONTATTO</small><strong><a href="tel:+39037372435">+39 0373 72435</a><br><a href="mailto:info@glcgrimaldelli.com">info@glcgrimaldelli.com</a></strong></div></div>${action('Vai ai contatti','#/contatti','button-outline')}</div><div class="sede-visual reveal delay-1"><div class="sede-photo-frame"><img src="${sedePhoto}" alt="Sede Grimaldelli a Salvirola" loading="lazy" onerror="this.onerror=null;this.src='${sedePhotoFallback}'"><span>LA NOSTRA SEDE / SALVIROLA (CR)</span></div></div></div></section>`;}
-function testimonials(){app.innerHTML=`${hero('GRIMALDELLI / RASSEGNA STAMPA','Dicono<br><span class="serif accent">di noi.</span>','Riconoscimenti e articoli che raccontano l’azienda. Ogni citazione rimanda alla fonte originale.',image('strutture-industriali',2),'08')}<section class="section testimony-intro"><div class="section-container">${top('RASSEGNA STAMPA','Uno sguardo<br><span class="serif accent">dall’esterno.</span>','Fonti pubbliche consultabili, attribuzioni verificabili e collegamenti agli articoli completi.')}<div class="press-grid">${coverage.map((x,i)=>`<article class="press-card reveal delay-${i}"><div class="press-card-top"><span>${x.kind}</span><span class="press-num">0${i+1}</span></div><div class="press-mark">&#8220;</div><blockquote>${escapeHtml(x.quote)}<span>&#8221;</span></blockquote><h3>${escapeHtml(x.title)}</h3><p>${escapeHtml(x.summary)}</p><div class="press-bottom"><strong>${escapeHtml(x.source)}</strong><a href="${x.href}" target="_blank" rel="noopener noreferrer">Leggi la fonte <span>&#8599;</span></a></div></article>`).join('')}</div><p class="source-note">Le citazioni sono estratti brevi delle fonti pubblicate. I contenuti di stampa non sono presentati come recensioni di clienti.</p></div></section><section class="section social-gallery-section"><div class="section-container">${top('FOTOGRAFIE / DIARIO AZIENDALE','Dietro ogni progetto<br><span class="serif accent">c’è una storia.</span>','Una selezione originale dall’archivio Grimaldelli. Per le fotografie più recenti esplora i canali social ufficiali.')}${officialPhotoWall()}<div class="social-gallery-bottom"><div><strong>Le foto social più recenti</strong><p>I contenuti Instagram e Facebook non sono ancora importati nell’anteprima: l’accesso diretto ai post è limitato. Non pubblichiamo immagini non verificate o riferite ad aziende terze.</p></div><div class="social-links compact">${socialLinks()}</div></div></div></section><section class="section social-reviews-section"><div class="section-container"><div class="social-review-panel reveal">${eyebrow('CLIENTI / TESTIMONIANZE')}<div><h2>La fiducia<br><span class="serif accent">si costruisce.</span></h2><p>Le recensioni clienti saranno inserite solo con testo, autore e provenienza verificati. Al momento non sono state trovate recensioni pubbliche attribuibili con sufficiente certezza: nessuna testimonianza inventata, nessun punteggio non documentato.</p><a href="https://www.facebook.com/grimaldelli" target="_blank" rel="noopener noreferrer" class="text-link">Visita la pagina Facebook ufficiale <span>&#8599;</span></a></div></div></div></section>`;}
+function testimonials(){app.innerHTML=`${hero('GRIMALDELLI / RASSEGNA STAMPA','Dicono<br><span class="serif accent">di noi.</span>','Riconoscimenti e articoli che raccontano l’azienda. Ogni citazione rimanda alla fonte originale.',image('strutture-industriali',2),'08')}<section class="section testimony-intro"><div class="section-container">${top('STAMPA / STUDI / RICONOSCIMENTI','Uno sguardo<br><span class="serif accent">dall’esterno.</span>','Articoli, approfondimenti e segnalazioni istituzionali verificabili. Ogni scheda indica il tipo di fonte e rimanda alla pubblicazione originale.')}<div class="press-grid">${coverage.map((x,i)=>`<article class="press-card reveal delay-${i}"><div class="press-card-top"><span>${x.kind}</span><span class="press-num">${String(i+1).padStart(2,'0')}</span></div><div class="press-mark">&#8220;</div><blockquote>${escapeHtml(x.quote)}<span>&#8221;</span></blockquote><h3>${escapeHtml(x.title)}</h3><p>${escapeHtml(x.summary)}</p><div class="press-bottom"><strong>${escapeHtml(x.source)}</strong><a href="${x.href}" target="_blank" rel="noopener noreferrer">Leggi la fonte <span>&#8599;</span></a></div></article>`).join('')}</div><p class="source-note">Le citazioni sono brevi estratti delle fonti pubblicate. Le segnalazioni, gli studi e i comunicati sono distinti dagli articoli giornalistici; più fonti possono riferirsi allo stesso evento. I contenuti non sono presentati come recensioni dei clienti.</p></div></section><section class="section social-gallery-section"><div class="section-container">${top('FOTOGRAFIE / DIARIO AZIENDALE','Dietro ogni progetto<br><span class="serif accent">c’è una storia.</span>','Una selezione originale dall’archivio Grimaldelli. Per le fotografie più recenti esplora i canali social ufficiali.')}${officialPhotoWall()}<div class="social-gallery-bottom"><div><strong>Le foto social più recenti</strong><p>I contenuti Instagram e Facebook non sono ancora importati nell’anteprima: l’accesso diretto ai post è limitato. Non pubblichiamo immagini non verificate o riferite ad aziende terze.</p></div><div class="social-links compact">${socialLinks()}</div></div></div></section><section class="section social-reviews-section"><div class="section-container"><div class="social-review-panel reveal">${eyebrow('CLIENTI / TESTIMONIANZE')}<div><h2>La fiducia<br><span class="serif accent">si costruisce.</span></h2><p>Le recensioni clienti saranno inserite solo con testo, autore e provenienza verificati. Al momento non sono state trovate recensioni pubbliche attribuibili con sufficiente certezza: nessuna testimonianza inventata, nessun punteggio non documentato.</p><a href="https://www.facebook.com/grimaldelli" target="_blank" rel="noopener noreferrer" class="text-link">Visita la pagina Facebook ufficiale <span>&#8599;</span></a></div></div></div></section>`;}
 
 function solutionsCards(){return `<div class="solutions-grid">${sol.map((s,i)=>`<a href="#/soluzione/${s.slug}" class="solution-card reveal delay-${i%4}" aria-label="Scopri ${s.label}">${photo(s.img,s.label)}<div class="solution-top"><span>${s.idx} / 04</span><span>&#8599;</span></div><div class="solution-content"><h3>${s.name}</h3><div class="solution-cta"><span>Esplora la specializzazione</span><b>&#8599;</b></div></div></a>`).join('')}</div><div class="footnote">Le immagini per Biogas e Fotovoltaico sono illustrazioni concettuali, non fotografie di impianti Grimaldelli.</div>`;}
 function tile(p,i){return `<a class="feature-tile reveal delay-${i%3}" href="#/prodotto/${p.slug}"><div class="feature-image">${photo(p.images?.[0]?.src||heroPhoto,p.title)}<span class="tile-number">${String(i+1).padStart(2,'0')} / SELEZIONE</span></div><div class="feature-title"><h3>${escapeHtml(p.title)}</h3><span>&#8599;</span></div></a>`;}
