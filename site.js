@@ -56,7 +56,7 @@ const coverage=[
     "title": "Un secolo di impresa, una visione rivolta al futuro",
     "summary": "Dalle origini nel 1921 alle tecnologie di progettazione tridimensionale: Claudio Grimaldelli racconta come esperienza, ricerca e persone guidano lo sviluppo dell’azienda a Salvirola.",
     "quote": "Le risorse umane sono il pilastro della nostra operatività quotidiana",
-    "href": "https://edicola.laprovinciacr.it/vnprovincia/books/impresa/2025/20251115impresa/pdf/issue.pdf",
+    "href": "https://www.assind.cr.it/allegati/MAG-INDUSTRIALI-_-GRIMALDELLI-1.pdf",
     "imageCategory": "stalle",
     "imageIndex": 0,
     "imageAlt": "Struttura metallica per allevamento realizzata da Grimaldelli",
