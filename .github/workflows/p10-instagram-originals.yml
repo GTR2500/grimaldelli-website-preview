@@ -1,0 +1,49 @@
+name: P10 - Acquire original Instagram media locally
+on:
+  push:
+    branches: [dev/p10-media-local-firstparty-20261112]
+    paths:
+      - scripts/p10_collect_instagram_originals.py
+      - .github/workflows/p10-instagram-originals.yml
+permissions:
+  contents: write
+jobs:
+  media:
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install acquisition and image tools
+        run: |
+          python -m pip install --disable-pip-version-check --quiet yt-dlp instaloader Pillow
+          ffmpeg -version | head -n 1
+      - name: Download company-owned media (no publication if absent)
+        run: python scripts/p10_collect_instagram_originals.py
+      - name: Verify stored assets
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          manifest=json.loads(pathlib.Path('assets/instagram/manifest.json').read_text())
+          assert manifest['media'], "no media could be downloaded"
+          for entry in manifest['media']:
+              for name in [*entry.get('images',[]),*entry.get('videos',[])]:
+                  p=pathlib.Path(name.lstrip('/'))
+                  assert p.is_file() and p.stat().st_size>1000,(name,'missing')
+          print('MEDIA_READY',len(manifest['media']))
+          PY
+      - name: Commit actual image/video files to working branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/instagram
+          if git diff --cached --quiet; then
+            echo "No media changes"
+            exit 0
+          fi
+          git commit -m "P10: store actual Grimaldelli Instagram media in repo"
+          git push origin HEAD:dev/p10-media-local-firstparty-20261112
