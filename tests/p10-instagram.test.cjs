@@ -17,7 +17,7 @@ for(const lang of ["it","en","fr","de"]){
     const area={hidden:true,children:[],appendChild(el){this.children.push(el)},replaceChildren(){this.children=[]},scrollIntoView(){}};
     const section={
       addEventListener(type,fn){if(type==="click")onClick=fn},
-      querySelector(s){if(s==="#p10-social-frame-biloni"||s==="#p10-social-frame-cadilana")return area;return null}
+      querySelector(s){if(s==="#p10-social-frame-biloni"||s==="#p10-social-frame-cadilana"||s==="#p10-social-frame-nisoli")return area;return null}
     };
     const app={querySelector(s){return s==="#p10-social-showcase"?section:null},
       insertAdjacentHTML(where,markup){html+=markup}};
@@ -29,7 +29,8 @@ for(const lang of ["it","en","fr","de"]){
     assert.equal(created.length,0,"media must not load before explicit user action");
     const expected=route==="/realizzazioni"?7:route==="/soluzione/zootecnia"||route==="/prodotto/stalle"?3:2;
     assert.equal((html.match(/class="p10-social-work"/g)||[]).length,expected);
-    const props={ariaExpanded:"false"},button={firstChild:{textContent:"Visualizza il contenuto "},getAttribute(key){return key==="data-instagram-load"?"biloni":props[key]},setAttribute(k,v){props[k]=v}};
+    const selected=route==="/soluzione/fotovoltaico"?"nisoli":"biloni";
+    const props={ariaExpanded:"false"},button={firstChild:{textContent:"Visualizza il contenuto "},getAttribute(key){return key==="data-instagram-load"?selected:props[key]},setAttribute(k,v){props[k]=v}};
     const ev={target:{closest(){return button}}};
     onClick(ev);
     assert.equal(created.length,1);
