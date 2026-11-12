@@ -360,7 +360,7 @@ function render(){
    else baseFooter();
  }
  else if(currentLocale!=='it' && window.GrimaldelliI18N){
-   window.GrimaldelliI18N.render(currentLocale,pathname,{app,photo,hero,eyebrow,top,action,sol,products,by,image,heroPhoto,otherPhoto,sedePhoto,solutionsCards,tile,socialLinks,coverage,wireGallery,company});
+   window.GrimaldelliI18N.render(currentLocale,pathname,{app,photo,hero,eyebrow,top,action,sol,products,by,image,heroPhoto,otherPhoto,sedePhoto,solutionsCards,tile,socialLinks,coverage,wireGallery,company,pressEditorial});
    window.GrimaldelliI18N.footer(currentLocale,{siteFooter,eyebrow,action,photo,socialLinks});
  }else{
   if(pathname==='/'){homepage();app.insertAdjacentHTML('beforeend',socialTeaser());}
