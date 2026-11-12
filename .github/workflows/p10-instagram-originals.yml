@@ -20,8 +20,8 @@ jobs:
           python-version: '3.12'
       - name: Install acquisition and image tools
         run: |
-          python -m pip install --disable-pip-version-check --quiet yt-dlp instaloader Pillow
-          ffmpeg -version | head -n 1
+          python -m pip install --disable-pip-version-check --quiet yt-dlp instaloader Pillow imageio-ffmpeg
+          python -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())"
       - name: Download company-owned media (no publication if absent)
         run: python scripts/p10_collect_instagram_originals.py
       - name: Verify stored assets
