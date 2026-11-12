@@ -55,7 +55,7 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     const list=products.filter(p=>p.group===group).slice(0,6);
     app.innerHTML=`${header(L.solutions.eyebrow,s.name,e(s.desc),s.img,s.idx)}
     <section class="section solution-detail"><div class="section-container detail-hero"><div class="reveal">${eyebrow(L.solutions.detailTitle)}<h2>${s.name}</h2><p>${e(s.desc)} ${e(L.solutions.detailText)}</p>${action(isEnergy?L.common.info:L.common.catalog,isEnergy?"#/contatti":`#/prodotti?gruppo=${group}`)}</div>${photo(s.img,s.label,"","eager")}</div>
-    ${!isEnergy?`<div class="section-container detail-copy">${head(L.nav[3],L.products.title,L.products.lead)}<div class="feature-grid">${list.map(p=>card(p.title,p.images?.[0]?.src||heroPhoto,"#/prodotto/"+p.slug)).join("")}</div></div>`:""}</section>`;
+    ${!isEnergy?`<div class="section-container detail-copy">${head(L.nav[3],L.products.title)}<div class="feature-grid">${list.map(p=>card(p.title,p.images?.[0]?.src||heroPhoto,"#/prodotto/"+p.slug)).join("")}</div></div>`:""}</section>`;
   } else if(path==="/prodotti"){
     const groups=[["tutti",L.common.all],["strutture",L.common.metal],["zootecnia",L.common.livestock],["modelli",L.common.models]];
     app.innerHTML=`${header(L.products.eyebrow,L.products.title,L.products.lead,image("abbeveratoi",0),"04")}
