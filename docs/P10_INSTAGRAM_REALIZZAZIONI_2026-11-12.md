@@ -1,39 +1,49 @@
-# P10 — Materiali Instagram integrati nell’anteprima
+# P10 — Integrazione nativa di fotografie e video dei lavori
 
-Data: 12 novembre 2026. Repository: `GTR2500/grimaldelli-website-preview`.
+Stato aggiornato: 12 novembre 2026, ramo `dev/p10-media-local-firstparty-20261112`.
 
-## Stato delle fonti
+## Obiettivo
 
-La chat precedente di raccolta Instagram aveva catalogato **30 contenuti**, di cui **13 reel e 17 post/caroselli**, ma aveva registrato permalink e descrizioni, **non i file MP4 e le fotografie originali**. Non si deve dichiarare un download fisico mai verificato.
+Mostrare **foto e video reali dei lavori all'interno del sito**, senza iframe Instagram e senza rimandare il visitatore a un social network. Codice, asset e manifest restano in GitHub come unica fonte di sviluppo; nessuna copia permanente sul PC DEV.
 
-Attraverso il profilo Instagram ufficiale Grimaldelli sono stati verificati e selezionati i seguenti contenuti, direttamente attribuiti alla pubblicazione aziendale:
+## Materiali acquisiti e salvati in Git
 
-| ID | Ambito | Fonte originale | Nota documentale |
+Sono stati recuperati i media associati a sette pubblicazioni del profilo aziendale Grimaldelli. Prima del recupero erano disponibili soltanto i permalink; ora sono presenti originali derivati e ottimizzati.
+
+- **21 file immagine WebP**, comprese le copertine dei video.
+- **3 video MP4**, uno ciascuno per Biloni, Cadilana e Bosetti, ottimizzati in H.264/AAC e con precaricamento disattivato.
+- `assets/instagram/manifest.json` associa gli identificativi dei lavori ai file locali effettivamente presenti.
+- I media sono serviti dalla stessa origine del sito. Non esistono dipendenze CDN Instagram nei componenti Realizzazioni.
+
+| Lavoro | Origine contenuto | Collocazione | Tipo |
 |---|---|---|---|
-| biloni | Zootecnia | https://www.instagram.com/grimaldellisrl/p/DfnCdbEIRz8/ | Azienda Agricola Biloni, Trigolo (CR): ristrutturazione prima stalla completata, carosello del 11/11/2026 |
-| cadilana | Zootecnia | https://www.instagram.com/grimaldellisrl/reel/DfiO5WDOkg9/ | Reel del 09/11/2026; hashtag stalla, benessere animale, bovini da latte, robot milking; località indicata Cadilana |
-| bosetti | Zootecnia | https://www.instagram.com/grimaldellisrl/reel/Cs5KMF3Ivcp/ | Reel storico con dicitura Bosetti Farm |
-| franciosi | Zootecnia | https://www.instagram.com/grimaldellisrl/p/CddN6WFKW2H/ | Stalla da 8000 m² in costruzione (testo originale del post) |
-| risaia | Zootecnia | https://www.instagram.com/grimaldellisrl/p/CcXNY82K4dd/ | Risaia del Duca; tema comfort animale |
-| nisoli | Fotovoltaico | https://www.instagram.com/grimaldellisrl/p/CvrdB_ionuY/ | Nisoli, Brignano Gera d’Adda (BG); post riferisce rimozione eternit e fotovoltaico da 122 kW |
-| ginelli | Fotovoltaico | https://www.instagram.com/grimaldellisrl/p/CvrJrWbItUF/ | Ginelli, Bagnolo Cremasco; post riferisce fotovoltaico da 75 kW |
+| Azienda Agricola Biloni | `https://www.instagram.com/p/DfnCdbEIRz8/` | Home, Realizzazioni, Zootecnia | Video e copertine |
+| Cadilana | `https://www.instagram.com/reel/DfiO5WDOkg9/` | Home, Realizzazioni, Zootecnia | Video e copertine |
+| Bosetti Farm | `https://www.instagram.com/reel/Cs5KMF3Ivcp/` | Realizzazioni, Zootecnia | Video e copertine |
+| Franciosi (stalla da 8.000 m²) | `https://www.instagram.com/p/CddN6WFKW2H/` | Realizzazioni | Foto |
+| Risaia del Duca | `https://www.instagram.com/p/CcXNY82K4dd/` | Realizzazioni | Foto |
+| Nisoli (fotovoltaico 122 kW) | `https://www.instagram.com/p/CvrdB_ionuY/` | Realizzazioni, Fotovoltaico | Foto |
+| Ginelli (fotovoltaico 75 kW) | `https://www.instagram.com/p/CvrJrWbItUF/` | Realizzazioni, Fotovoltaico | Foto |
 
-Le date non dichiarate nelle caption recuperate **non sono state inventate**: sul sito sono indicate come archivio.
+## Comportamento frontend
 
-## Implementazione
+- `site-instagram.js` legge solo `assets/instagram/manifest.json`. Non visualizza i contenuti per cui non esistono file.
+- Fotografie in galleria con scorrimento precedente/successivo e apertura in un lightbox nativo.
+- Video con elemento HTML5 `<video controls playsinline preload="none">`, copertina locale e nessun autoplay.
+- Nessun iframe, pulsante Instagram, uscita verso un social o richiesta a Meta nella galleria.
+- Traduzioni complete IT, EN, FR, DE. Nessuna replica superflua di file tra lingue.
+- L'Area legale / Cookie Policy in quattro lingue descrive la distribuzione diretta dei media, senza cookie di terze parti.
+- Il profilo Instagram resta documentato qui come fonte; **non compare come collegamento sostitutivo alle immagini nel componente**.
 
-- `site-instagram.js` contiene i dati, i testi IT/EN/FR/DE e il caricamento su richiesta.
-- `editorial.css` mantiene impaginazione corporate responsive.
-- `site.js` attiva il modulo nelle sezioni: Home (2 post recenti), Realizzazioni (7), Zootecnia / Stalle (3), Fotovoltaico (2).
-- `index.html` carica lo script locale con parametro di versione per la cache.
-- Il clic del visitatore su **Visualizza il contenuto** crea un iframe Instagram; fino a quel momento **non vengono richiesti asset, cookie o script Meta**.
-- Un collegamento esterno diretto a Instagram rimane sempre disponibile se l’iframe viene bloccato.
-- Le quattro Cookie Policy documentano il caricamento opzionale di contenuti esterni e il possibile trattamento dati da parte di Meta.
-- Nessuna modifica al backend dei moduli, ai DNS o al dominio ufficiale.
+## Verifiche
 
-## QA e vincoli
+- Sono stati verificati su branch GitHub asset e dimensioni non nulle, inclusi i video locali.
+- Test funzionali: 4 lingue × 5 tipologie di pagina, nessuna uscita o incorporamento esterno, manifest di stessa origine, tutti i percorsi file esistenti.
+- Test browser Chromium su 4 lingue × 4 rotte × 2 viewport (mobile 390 px / desktop 1440 px), senza errori JS o richieste esterne; controllata la navigazione della galleria fotografica.
+- Dopo l'eventuale merge, verificare che il deploy GitHub Pages abbia effettivamente pubblicato il commit aggiornato e non una cache precedente.
 
-- CI GitHub Actions: verifica sintassi JavaScript e PHP; test JS di cinque route e quattro lingue con asserzione che nessun iframe sia creato prima del clic, e che il contenuto venga rimosso alla chiusura.
-- Questo aggiornamento riusa **i contenuti reali online** tramite embed, non genera fotografie, non usa foto di terzi per simulare lavori Grimaldelli e non archivia copie dei media.
-- Per una futura versione indipendente da Instagram conviene ottenere l’esportazione autorizzata degli originali: JPG/PNG/HEIC/MP4 e relative caption. Convertire immagini in WebP/AVIF e video in MP4/WebM con poster locale, sottotitoli e `preload=none`, conservando fonte e autorizzazioni, quindi sostituire progressivamente gli embed.
-- Le strutture e gli interventi descritti nei singoli post non devono essere attribuiti a Grimaldelli oltre quanto dichiarato dalla fonte. In particolare per i progetti fotovoltaici non va dedotta la realizzazione di un impianto completo quando il perimetro esatto non è documentato.
+## Vincoli
+
+- Le descrizioni commerciali devono attenersi al perimetro dei lavori effettivamente svolti da Grimaldelli; per il fotovoltaico non attribuire indiscriminatamente la realizzazione dell'impianto completo.
+- Per ogni media utilizzato serve confermare titolarità aziendale e liberatorie/diritti di riuso e riprese di terzi, quando applicabili.
+- Nessun intervento su Aruba, DNS o sito pubblico ufficiale senza autorizzazione e collaudo.
