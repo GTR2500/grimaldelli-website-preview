@@ -2,7 +2,7 @@
 window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
   const L=window.GRIMALDELLI_LOCALES[lang];
   if(!L)return false;
-  const {app,photo,hero,eyebrow,top,action,sol,products,by,image,heroPhoto,otherPhoto,sedePhoto,solutionsCards,tile,socialLinks,coverage,wireGallery}=C;
+  const {app,photo,hero,eyebrow,top,action,sol,products,by,image,heroPhoto,otherPhoto,sedePhoto,solutionsCards,tile,socialLinks,coverage,wireGallery,pressEditorial}=C;
   const e=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const header=(type,title,lead,img=heroPhoto,num="01")=>hero(type,title,lead,img,num);
   const head=(k,t,d="",dark=false)=>top(k,t,d,dark);
@@ -89,11 +89,8 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     <div class="feature-grid">${images.map((im,i)=>`<div class="feature-tile reveal"><button type="button" data-gallery="${i}" class="gallery-photo feature-image" style="display:block;width:100%">${photo(im.src,im.caption)}</button><div class="feature-title"><h3>${e(im.caption)}</h3><span>&#8599;</span></div></div>`).join("")}</div></div></section>`;
     wireGallery(images);
   } else if(path==="/dicono-di-noi"){
-    const N=window.GRIMALDELLI_NEWS_LOCALES?.[lang]||{};
-    const story=(it,i)=>{const t=N[it.id]||{};return `<article class="news-story"><div class="news-story-body"><div class="news-meta"><span>${e(t.type||it.type)}</span><time>${e((it.date.match(/\d{4}/)||[])[0]||it.date)}</time></div><div class="news-publisher">${e(it.publication)}</div><h3>${e(t.title||it.title)}</h3><p>${e(t.summary||it.summary)}</p><a class="news-read" href="${e(it.href)}" target="_blank" rel="noopener noreferrer">${e(L.press.read)} <span aria-hidden="true">&#8599;</span></a></div></article>`;};
-    app.innerHTML=`${header(L.press.eyebrow,L.press.title,L.press.lead,image("strutture-industriali",2),"08")}
-    <section class="news-editorial-section"><div class="section-container"><div class="news-editorial-heading"><div><span class="news-edition">GRIMALDELLI / ${e(L.press.news)}</span><h2>${e(L.press.title)}</h2></div><div class="news-editorial-intro"><p>${e(L.press.lead)}</p><span>11 ${e(L.common.archive)}</span></div></div>
-    <div class="news-story-grid">${coverage.filter(x=>x.tier!=="archive").map(story).join("")}</div><div class="news-section-heading"><div><h2>${e(L.press.archive)}</h2></div></div><div class="news-story-grid">${coverage.filter(x=>x.tier==="archive").map(story).join("")}</div></div></section>
+    const pressHtml=pressEditorial();
+    app.innerHTML=`${header(L.press.eyebrow,L.press.title,L.press.lead,image("strutture-industriali",2),"08")}${pressHtml}
     <section class="section social-gallery-section"><div class="section-container">
     ${head(L.common.photos,L.press.social,L.press.socialText)}
     <div class="social-photo-wall">
@@ -106,6 +103,7 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     <section class="section social-reviews-section"><div class="section-container"><div class="social-review-panel reveal">
     ${eyebrow(L.common.follow)}<div><h2>${e(L.press.title)}</h2><p>${e(L.press.lead)}</p>
     <a href="https://www.facebook.com/grimaldelli" target="_blank" rel="noopener noreferrer" class="text-link">Facebook &#8599;</a></div></div></div></section>`;
+    if(!window.GrimaldelliPressParity?.apply(lang,app,coverage))console.warn("Press localization incomplete");
   } else if(path==="/contatti"){
     app.innerHTML=`${header(L.contact.eyebrow,L.contact.title,L.contact.lead,"","06")}
     <section class="section"><div class="section-container contact-grid"><div class="contact-copy reveal">${eyebrow(L.contact.visit)}<h2>${e(L.contact.visit)}</h2>
