@@ -28,8 +28,8 @@ const sandbox={
   }
 };
 vm.runInNewContext(source,sandbox,{filename:"site-instagram.js"});
-const module=sandbox.window.GrimaldelliInstagram;
-assert.equal(module.posts.length,7);
+const gallery=sandbox.window.GrimaldelliInstagram;
+assert.equal(gallery.posts.length,7);
 assert.ok(manifest.media.every(x=>x.images.length||x.videos.length),"No empty media sources");
 for(const item of manifest.media){
   for(const file of [...item.images,...item.videos]){
@@ -54,7 +54,7 @@ for(const item of manifest.media){
         querySelector(selector){return selector==="#p10-social-showcase"?section:null},
         insertAdjacentHTML(position,markup){html+=markup}
       };
-      assert.equal(await module.mount(route,lang,app),true,lang+route);
+      assert.equal(await gallery.mount(route,lang,app),true,lang+route);
       assert.equal((html.match(/class="p10-social-work p10-work-card"/g)||[]).length,expected,lang+route);
       assert.ok(listened,lang+route+" no controls");
       assert.ok(html.includes("assets/instagram/"),lang+route+" missing local assets");
@@ -64,6 +64,6 @@ for(const item of manifest.media){
     }
   }
   assert.equal(requests.length,1,"Manifest should be loaded once from first-party host");
-  assert.equal(await module.mount("/contatti","it",{}),false);
+  assert.equal(await gallery.mount("/contatti","it",{}),false);
   console.log("PASS: 4 languages x 5 routes, 7 local media sets, first-party images/videos, no embeds, no outbound links");
 })().catch(e=>{console.error(e);process.exitCode=1});
