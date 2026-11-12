@@ -14,6 +14,12 @@ from datetime import datetime, timezone
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DEST=ROOT/"assets"/"instagram"
+try:
+    import imageio_ffmpeg
+    FFMPEG=imageio_ffmpeg.get_ffmpeg_exe()
+except ImportError:
+    FFMPEG=shutil.which("ffmpeg") or "ffmpeg"
+print("FFMPEG_BINARY",FFMPEG,flush=True)
 SOURCES=[
   ("biloni","DfnCdbEIRz8","p"),
   ("cadilana","DfiO5WDOkg9","reel"),
@@ -53,7 +59,7 @@ def optimize_photo(src,dst):
         return False
 
 def optimize_video(src,dst):
-    args=["ffmpeg","-y","-hide_banner","-loglevel","error","-i",str(src),
+    args=[FFMPEG,"-y","-hide_banner","-loglevel","error","-i",str(src),
           "-map","0:v:0","-map","0:a:0?","-vf","scale='min(1280,iw)':-2",
           "-c:v","libx264","-preset","medium","-crf","27","-pix_fmt","yuv420p",
           "-c:a","aac","-b:a","96k","-movflags","+faststart","-t","90",str(dst)]
@@ -62,7 +68,7 @@ def optimize_video(src,dst):
     return dst.exists() and dst.stat().st_size>10000
 
 def video_poster(src,dst):
-    return execute(["ffmpeg","-y","-hide_banner","-loglevel","error","-ss","00:00:01",
+    return execute([FFMPEG,"-y","-hide_banner","-loglevel","error","-ss","00:00:01",
               "-i",str(src),"-frames:v","1","-vf","scale='min(1280,iw)':-2",
               "-quality","85",str(dst)],timeout=45)
 
