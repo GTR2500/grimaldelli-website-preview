@@ -1,8 +1,10 @@
 const assert=require("node:assert/strict");
 const fs=require("node:fs");
 const vm=require("node:vm");
-const source=fs.readFileSync("site-instagram.js","utf8");
-const manifest=JSON.parse(fs.readFileSync("assets/instagram/manifest.json","utf8"));
+const path=require("node:path");
+const root=path.resolve(__dirname,"..");
+const source=fs.readFileSync(path.join(root,"site-instagram.js"),"utf8");
+const manifest=JSON.parse(fs.readFileSync(path.join(root,"assets/instagram/manifest.json"),"utf8"));
 const requests=[];
 const document={
   createElement(tag){
@@ -35,8 +37,8 @@ for(const item of manifest.media){
   for(const file of [...item.images,...item.videos]){
     const local=file.replace(/^\/+/,"");
     assert.ok(local.startsWith("assets/instagram/"));
-    assert.ok(fs.existsSync(local),local+" missing");
-    assert.ok(fs.statSync(local).size>1000,local+" empty");
+    assert.ok(fs.existsSync(path.join(root,local)),local+" missing");
+    assert.ok(fs.statSync(path.join(root,local)).size>1000,local+" empty");
   }
 }
 (async()=>{
