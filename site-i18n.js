@@ -153,7 +153,7 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
       <span><b>${e(t.register)}</b> 01190000198</span>
     </div>
     <div class="footer-social-row"><span class="social-caption">${e(t.follow)}</span><div class="social-links">${socialLinks()}</div></div>
-    <div class="footer-line"><span>&copy; 2026 Grimaldelli S.r.l. · ${e(t.rights)}</span><span>Salvirola (CR) · Italia</span></div>
+    <div class="footer-line"><span>&copy; 2026 Grimaldelli S.r.l. · ${e(t.rights)}</span></div>
   </div>`;
 },shell:function shellLocalized(lang,path){
   const langs=["it","en","fr","de"],nav=document.querySelector(".nav-desktop"),mobile=document.querySelector(".mobile-menu-inner"),selector=document.querySelector(".language-switcher");
