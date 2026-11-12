@@ -282,3 +282,33 @@ outline:2px solid #ea7228;outline-offset:2px}
  .p10-social-showcase{padding:70px 0}
  .p10-social-embed iframe{height:540px}
 }
+
+
+/* P10 - Gallerie e video ospitati direttamente su Grimaldelli, senza iframe o richieste social. */
+.p10-work-card{align-content:start}
+.p10-work-visual{position:relative;overflow:hidden;background:#16231d;aspect-ratio:16/10;min-height:180px}
+.p10-work-expand{appearance:none;display:block;width:100%;height:100%;padding:0;border:0;background:#1b2921;cursor:zoom-in;overflow:hidden;position:absolute;inset:0}
+.p10-work-image{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease;transform-origin:center center}
+.p10-work-expand:hover .p10-work-image{transform:scale(1.035)}
+.p10-work-expand:focus-visible{outline:4px solid #ec7a2d;outline-offset:-4px}
+.p10-work-image-corner{position:absolute;right:18px;bottom:18px;color:#fff;background:#ec762b;display:grid;place-items:center;width:39px;height:39px;pointer-events:none}
+.p10-work-video{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;background:#121913;position:absolute;inset:0}
+.p10-work-media-type{position:absolute;top:17px;left:17px;background:rgba(19,35,27,.83);padding:9px 12px;font-size:10px;font-weight:750;letter-spacing:.08em;color:#fff;pointer-events:none;text-transform:uppercase}
+.p10-work-carousel-nav{display:flex;align-items:center;justify-content:space-between;padding:6px 20px;border-bottom:1px solid #e5e8e4;background:#fafbf9}
+.p10-work-carousel-nav button{min-width:42px;min-height:42px;display:grid;place-items:center;border:0;background:transparent;cursor:pointer;font-size:22px;color:#28382f}
+.p10-work-carousel-nav button:hover{color:#e87128}
+.p10-work-carousel-nav button:focus-visible{outline:2px solid #ec762b;outline-offset:2px}
+.p10-work-count{font-size:12px;color:#506054;letter-spacing:.04em;font-weight:650}
+.p10-work-card .p10-social-work-content{padding:26px 30px 32px}
+.p10-work-card .p10-social-work-content>p{min-height:0;margin-bottom:0}
+.p10-work-dialog{border:0;max-width:min(94vw,1200px);max-height:92vh;padding:14px;background:#f8f8f5;box-shadow:0 22px 100px rgba(0,0,0,.45);position:fixed}
+.p10-work-dialog::backdrop{background:rgba(8,19,15,.82)}
+.p10-work-dialog img{display:block;max-width:calc(94vw - 28px);max-height:calc(92vh - 28px);height:auto;width:auto;object-fit:contain}
+.p10-work-dialog-close{position:absolute;top:20px;right:20px;display:grid;place-items:center;width:42px;height:42px;border:none;color:#fff;background:#192b20;border-radius:50%;cursor:pointer;font-size:17px}
+.p10-work-dialog-close:focus-visible{outline:2px solid #e87928;outline-offset:2px}
+@media(max-width:750px){
+  .p10-work-visual{aspect-ratio:4/3}
+  .p10-work-card .p10-social-work-content{padding:24px}
+  .p10-work-media-type{top:12px;left:12px}
+}
+@media(prefers-reduced-motion:reduce){.p10-work-image{transition:none}.p10-work-expand:hover .p10-work-image{transform:none}}
