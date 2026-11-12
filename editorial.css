@@ -94,3 +94,37 @@
 @media(max-width:960px){.hero-salvirola .hero-image{object-position:62% center;opacity:.75}.hero-salvirola .hero-shade{background:linear-gradient(90deg,rgba(13,20,20,.85),rgba(13,20,20,.52)),linear-gradient(0deg,rgba(13,20,20,.57),transparent 65%)}}
 @media(max-width:640px){.hero-salvirola{min-height:min(740px,calc(100svh - 100px))}.hero-salvirola h1{font-size:clamp(52px,12.2vw,78px)}.hero-salvirola .hero-image{object-position:67% center}}
 @media(prefers-reduced-motion:reduce){.hero-salvirola .hero-image{animation:none;transform:none}}
+
+
+/* Grimaldelli P10 – dati societari, icone social e selettore lingue */
+.footer-legal-grid{border-top:1px solid rgba(255,255,255,.18);padding:28px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:52px;row-gap:28px}
+.footer-legal-item{display:flex;flex-direction:column;align-items:flex-start;gap:9px;font-size:13px;line-height:1.55;color:#d4dbd6}
+.footer-legal-item strong{font-size:14px;color:#fff;margin-bottom:7px}
+.footer-legal-item span{overflow-wrap:anywhere}
+.footer-legal-item a{color:#e4e8e4;text-decoration:none;overflow-wrap:anywhere}
+.footer-legal-item a:hover,.footer-legal-item a:focus-visible{color:#ea9662;text-decoration:underline}
+.social-pill svg{height:18px;width:18px;flex:0 0 18px;display:block}
+.social-pill>span{font-size:11px;letter-spacing:0;font-weight:600;opacity:1}
+.language-switcher{display:flex;align-items:center;gap:4px;flex:0 0 auto;margin-left:8px}
+.language-switcher a{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;color:#333b35;font-size:11px;font-weight:750;letter-spacing:.04em;border:1px solid #d0d1cb;border-radius:2px;min-width:31px;min-height:32px;padding:0 5px}
+.language-switcher a:hover,.language-switcher a[aria-current="true"]{background:#202a25;color:#fff;border-color:#202a25}
+.language-switcher a:focus-visible{outline:2px solid #df6d29;outline-offset:3px}
+.footer-social-row{margin-top:0}
+@media(max-width:1150px){
+  .nav-inner{gap:13px}
+  .nav-desktop{gap:9px}
+  .nav-desktop>a,.nav-drop>a{font-size:9px;letter-spacing:.07em}
+  .language-switcher{margin-left:0}
+}
+@media(max-width:960px){
+  .language-switcher{margin-left:auto}
+  .language-switcher a{min-width:34px;min-height:36px}
+}
+@media(max-width:700px){
+  .footer-legal-grid{grid-template-columns:1fr;padding:26px 0}
+  .footer-bottom-grid{gap:25px}
+  .social-pill{padding:9px 11px}
+  .social-pill svg{height:16px;width:16px}
+  .language-switcher{gap:3px}
+  .language-switcher a{min-width:30px;font-size:10px}
+}
