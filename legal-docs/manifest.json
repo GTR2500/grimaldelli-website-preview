@@ -1,0 +1,74 @@
+{
+  "source": "https://www.glcgrimaldelli.com/area_legale/",
+  "date_utc": "2026-11-12T16:33:41.885763+00:00",
+  "purpose": "snapshot dei documenti PDF ancora presenti nell'Area legale del nuovo sito; gli originali non sono stati modificati",
+  "release_note": "La vecchia cookie policy descrive anche Google Analytics del sito WordPress e resta soltanto un documento di archivio; le nuove policy sono in privacy-sito.html e privacy-cookie.html. Certificazioni e testi richiedono approvazione prima del rilascio.",
+  "documents": [
+    {
+      "file": "legal-docs/Informativa-privacy-Clienti.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Informativa-privacy-Clienti.pdf",
+      "sha256": "2b95463300d45e32e3cb672ee9d77a538b73e281fdeac7233c46317e0cfb42bb",
+      "bytes": 86882
+    },
+    {
+      "file": "legal-docs/Informativa-privacy-Fornitori.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Informativa-privacy-Fornitori.pdf",
+      "sha256": "9b45029336dc19e26c31ad21de463f10bd0e36003cabf3c631827a028dc4fe6b",
+      "bytes": 82881
+    },
+    {
+      "file": "legal-docs/Informativa-privacy-Videosorveglianza.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Informativa-privacy-Videosorveglianza.pdf",
+      "sha256": "f0fcb2bba08b88c766c57322a19fa309d132226403e432e8c79b3f0cb9d52f8e",
+      "bytes": 81267
+    },
+    {
+      "file": "legal-docs/Cookie-policy.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Cookie-policy.pdf",
+      "sha256": "5006a191ca660fead258e14ad12d02193c9d928b06f15544876811c1155ada3a",
+      "bytes": 134213
+    },
+    {
+      "file": "legal-docs/Politica-della-Qualita-3.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Politica-della-Qualit%C3%A0-3.pdf",
+      "sha256": "9d1df87ddc059ff8bdaf296952f6613bddf1879a81f1fe9d5bc2c6e20ab7ab88",
+      "bytes": 205295
+    },
+    {
+      "file": "legal-docs/Manuale-Qualita.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Manuale-Qualita.pdf",
+      "sha256": "0bb78c07f05710ac341b07feb17885a9f88a4eb444386330bcf4fa63d7acdc96",
+      "bytes": 471911
+    },
+    {
+      "file": "legal-docs/Certificato-Centro-trasformazione-Grimaldelli.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Certificato-Centro-trasformazione-Grimaldelli.pdf",
+      "sha256": "4eee5817b429df567f9182f7a2b4063cbcee1b2c503165fd8cf2c7afd103a6dc",
+      "bytes": 307292
+    },
+    {
+      "file": "legal-docs/Certificato-EN1090-2961-CPR-070.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Certificato-EN1090-2961-CPR-070.pdf",
+      "sha256": "b317e8749d41c0b5d81b586dec946146c45b99b9d8ff0069191740e28415f794",
+      "bytes": 463265
+    },
+    {
+      "file": "legal-docs/Certificato-9001_EN_validita.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Certificato-9001_EN_validit%C3%A0.pdf",
+      "sha256": "730684c3266c0b9c8161496cf6cadfe79429b25c34402db27b8cc7679bf0139d",
+      "bytes": 95327
+    },
+    {
+      "file": "legal-docs/Certificato-9001_IT_validita.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Certificato-9001_IT_validit%C3%A0.pdf",
+      "sha256": "5cacd6e93bf876723fd0a01885a45aa4c1ea0d4f68e6486ecf526f7787c49871",
+      "bytes": 140582
+    },
+    {
+      "file": "legal-docs/Certificato-ISO-3834-SQ1.C-0855.pdf",
+      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Certificato-ISO-3834-SQ1.C-0855.pdf",
+      "sha256": "dcdf011ebbe013f6d77fd7a688cb8f23a88c08fd9e0e287e2d7d7ea992c14dec",
+      "bytes": 349492
+    }
+  ]
+}
