@@ -25,13 +25,8 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     <section class="career-teaser"><div class="section-container career-teaser-inner"><div class="reveal">${eyebrow(L.nav[7],true)}<h2>${e(L.careers.headline)}</h2></div><div class="reveal delay-1"><p>${e(L.careers.text)}</p>${action(L.nav[7],"#/lavora-con-noi","button-ghost")}</div></div></section>
     <section class="section social-teaser-section"><div class="section-container">${head(L.common.follow,L.home.socialTitle,L.home.socialText)}<div class="social-teaser-layout"><div class="social-teaser-image reveal">${media("stalle",2,L.projects.items[0])}</div><div class="social-teaser-copy reveal delay-1"><h3>${e(L.home.socialTitle)}</h3><p>${e(L.home.socialText)}</p>${socialBar}</div></div></div></section>`;
   } else if(path==="/azienda"){
-    app.innerHTML=`${header(L.company.eyebrow,L.company.title,L.company.lead,otherPhoto,"02")}
-    <section class="company-longread"><div class="section-container">
-      <header class="company-story-header"><div class="company-story-brow"><span>GRIMALDELLI / 1921</span><span>${e(L.company.story)}</span></div><h2>${e(L.company.timeline)}</h2><p class="company-story-deck">${e(L.company.storyLead)}</p></header>
-      <aside class="company-interview-spotlight"><div class="company-interview-number">03<span>PDF</span></div><div class="company-interview-copy"><span class="company-interview-overline">CLAUDIO GRIMALDELLI / 2025</span><h3>${e(L.company.story)}</h3><p>${e(L.company.lead)}</p><a class="company-read-link" href="https://www.assind.cr.it/allegati/MAG-INDUSTRIALI-_-GRIMALDELLI-1.pdf" target="_blank" rel="noopener noreferrer">${e(L.company.source)} <span aria-hidden="true">&#8599;</span></a></div></aside>
-    </div></section>
-    <section class="company-history"><div class="section-container"><div class="company-history-heading"><span class="company-history-eyebrow">${e(L.company.story)}</span><h2>${e(L.company.timeline)}</h2><p>${e(L.company.storyLead)}</p></div><div class="company-history-list">${L.company.history.map((m,i)=>`<article class="company-history-event"><div class="company-history-year">${e(m[0])}</div><div class="company-history-copy"><h3>${e(m[1])}</h3><p>${e(m[2])}</p></div><span class="company-history-number">${String(i+1).padStart(2,"0")}</span></article>`).join("")}</div></div></section>
-    <section class="section solutions-section"><div class="section-container">${head(L.solutions.eyebrow,L.solutions.title,L.solutions.lead,true)}${solutionsCards()}</div></section>`;
+    C.company();
+    window.GrimaldelliCompany?.translate(lang,app);
   } else if(path==="/soluzioni"){
     app.innerHTML=`${header(L.solutions.eyebrow,L.solutions.title,L.solutions.lead,heroPhoto,"03")}
     <section class="section solutions-section"><div class="section-container">${head(L.solutions.heading,L.solutions.title,L.solutions.lead,true)}${solutionsCards()}<p class="footnote">${e(L.solutions.illustration)}</p></div></section>`;
