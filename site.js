@@ -3,7 +3,10 @@
 'use strict';
 if (!document.querySelector('link[href*="press-editorial.css"]')) { const p = document.createElement('link'); p.rel = 'stylesheet'; p.href = 'press-editorial.css?v=20261030'; document.head.appendChild(p); }
 const D=window.GRIMALDELLI_DATA||{categories:[]};
-const products=D.categories||[];
+const activeLocale=(new URLSearchParams(location.search).get("lang")||"it").toLowerCase();
+const currentLocale=["it","en","fr","de"].includes(activeLocale)?activeLocale:"it";
+const localizedProducts=window.GRIMALDELLI_PRODUCT_LOCALES?.[currentLocale]||{};
+const products=(D.categories||[]).map(p=>{const loc=localizedProducts[p.slug];return loc?{...p,title:loc[0],summary:loc[1]}:p;});
 const $=s=>document.querySelector(s);
 const $$=s=>Array.from(document.querySelectorAll(s));
 const by=s=>products.find(p=>p.slug===s);
@@ -27,6 +30,10 @@ const sol=[
   {slug:'biogas',idx:'03',name:'Biogas e<br>biometano',label:'Allacciamenti e carpenterie',img:energy('biogas'),type:'concept',desc:'Carpenterie metalliche e collegamenti per applicazioni nel settore biogas e biometano.'},
   {slug:'fotovoltaico',idx:'04',name:'Impianti<br>fotovoltaici',label:'Energia rinnovabile',img:energy('fotovoltaico'),type:'concept',desc:'Strutture e componenti metallici per applicazioni nel settore fotovoltaico.'}
 ];
+if(currentLocale!=="it"){
+  const localizedSolutions=window.GRIMALDELLI_LOCALES?.[currentLocale]?.sols||[];
+  sol.forEach((item,i)=>{const tr=localizedSolutions[i];if(tr){item.name=tr[0];item.label=tr[1];item.desc=tr[2];}});
+}
 let observer=null;
 let selectedGroup='tutti';
 let query='';
@@ -348,7 +355,31 @@ function renderLightbox(){let im=lightImages[lightIndex];$('#lightbox-img').src=
 function closeLightbox(){$('#lightbox').classList.remove('open');$('#lightbox').setAttribute('aria-hidden','true');}
 let setup=()=>{};
 function setupReveals(){if(observer)observer.disconnect();let elements=$$('.reveal');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){elements.forEach(e=>e.classList.add('visible'));return;}observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px 35px 0px'});elements.forEach(el=>observer.observe(el));}
-function render(){const {path,params}=getPath();let pathname=path==='/'?'/':path.replace(/\/$/,'');$('#mobile-menu').classList.remove('is-open');$('#mobile-menu').setAttribute('aria-hidden','true');$('#menu-toggle').setAttribute('aria-expanded','false');$$('.nav-desktop a').forEach(a=>a.classList.toggle('active',a.dataset.nav===pathname));if(pathname==='/'){homepage();app.insertAdjacentHTML('beforeend',socialTeaser());}else if(pathname==='/azienda')company();else if(pathname==='/soluzioni')solutions();else if(pathname.startsWith('/soluzione/'))solutionPage(pathname.split('/').pop());else if(pathname==='/prodotti')productsPage(params);else if(pathname.startsWith('/prodotto/'))productPage(pathname.split('/').pop());else if(pathname==='/realizzazioni')projects();else if(pathname==='/dicono-di-noi')testimonials();else if(pathname==='/contatti')contact();else if(pathname==='/lavora-con-noi')careers();else notFound();baseFooter();window.scrollTo({top:0,behavior:'instant'});setupReveals();document.title='Grimaldelli | '+(pathname==='/'?'Soluzioni che prendono forma':pathname.split('/').pop().replaceAll('-',' '))+'';}
+function render(){
+ const {path,params}=getPath();let pathname=path==='/'?'/':path.replace(/\/$/,'');
+ $('#mobile-menu').classList.remove('is-open');$('#mobile-menu').setAttribute('aria-hidden','true');$('#menu-toggle').setAttribute('aria-expanded','false');
+ $$('.nav-desktop a').forEach(a=>a.classList.toggle('active',a.dataset.nav===pathname));
+ if(currentLocale!=='it' && window.GrimaldelliI18N){
+   window.GrimaldelliI18N.render(currentLocale,pathname,{app,photo,hero,eyebrow,top,action,sol,products,by,image,heroPhoto,otherPhoto,sedePhoto,solutionsCards,tile,socialLinks,coverage,wireGallery});
+   window.GrimaldelliI18N.footer(currentLocale,{siteFooter,eyebrow,action,photo,socialLinks});
+ }else{
+  if(pathname==='/'){homepage();app.insertAdjacentHTML('beforeend',socialTeaser());}
+  else if(pathname==='/azienda')company();
+  else if(pathname==='/soluzioni')solutions();
+  else if(pathname.startsWith('/soluzione/'))solutionPage(pathname.split('/').pop());
+  else if(pathname==='/prodotti')productsPage(params);
+  else if(pathname.startsWith('/prodotto/'))productPage(pathname.split('/').pop());
+  else if(pathname==='/realizzazioni')projects();
+  else if(pathname==='/dicono-di-noi')testimonials();
+  else if(pathname==='/contatti')contact();
+  else if(pathname==='/lavora-con-noi')careers();
+  else notFound();
+  baseFooter();
+ }
+ window.GrimaldelliI18N?.shell(currentLocale,pathname);
+ window.scrollTo({top:0,behavior:'instant'});
+ setupReveals();
+}
 function onRoute(){let current=getPath().path;if(prevRoute===current){render();return;}prevRoute=current;const mask=$('#route-mask');if(matchMedia('(prefers-reduced-motion: reduce)').matches){render();return;}mask.classList.add('active');setTimeout(()=>{render();mask.classList.remove('active');},175);}
 $('#menu-toggle').addEventListener('click',()=>{const opened=$('#mobile-menu').classList.toggle('is-open');$('#mobile-menu').setAttribute('aria-hidden',String(!opened));$('#menu-toggle').setAttribute('aria-expanded',String(opened));});$('#mobile-menu').addEventListener('click',e=>{if(e.target.closest('a')){$('#mobile-menu').classList.remove('is-open');$('#mobile-menu').setAttribute('aria-hidden','true');}});$('#lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeLightbox();});$('.lightbox-close').addEventListener('click',closeLightbox);$('.lightbox-prev').addEventListener('click',()=>{lightIndex=(lightIndex-1+lightImages.length)%lightImages.length;renderLightbox();});$('.lightbox-next').addEventListener('click',()=>{lightIndex=(lightIndex+1)%lightImages.length;renderLightbox();});document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLightbox();$('#mobile-menu').classList.remove('is-open');}if($('#lightbox').classList.contains('open')){if(e.key==='ArrowRight')$('.lightbox-next').click();if(e.key==='ArrowLeft')$('.lightbox-prev').click();}});
 window.addEventListener('scroll',()=>{let p=document.documentElement;let max=p.scrollHeight-innerHeight;$('#progress').style.width=(max>0?(scrollY/max*100):0)+'%';},{passive:true});window.addEventListener('hashchange',onRoute);render();
