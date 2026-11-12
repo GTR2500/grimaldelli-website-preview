@@ -10,6 +10,21 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
   const card=(name,pic,href,idx)=>`<a class="feature-tile reveal" href="${href}"><div class="feature-image">${photo(pic,name)}</div><div class="feature-title"><h3>${e(name)}</h3><span>&#8599;</span></div></a>`;
   const mail="info@glcgrimaldelli.com";
   const socialBar=`<div class="social-links compact">${socialLinks()}</div>`;
+  const ticker={
+    en:["Steel fabrication","Livestock facilities","Biogas","Photovoltaics","Engineering"],
+    fr:["Construction métallique","Équipements d’élevage","Biogaz","Photovoltaïque","Conception"],
+    de:["Stahlbau","Stalleinrichtungen","Biogas","Photovoltaik","Planung"]
+  }[lang]||[];
+  const band={
+    en:["DESIGNED FOR PEOPLE AND ANIMALS","Build better.","Work better.","Our approach"],
+    fr:["CONCEVOIR POUR LES PERSONNES ET LES ANIMAUX","Mieux construire.","Mieux travailler.","Notre démarche"],
+    de:["FÜR MENSCHEN UND TIERE PLANEN","Besser bauen.","Besser arbeiten.","Unser Ansatz"]
+  }[lang]||[];
+  const galleryLabels={
+    en:["Livestock buildings","Steel fabrication","Livestock equipment","Roofs and structures","Animal comfort","Barn management"],
+    fr:["Bâtiments d'élevage","Construction métallique","Équipements d'élevage","Structures et couvertures","Confort animal","Gestion des étables"],
+    de:["Stallgebäude","Stahlbau","Stalleinrichtungen","Konstruktionen und Dächer","Tierkomfort","Stallmanagement"]
+  }[lang]||[];
   if(path==="/"){
     const featured=["stalle","strutture-industriali","autocatture","battifianco","abbeveratoi","raschiatori-asporta-letame"].map(by).filter(Boolean);
     app.innerHTML=`
@@ -17,21 +32,19 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
       <div class="hero-content"><div class="hero-pre">${eyebrow(L.home.eyebrow,true)}</div><h1>${L.home.hero.map((x,i)=>`<span class="mask-text"><span class="${i===2?"serif":""}">${e(x)}</span></span>`).join("")}</h1>
       <div class="hero-bottom"><p>${e(L.home.lead)}</p>${action(L.common.explore,"#/soluzioni")}${action(L.common.projects,"#/realizzazioni","button-ghost")}</div></div>
       <div class="hero-counter">SALVIROLA / CREMONA <span>${e(L.common.more)}</span></div><div class="hero-side">GRIMALDELLI / SALVIROLA (CR) / ITALIA</div></section>
+    <div class="marquee-strap"><div class="marquee-track">${Array(2).fill(ticker.map(x=>'<span>'+e(x)+'</span><b>+</b>').join('')).join('')}</div></div>
     <section class="section intro-section"><div class="section-container intro-layout"><div class="intro-copy reveal">${eyebrow(L.home.identity)}<h2>${e(L.home.introTitle)}</h2><p>${e(L.home.introText)}</p><a href="#/azienda" class="text-link">${e(L.common.history)} <span aria-hidden="true">&#8599;</span></a></div><div class="intro-image reveal delay-1">${photo(otherPhoto,"Grimaldelli steelwork")}<div class="intro-index"><b>1921</b><small>${e(L.since)}</small></div></div></div></section>
     <section class="section sede-section"><div class="section-container sede-layout"><div class="sede-copy reveal">${eyebrow("SALVIROLA / CREMONA")}<h2>${e(L.home.headquarters)}</h2><p>${e(L.home.headquartersText)}</p><div class="sede-meta"><div><small>${e(L.common.address)}</small><strong>Strada Provinciale 20<br>26010 Salvirola (CR)</strong></div><div><small>${e(L.common.contact)}</small><strong><a href="tel:+39037372435">+39 0373 72435</a><br><a href="mailto:${mail}">${mail}</a></strong></div></div>${action(L.nav[6],"#/contatti","button-outline")}</div><div class="sede-visual reveal delay-1"><div class="sede-photo-frame">${photo(sedePhoto,"Grimaldelli Salvirola")}<span>SALVIROLA / CREMONA</span></div></div></div></section>
     <section class="section solutions-section"><div class="section-container">${head(L.home.areasTitle,L.solutions.title,L.home.areasText,true)}${solutionsCards()}</div></section>
     <section class="section feature-section"><div class="section-container">${head(L.nav[3],L.products.title,L.products.lead)}<div class="feature-grid">${featured.map((p,i)=>card(p.title,p.images?.[0]?.src||heroPhoto,"#/prodotto/"+p.slug,i)).join("")}</div><div class="more-row reveal">${action(L.common.catalog,"#/prodotti","button-outline")}</div></div></section>
+    <section class="editorial-band">${photo(image("stalle",11),e(L.projects.items[0]))}<div class="section-container reveal">
+    ${eyebrow(band[0],true)}<h2>${e(band[1])}<br><span class="serif">${e(band[2])}</span></h2>${action(band[3],"#/azienda","button-ghost")}</div></section>
     <section class="section projects-section"><div class="section-container">${head(L.nav[4],L.projects.title,L.projects.galleryText)}<div class="projects-grid">${[["stalle",0,L.projects.items[0]],["strutture-industriali",0,L.projects.items[1]]].map((x,i)=>`<a class="project-item reveal" href="#/realizzazioni"><div class="photo">${media(x[0],x[1],x[2])}</div><div class="project-title"><div><small>0${i+1}</small><h3>${e(x[2])}</h3></div><span class="project-icon">&#8599;</span></div></a>`).join("")}</div><div class="more-row reveal">${action(L.common.projects,"#/realizzazioni","button-outline")}</div></div></section>
     <section class="career-teaser"><div class="section-container career-teaser-inner"><div class="reveal">${eyebrow(L.nav[7],true)}<h2>${e(L.careers.headline)}</h2></div><div class="reveal delay-1"><p>${e(L.careers.text)}</p>${action(L.nav[7],"#/lavora-con-noi","button-ghost")}</div></div></section>
     <section class="section social-teaser-section"><div class="section-container">${head(L.common.follow,L.home.socialTitle,L.home.socialText)}<div class="social-teaser-layout"><div class="social-teaser-image reveal">${media("stalle",2,L.projects.items[0])}</div><div class="social-teaser-copy reveal delay-1"><h3>${e(L.home.socialTitle)}</h3><p>${e(L.home.socialText)}</p>${socialBar}</div></div></div></section>`;
   } else if(path==="/azienda"){
-    app.innerHTML=`${header(L.company.eyebrow,L.company.title,L.company.lead,otherPhoto,"02")}
-    <section class="company-longread"><div class="section-container">
-      <header class="company-story-header"><div class="company-story-brow"><span>GRIMALDELLI / 1921</span><span>${e(L.company.story)}</span></div><h2>${e(L.company.timeline)}</h2><p class="company-story-deck">${e(L.company.storyLead)}</p></header>
-      <aside class="company-interview-spotlight"><div class="company-interview-number">03<span>PDF</span></div><div class="company-interview-copy"><span class="company-interview-overline">CLAUDIO GRIMALDELLI / 2025</span><h3>${e(L.company.story)}</h3><p>${e(L.company.lead)}</p><a class="company-read-link" href="https://www.assind.cr.it/allegati/MAG-INDUSTRIALI-_-GRIMALDELLI-1.pdf" target="_blank" rel="noopener noreferrer">${e(L.company.source)} <span aria-hidden="true">&#8599;</span></a></div></aside>
-    </div></section>
-    <section class="company-history"><div class="section-container"><div class="company-history-heading"><span class="company-history-eyebrow">${e(L.company.story)}</span><h2>${e(L.company.timeline)}</h2><p>${e(L.company.storyLead)}</p></div><div class="company-history-list">${L.company.history.map((m,i)=>`<article class="company-history-event"><div class="company-history-year">${e(m[0])}</div><div class="company-history-copy"><h3>${e(m[1])}</h3><p>${e(m[2])}</p></div><span class="company-history-number">${String(i+1).padStart(2,"0")}</span></article>`).join("")}</div></div></section>
-    <section class="section solutions-section"><div class="section-container">${head(L.solutions.eyebrow,L.solutions.title,L.solutions.lead,true)}${solutionsCards()}</div></section>`;
+    C.company();
+    window.GrimaldelliCompany?.translate(lang,app);
   } else if(path==="/soluzioni"){
     app.innerHTML=`${header(L.solutions.eyebrow,L.solutions.title,L.solutions.lead,heroPhoto,"03")}
     <section class="section solutions-section"><div class="section-container">${head(L.solutions.heading,L.solutions.title,L.solutions.lead,true)}${solutionsCards()}<p class="footnote">${e(L.solutions.illustration)}</p></div></section>`;
@@ -81,7 +94,18 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     app.innerHTML=`${header(L.press.eyebrow,L.press.title,L.press.lead,image("strutture-industriali",2),"08")}
     <section class="news-editorial-section"><div class="section-container"><div class="news-editorial-heading"><div><span class="news-edition">GRIMALDELLI / ${e(L.press.news)}</span><h2>${e(L.press.title)}</h2></div><div class="news-editorial-intro"><p>${e(L.press.lead)}</p><span>11 ${e(L.common.archive)}</span></div></div>
     <div class="news-story-grid">${coverage.filter(x=>x.tier!=="archive").map(story).join("")}</div><div class="news-section-heading"><div><h2>${e(L.press.archive)}</h2></div></div><div class="news-story-grid">${coverage.filter(x=>x.tier==="archive").map(story).join("")}</div></div></section>
-    <section class="section social-gallery-section"><div class="section-container">${head(L.common.photos,L.press.social,L.press.socialText)}${socialBar}</div></section>`;
+    <section class="section social-gallery-section"><div class="section-container">
+    ${head(L.common.photos,L.press.social,L.press.socialText)}
+    <div class="social-photo-wall">
+      ${[["stalle",2],["strutture-industriali",2],["autocatture",4],["pensiline",1],["battifianco",5],["raschiatori-asporta-letame",4]].map((x,i)=>
+       '<a class="social-photo-tile" href="#/prodotto/'+x[0]+'" aria-label="'+e(galleryLabels[i])+'">'+
+       '<img loading="lazy" src="'+image(x[0],x[1])+'" alt="'+e(galleryLabels[i])+'">'+
+       '<span>0'+(i+1)+' <small>'+e(galleryLabels[i])+'</small><b>&#8599;</b></span></a>').join('')}
+    </div><div class="social-gallery-bottom"><div><strong>${e(L.press.social)}</strong><p>${e(L.press.socialText)}</p></div>${socialBar}</div>
+    </div></section>
+    <section class="section social-reviews-section"><div class="section-container"><div class="social-review-panel reveal">
+    ${eyebrow(L.common.follow)}<div><h2>${e(L.press.title)}</h2><p>${e(L.press.lead)}</p>
+    <a href="https://www.facebook.com/grimaldelli" target="_blank" rel="noopener noreferrer" class="text-link">Facebook &#8599;</a></div></div></div></section>`;
   } else if(path==="/contatti"){
     app.innerHTML=`${header(L.contact.eyebrow,L.contact.title,L.contact.lead,"","06")}
     <section class="section"><div class="section-container contact-grid"><div class="contact-copy reveal">${eyebrow(L.contact.visit)}<h2>${e(L.contact.visit)}</h2>

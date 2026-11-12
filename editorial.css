@@ -185,3 +185,45 @@
 @media(max-width:380px){
  .footer-top h2{font-size:clamp(39px,12vw,51px)}
 }
+
+/* P10: multilingual typography - preserve accented ascenders/descenders and long headings */
+.hero h1 .mask-text{overflow:visible;padding:.04em .1em .12em;margin:-.04em -.1em -.12em}
+html[lang="en"] .hero h1,
+html[lang="fr"] .hero h1,
+html[lang="de"] .hero h1{font-size:clamp(54px,7.4vw,126px);line-height:1.09;letter-spacing:-.07em;max-width:min(100%,1050px)}
+html[lang="fr"] .hero h1{font-size:clamp(52px,7vw,120px)}
+html[lang="de"] .hero h1{font-size:clamp(52px,7vw,120px)}
+.company-story-header h2,.company-story-body h3,.company-history-heading h2,
+.career-form-intro h2,.contact-copy h2{overflow-wrap:break-word;hyphens:auto;line-height:1.14}
+.company-story-header h2 em,.company-history-heading h2 em{display:inline-block;padding-bottom:.075em}
+.company-story-header,.company-story-body,.company-interview-spotlight{min-width:0}
+.company-story-deck,.company-story-chapter p{overflow-wrap:break-word}
+
+/* P10: forms within the static site; POST handled exclusively by Aruba PHP when configured */
+.grimaldelli-form{width:100%;position:relative}
+.grimaldelli-form .field{min-width:0}
+.grimaldelli-form .field input,.grimaldelli-form .field select,.grimaldelli-form .field textarea{font-family:inherit}
+.grimaldelli-form .form-grid{margin-top:23px}
+.grimaldelli-form .privacy-ack{margin:26px 0 20px;font-size:13px;color:#223129}
+.grimaldelli-form .privacy-ack label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;line-height:1.6;font-weight:500}
+.grimaldelli-form .privacy-ack input{accent-color:#ea7228;min-width:18px;height:18px;margin-top:2px}
+.grimaldelli-form .privacy-ack a{color:#1b5337;text-decoration:underline;text-underline-offset:3px}
+.grimaldelli-form .form-message{display:none;padding:15px 17px;border-left:3px solid #b94a30;background:#fff1ed;color:#633223;margin:16px 0;line-height:1.5}
+.grimaldelli-form .form-message.show{display:block}
+.grimaldelli-form .form-message.success{background:#f0f7ec;border-color:#366d40;color:#274a30}
+.grimaldelli-form .form-submit:disabled{opacity:.6;cursor:progress}
+.grimaldelli-form .form-honeypot{position:absolute!important;top:-9999px!important;left:-9999px!important;opacity:0!important;height:1px;width:1px;overflow:hidden}
+.grimaldelli-form .form-note{margin-top:14px}
+.grimaldelli-form .upload-zone input{cursor:pointer}
+.grimaldelli-form .field input:focus-visible,.grimaldelli-form .field select:focus-visible,
+.grimaldelli-form .field textarea:focus-visible,.grimaldelli-form button:focus-visible{
+outline:2px solid #ea7228;outline-offset:2px}
+.contact-form,.contact-grid>* ,.career-form-grid>*{min-width:0}
+.contact-record span{font-size:16px;font-weight:500;overflow-wrap:anywhere}
+@media(max-width:750px){
+ html[lang="en"] .hero h1,html[lang="fr"] .hero h1,html[lang="de"] .hero h1{
+ font-size:clamp(42px,9.3vw,72px);line-height:1.12}
+ .contact-form{padding:clamp(20px,5vw,42px)}
+ .grimaldelli-form .form-grid{grid-template-columns:1fr}
+ .company-story-header h2,.company-history-heading h2{font-size:clamp(38px,9vw,65px);letter-spacing:-.052em}
+}
