@@ -1,6 +1,11 @@
-# Documentazione legale pubblica Grimaldelli
+# Documentazione Area legale Grimaldelli
 
-Gli 11 PDF sono copie byte-identiche, raccolte dalla pagina pubblica https://www.glcgrimaldelli.com/area_legale/ nella data registrata nel manifest.
-Ogni hash SHA-256 e l'URL di origine sono in manifest.json.
-Cookie-policy.pdf descrive il sito precedente e resta esclusivamente come archivio: non sostituisce la Cookie Policy del nuovo sito. Privacy e cookie del nuovo sito sono pubblicati in privacy-sito.html e privacy-cookie.html (da approvare prima del rilascio).
-La validita dei certificati deve essere confermata prima della produzione.
+I 10 PDF contenuti in questa cartella sono stati copiati dall'area legale del sito aziendale. URL di origine, dimensioni e hash SHA-256 sono conservati in manifest.json. I file PDF non sono stati modificati.
+
+Le precedenti Privacy Policy e Cookie Policy generali del sito WordPress sono state sostituite dalle informative relative al nuovo sito:
+- privacy-sito.html, privacy-cookie.html (italiano)
+- privacy-sito-en.html, privacy-cookie-en.html
+- privacy-sito-fr.html, privacy-cookie-fr.html
+- privacy-sito-de.html, privacy-cookie-de.html
+
+Le certificazioni firmate restano in lingua originale e richiedono verifica di validita prima dell'uso ufficiale.

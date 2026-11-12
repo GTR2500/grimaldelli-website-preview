@@ -1,8 +1,8 @@
 {
   "source": "https://www.glcgrimaldelli.com/area_legale/",
   "date_utc": "2026-11-12T16:33:41.885763+00:00",
-  "purpose": "snapshot dei documenti PDF ancora presenti nell'Area legale del nuovo sito; gli originali non sono stati modificati",
-  "release_note": "La vecchia cookie policy descrive anche Google Analytics del sito WordPress e resta soltanto un documento di archivio; le nuove policy sono in privacy-sito.html e privacy-cookie.html. Certificazioni e testi richiedono approvazione prima del rilascio.",
+  "purpose": "Copie dei 10 PDF aziendali pubblicati nell Area legale, inclusi documenti privacy per clienti, fornitori e videosorveglianza, qualita e certificazioni.",
+  "release_note": "Le informative Privacy Policy e Cookie Policy della nuova piattaforma sono nelle pagine HTML per IT, EN, FR e DE. Le due vecchie policy generali del sito WordPress non sono presenti nell albero corrente.",
   "documents": [
     {
       "file": "legal-docs/Informativa-privacy-Clienti.pdf",
@@ -21,12 +21,6 @@
       "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Informativa-privacy-Videosorveglianza.pdf",
       "sha256": "f0fcb2bba08b88c766c57322a19fa309d132226403e432e8c79b3f0cb9d52f8e",
       "bytes": 81267
-    },
-    {
-      "file": "legal-docs/Cookie-policy.pdf",
-      "source_url": "https://www.glcgrimaldelli.com/wp-content/uploads/2025/12/Cookie-policy.pdf",
-      "sha256": "5006a191ca660fead258e14ad12d02193c9d928b06f15544876811c1155ada3a",
-      "bytes": 134213
     },
     {
       "file": "legal-docs/Politica-della-Qualita-3.pdf",
