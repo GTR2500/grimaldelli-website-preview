@@ -104,21 +104,57 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
   }
   return true;
 },footer:function footerLocalized(lang,C){
-  const L=window.GRIMALDELLI_LOCALES?.[lang];if(!L)return;
+  const L=window.GRIMALDELLI_LOCALES?.[lang];
+  if(lang!=="it"&&!L)return;
   const {siteFooter,eyebrow,action,photo,socialLinks}=C;
   const e=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const prefix=lang==="it"?"":"-"+lang;
+  const locales={
+    it:{cta:"REALIZZIAMO INSIEME",headline:'Un progetto<br><span class="serif accent">da immaginare?</span>',contact:"Contattaci",brand:"Carpenteria metallica, attrezzature zootecniche e lavorazioni per il settore energetico.",explore:"Esplora",nav:["Azienda","Soluzioni","Prodotti","Realizzazioni","Dicono di noi","Lavora con noi"],documents:"Documenti e trasparenza",legal:"Area legale e certificazioni",privacy:"Privacy Policy",cookies:"Cookie Policy",rea:"Numero REA",sdi:"Codice SDI",register:"Registro Imprese di Cremona n.",follow:"SEGUICI",rights:"Tutti i diritti riservati"},
+    en:{cta:L?.common.footerTop,headline:L?.common.footerTitle,contact:L?.nav[6],brand:L?.home.lead,explore:L?.common.more,nav:[L?.nav[1],L?.nav[2],L?.nav[3],L?.nav[4],L?.nav[5],L?.nav[7]],documents:"Legal documents",legal:L?.common.cert,privacy:L?.common.privacy,cookies:L?.common.cookies,rea:L?.common.rea,sdi:L?.common.sdi,register:L?.common.register,follow:L?.common.follow,rights:L?.common.rights},
+    fr:{cta:L?.common.footerTop,headline:L?.common.footerTitle,contact:L?.nav[6],brand:L?.home.lead,explore:L?.common.more,nav:[L?.nav[1],L?.nav[2],L?.nav[3],L?.nav[4],L?.nav[5],L?.nav[7]],documents:"Documents et transparence",legal:L?.common.cert,privacy:L?.common.privacy,cookies:L?.common.cookies,rea:L?.common.rea,sdi:L?.common.sdi,register:L?.common.register,follow:L?.common.follow,rights:L?.common.rights},
+    de:{cta:L?.common.footerTop,headline:L?.common.footerTitle,contact:L?.nav[6],brand:L?.home.lead,explore:L?.common.more,nav:[L?.nav[1],L?.nav[2],L?.nav[3],L?.nav[4],L?.nav[5],L?.nav[7]],documents:"Dokumente und Transparenz",legal:L?.common.cert,privacy:L?.common.privacy,cookies:L?.common.cookies,rea:L?.common.rea,sdi:L?.common.sdi,register:L?.common.register,follow:L?.common.follow,rights:L?.common.rights}
+  };
+  const t=locales[lang]||locales.it;
+  const navPaths=["azienda","soluzioni","prodotti","realizzazioni","dicono-di-noi","lavora-con-noi"];
   siteFooter.className="footer";
-  siteFooter.innerHTML=`<div class="section-container"><div class="footer-top"><div>${eyebrow(L.common.footerTop,true)}<h2>${e(L.common.footerTitle)}</h2></div>${action(L.nav[6],"#/contatti","button-ghost")}</div>
-  <div class="footer-bottom-grid">
-    <div><a href="#/" class="footer-logo-panel">${photo("assets/grimaldelli-logo-originale.png","Grimaldelli")}</a><p style="font-size:12px;color:#b5c0ba;line-height:1.8;margin-top:25px">${e(L.home.lead)}</p></div>
-    <div class="footer-col"><label>${e(L.common.more)}</label>${L.nav.slice(0,6).map((x,i)=>`<a href="#/${["","azienda","soluzioni","prodotti","realizzazioni","dicono-di-noi"][i]}">${e(x)}</a>`).join("")}</div>
-    <div class="footer-col"><label>${e(L.nav[6])}</label><a href="tel:+39037372435">+39 0373 72435</a><a href="mailto:info@glcgrimaldelli.com">info@glcgrimaldelli.com</a><p>Strada Provinciale 20<br>26010 Salvirola (CR)</p></div>
-    <div class="footer-col"><label>${e(L.common.business)}</label><a href="#/lavora-con-noi">${e(L.nav[7])}</a><a href="area-legale-${lang}.html">${e(L.common.cert)}</a><a href="privacy-sito-${lang}.html">${e(L.common.privacy)}</a><a href="privacy-cookie-${lang}.html">${e(L.common.cookies)}</a></div>
-  </div>
-  <div class="footer-legal-grid"><div class="footer-legal-item"><strong>Grimaldelli S.r.l.</strong><span>P. IVA: 01190000198</span><span>${e(L.common.rea)}: 0149980</span><span>${e(L.common.sdi)}: W7YVJK9</span><span>${e(L.common.register)} 01190000198</span></div>
-  <div class="footer-legal-item"><strong>${e(L.nav[6])}</strong><a href="tel:+39037372435">+39 0373 72435</a><span>Strada Provinciale 20, 26010 Salvirola (CR), Italia</span><a href="mailto:info@glcgrimaldelli.com">info@glcgrimaldelli.com</a><a href="mailto:grimaldelli@posta.insiemebusiness.it">grimaldelli@posta.insiemebusiness.it (PEC)</a></div></div>
-  <div class="footer-social-row"><div><span class="social-caption">${e(L.common.follow)}</span><p>${e(L.home.socialText)}</p></div><div class="social-links">${socialLinks()}</div></div>
-  <div class="footer-line"><span>&copy; 2026 Grimaldelli S.r.l. · ${e(L.common.rights)}</span><span>Salvirola (CR) · Italia</span></div></div>`;
+  siteFooter.innerHTML=`<div class="section-container">
+    <div class="footer-top"><div>${eyebrow(t.cta,true)}<h2>${t.headline}</h2></div>${action(t.contact,"#/contatti","button-ghost")}</div>
+    <div class="footer-main-grid">
+      <div class="footer-brand">
+        <a href="#/" class="footer-logo-panel">${photo("assets/grimaldelli-logo-originale.png","Grimaldelli")}</a>
+        <p>${e(t.brand)}</p>
+      </div>
+      <nav class="footer-navigation" aria-label="${e(t.explore)}">
+        <h3>${e(t.explore)}</h3>
+        ${t.nav.map((label,n)=>`<a href="#/${navPaths[n]}">${e(label)}</a>`).join("")}
+      </nav>
+      <div class="footer-contact">
+        <h3>${e(t.contact)}</h3>
+        <a href="tel:+39037372435">+39 0373 72435</a>
+        <a href="mailto:info@glcgrimaldelli.com">info@glcgrimaldelli.com</a>
+        <a href="mailto:grimaldelli@posta.insiemebusiness.it">grimaldelli@posta.insiemebusiness.it (PEC)</a>
+        <address>Strada Provinciale 20<br>26010 Salvirola (CR), Italia</address>
+      </div>
+    </div>
+    <nav class="footer-documents" aria-label="${e(t.documents)}">
+      <h3>${e(t.documents)}</h3>
+      <div class="footer-document-links">
+        <a href="area-legale${prefix}.html"><span>${e(t.legal)}</span><span class="footer-doc-arrow" aria-hidden="true">&#8599;</span></a>
+        <a href="privacy-sito${prefix}.html"><span>${e(t.privacy)}</span><span class="footer-doc-arrow" aria-hidden="true">&#8599;</span></a>
+        <a href="privacy-cookie${prefix}.html"><span>${e(t.cookies)}</span><span class="footer-doc-arrow" aria-hidden="true">&#8599;</span></a>
+      </div>
+    </nav>
+    <div class="footer-corporate">
+      <strong>Grimaldelli S.r.l.</strong>
+      <span><b>P. IVA</b> 01190000198</span>
+      <span><b>${e(t.rea)}</b> 0149980</span>
+      <span><b>${e(t.sdi)}</b> W7YVJK9</span>
+      <span><b>${e(t.register)}</b> 01190000198</span>
+    </div>
+    <div class="footer-social-row"><span class="social-caption">${e(t.follow)}</span><div class="social-links">${socialLinks()}</div></div>
+    <div class="footer-line"><span>&copy; 2026 Grimaldelli S.r.l. · ${e(t.rights)}</span><span>Salvirola (CR) · Italia</span></div>
+  </div>`;
 },shell:function shellLocalized(lang,path){
   const langs=["it","en","fr","de"],nav=document.querySelector(".nav-desktop"),mobile=document.querySelector(".mobile-menu-inner"),selector=document.querySelector(".language-switcher");
   if(selector){selector.querySelectorAll("a[data-lang]").forEach(a=>{const code=a.getAttribute("data-lang");a.setAttribute("href",location.pathname+"?lang="+code+"#"+(path||"/"));if(code===lang){a.setAttribute("aria-current","true");a.setAttribute("title",code.toUpperCase());}else a.removeAttribute("aria-current");});}
