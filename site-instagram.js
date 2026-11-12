@@ -1,13 +1,10 @@
-/* P10 - Instagram gallery, first-party UI with user-initiated external media.
-   No third-party requests, cookies, scripts or iframes until a visitor clicks Load. */
+/* P10: media originali Grimaldelli ospitati sul sito. Nessun embed, cookie o link social. */
 (function(){
   "use strict";
   const posts=[
     {
       id:"biloni",
       type:"photos",
-      instagram:"https://www.instagram.com/p/DfnCdbEIRz8/",
-      embed:"https://www.instagram.com/p/DfnCdbEIRz8/embed/captioned/",
       date:"2026-11-11",
       where:"Trigolo (CR)",
       it:{label:"Carosello fotografico",title:"Azienda Agricola Biloni",desc:"Ristrutturazione della prima stalla completata. Una realizzazione raccontata con le fotografie pubblicate dal profilo aziendale."},
@@ -18,8 +15,6 @@
     {
       id:"cadilana",
       type:"video",
-      instagram:"https://www.instagram.com/grimaldellisrl/reel/DfiO5WDOkg9/",
-      embed:"https://www.instagram.com/reel/DfiO5WDOkg9/embed/captioned/",
       date:"2026-11-09",
       where:"Cadilana",
       it:{label:"Video / Reel",title:"Dal campo: stalla e benessere animale",desc:"Un video pubblicato dal profilo Grimaldelli su stalle, benessere animale e mungitura robotizzata."},
@@ -35,8 +30,6 @@
     "id": "bosetti",
     "type": "video",
     "category": "livestock",
-    "instagram": "https://www.instagram.com/grimaldellisrl/reel/Cs5KMF3Ivcp/",
-    "embed": "https://www.instagram.com/reel/Cs5KMF3Ivcp/embed/captioned/",
     "date": "",
     "where": "Bosetti Farm",
     "it": {
@@ -64,8 +57,6 @@
     "id": "franciosi",
     "type": "photos",
     "category": "livestock",
-    "instagram": "https://www.instagram.com/grimaldellisrl/p/CddN6WFKW2H/",
-    "embed": "https://www.instagram.com/p/CddN6WFKW2H/embed/captioned/",
     "date": "",
     "where": "Azienda Agricola Franciosi",
     "it": {
@@ -93,8 +84,6 @@
     "id": "risaia",
     "type": "photos",
     "category": "livestock",
-    "instagram": "https://www.instagram.com/grimaldellisrl/p/CcXNY82K4dd/",
-    "embed": "https://www.instagram.com/p/CcXNY82K4dd/embed/captioned/",
     "date": "",
     "where": "Risaia del Duca",
     "it": {
@@ -122,8 +111,6 @@
     "id": "nisoli",
     "type": "photos",
     "category": "energy",
-    "instagram": "https://www.instagram.com/grimaldellisrl/p/CvrdB_ionuY/",
-    "embed": "https://www.instagram.com/p/CvrdB_ionuY/embed/captioned/",
     "date": "",
     "where": "Brignano Gera d'Adda (BG)",
     "it": {
@@ -151,8 +138,6 @@
     "id": "ginelli",
     "type": "photos",
     "category": "energy",
-    "instagram": "https://www.instagram.com/grimaldellisrl/p/CvrJrWbItUF/",
-    "embed": "https://www.instagram.com/p/CvrJrWbItUF/embed/captioned/",
     "date": "",
     "where": "Bagnolo Cremasco (CR)",
     "it": {
@@ -178,73 +163,231 @@
   }
 ]);
   const ui={
-    it:{archive:"Archivio",energyTitle:"Dai tetti.<br><em>All\u2019energia.</em>",kicker:"DAL CANTIERE / PROGETTI REALI",homeTitle:"Il lavoro sul campo.<br><em>Raccontato per immagini.</em>",projectsTitle:"Interventi recenti.<br><em>Foto e video dal campo.</em>",sectorTitle:"Dalle stalle.<br><em>Ai progetti reali.</em>",intro:"Una selezione di contenuti pubblicati dal profilo Instagram ufficiale Grimaldelli. Immagini e video si caricano soltanto su tua richiesta.",load:"Visualizza il contenuto",external:"Apri su Instagram",privacy:"Se scegli di visualizzare il contenuto, Instagram riceverà una richiesta dal tuo browser e potrà utilizzare cookie secondo le proprie regole.",photos:"Fotografie del lavoro",video:"Riprese dal campo",close:"Chiudi il contenuto",source:"Fonte: profilo ufficiale Instagram Grimaldelli",cta:"Vedi tutte le realizzazioni"},
-    en:{archive:"Archive",energyTitle:"From rooftops.<br><em>To clean energy.</em>",kicker:"ON SITE / REAL PROJECTS",homeTitle:"Work in progress.<br><em>Stories in pictures.</em>",projectsTitle:"Recent projects.<br><em>Photos and videos from site.</em>",sectorTitle:"From barns.<br><em>To completed projects.</em>",intro:"Selected posts from Grimaldelli's official Instagram profile. Photos and videos load only when you choose to view them.",load:"View the content",external:"Open on Instagram",privacy:"If you choose to view it, Instagram will receive a request from your browser and may use cookies under its own terms.",photos:"Project photography",video:"On-site video",close:"Close content",source:"Source: official Grimaldelli Instagram profile",cta:"View all projects"},
-    fr:{archive:"Archives",energyTitle:"Des toitures.<br><em>À l\u2019énergie.</em>",kicker:"SUR LE TERRAIN / PROJETS RÉELS",homeTitle:"Le travail sur site.<br><em>Raconté en images.</em>",projectsTitle:"Projets récents.<br><em>Photos et vidéos du terrain.</em>",sectorTitle:"Des étables.<br><em>Aux réalisations.</em>",intro:"Une sélection de publications du compte Instagram officiel de Grimaldelli. Les médias ne se chargent qu'à votre demande.",load:"Voir le contenu",external:"Ouvrir sur Instagram",privacy:"Si vous choisissez de voir ce contenu, Instagram recevra une requête de votre navigateur et pourra utiliser des cookies selon ses conditions.",photos:"Photos des chantiers",video:"Vidéo du terrain",close:"Fermer le contenu",source:"Source : profil Instagram officiel de Grimaldelli",cta:"Voir les réalisations"},
-    de:{archive:"Archiv",energyTitle:"Vom Dach.<br><em>Zur Energie.</em>",kicker:"VOR ORT / REALE PROJEKTE",homeTitle:"Arbeit vor Ort.<br><em>In Bildern erzählt.</em>",projectsTitle:"Aktuelle Projekte.<br><em>Fotos und Videos von der Baustelle.</em>",sectorTitle:"Vom Stall.<br><em>Zum realen Projekt.</em>",intro:"Ausgewählte Beiträge vom offiziellen Instagram-Profil von Grimaldelli. Fotos und Videos werden erst auf Ihren Wunsch geladen.",load:"Inhalt anzeigen",external:"Auf Instagram öffnen",privacy:"Wenn Sie den Inhalt anzeigen, erhält Instagram eine Anfrage von Ihrem Browser und kann gemäß seinen Regeln Cookies verwenden.",photos:"Fotos von Projekten",video:"Video vor Ort",close:"Inhalt schließen",source:"Quelle: offizielles Instagram-Profil von Grimaldelli",cta:"Alle Referenzen ansehen"}
+  "it": {
+    "archive": "Archivio",
+    "energyTitle": "Dai tetti.<br><em>All’energia.</em>",
+    "kicker": "REALIZZAZIONI / DAL CANTIERE",
+    "homeTitle": "Il lavoro sul campo.<br><em>Raccontato per immagini.</em>",
+    "projectsTitle": "Interventi reali.<br><em>Foto e video dal campo.</em>",
+    "sectorTitle": "Dalle stalle.<br><em>Ai progetti reali.</em>",
+    "intro": "Strutture, lavorazioni e impianti nelle immagini dei nostri cantieri. Esplora le fotografie e guarda i video direttamente qui.",
+    "photos": "Galleria fotografica",
+    "video": "Video del cantiere",
+    "source": "Immagini e riprese delle realizzazioni Grimaldelli.",
+    "cta": "Vedi tutte le realizzazioni",
+    "previous": "Fotografia precedente",
+    "next": "Fotografia successiva",
+    "expand": "Ingrandisci la fotografia",
+    "close": "Chiudi la fotografia",
+    "photo": "Fotografia",
+    "of": "di",
+    "watch": "Guarda il video"
+  },
+  "en": {
+    "archive": "Archive",
+    "energyTitle": "From rooftops.<br><em>To energy.</em>",
+    "kicker": "PROJECTS / ON SITE",
+    "homeTitle": "Work on site.<br><em>Captured in images.</em>",
+    "projectsTitle": "Real projects.<br><em>Photos and videos on site.</em>",
+    "sectorTitle": "From barns.<br><em>To real projects.</em>",
+    "intro": "Structures, fabrication and installations shown in photographs from our projects. Browse the galleries and watch videos directly here.",
+    "photos": "Photo gallery",
+    "video": "Project video",
+    "source": "Images and footage of Grimaldelli projects.",
+    "cta": "View all projects",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "expand": "Enlarge photo",
+    "close": "Close photo",
+    "photo": "Photo",
+    "of": "of",
+    "watch": "Watch the video"
+  },
+  "fr": {
+    "archive": "Archives",
+    "energyTitle": "Des toitures.<br><em>À l’énergie.</em>",
+    "kicker": "RÉALISATIONS / SUR LE TERRAIN",
+    "homeTitle": "Le travail sur site.<br><em>Raconté en images.</em>",
+    "projectsTitle": "Des projets concrets.<br><em>Photos et vidéos.</em>",
+    "sectorTitle": "Des étables.<br><em>Aux réalisations.</em>",
+    "intro": "Structures, fabrication et installations illustrées par les images de nos chantiers. Explorez les galeries et regardez les vidéos directement ici.",
+    "photos": "Galerie photos",
+    "video": "Vidéo du chantier",
+    "source": "Photos et vidéos des réalisations Grimaldelli.",
+    "cta": "Voir les réalisations",
+    "previous": "Photo précédente",
+    "next": "Photo suivante",
+    "expand": "Agrandir la photo",
+    "close": "Fermer la photo",
+    "photo": "Photo",
+    "of": "sur",
+    "watch": "Regarder la vidéo"
+  },
+  "de": {
+    "archive": "Archiv",
+    "energyTitle": "Vom Dach.<br><em>Zur Energie.</em>",
+    "kicker": "REFERENZEN / VOR ORT",
+    "homeTitle": "Arbeit vor Ort.<br><em>In Bildern erzählt.</em>",
+    "projectsTitle": "Reale Projekte.<br><em>Fotos und Videos vor Ort.</em>",
+    "sectorTitle": "Vom Stall.<br><em>Zum realen Projekt.</em>",
+    "intro": "Konstruktionen, Fertigung und Anlagen in Bildern unserer Projekte. Sehen Sie sich die Galerien und Videos direkt hier an.",
+    "photos": "Fotogalerie",
+    "video": "Projektvideo",
+    "source": "Bilder und Videos von Grimaldelli-Projekten.",
+    "cta": "Alle Referenzen ansehen",
+    "previous": "Vorheriges Foto",
+    "next": "Nächstes Foto",
+    "expand": "Foto vergrößern",
+    "close": "Foto schließen",
+    "photo": "Foto",
+    "of": "von",
+    "watch": "Video ansehen"
+  }
+};
+
+  const descriptions={
+    biloni:{
+      it:"Ristrutturazione della prima stalla completata presso l'Azienda Agricola Biloni a Trigolo (CR).",
+      en:"The first barn refurbishment completed at Biloni Farm in Trigolo, Cremona.",
+      fr:"Rénovation de la première étable achevée à l'exploitation agricole Biloni, à Trigolo.",
+      de:"Die Renovierung des ersten Stalls auf dem Landwirtschaftsbetrieb Biloni in Trigolo ist abgeschlossen."
+    },
+    cadilana:{
+      it:"Un esempio di struttura zootecnica dedicata al benessere animale e alla gestione della mungitura.",
+      en:"Livestock facilities focused on animal welfare and milking operations.",
+      fr:"Un exemple d'installations d'élevage consacrées au bien-être animal et à la traite.",
+      de:"Ein Beispiel für Tierhaltungsanlagen mit Schwerpunkt Tierwohl und Melkbetrieb."
+    },
+    bosetti:{
+      it:"Immagini e riprese da Bosetti Farm, tra stalle e vita dell'allevamento.",
+      en:"Images and footage from Bosetti Farm, featuring livestock facilities and farm life.",
+      fr:"Images et vidéos de Bosetti Farm : installations et vie de l'élevage.",
+      de:"Bilder und Aufnahmen von Bosetti Farm mit Stalleinrichtungen und Einblicken in den Betrieb."
+    },
+    franciosi:{
+      it:"Nuova struttura zootecnica da 8.000 m² in costruzione presso l'Azienda Agricola Franciosi.",
+      en:"An 8,000 m² new livestock building under construction at Franciosi Farm.",
+      fr:"Nouvelle structure d'élevage de 8 000 m² en cours de construction chez Franciosi.",
+      de:"Neues Stallgebäude mit 8.000 m² Fläche im Bau beim Landwirtschaftsbetrieb Franciosi."
+    },
+    risaia:{
+      it:"Soluzioni e ambienti zootecnici presso Risaia del Duca, con attenzione al comfort degli animali.",
+      en:"Livestock facilities at Risaia del Duca, with a focus on animal comfort.",
+      fr:"Installations d'élevage à Risaia del Duca, avec une attention particulière au confort animal.",
+      de:"Stalleinrichtungen bei Risaia del Duca, mit besonderem Augenmerk auf den Tierkomfort."
+    },
+    nisoli:{
+      it:"Immagini dell'intervento a Brignano Gera d'Adda: copertura e progetto fotovoltaico da 122 kW.",
+      en:"Images from the work in Brignano Gera d'Adda: roofing and a 122 kW solar project.",
+      fr:"Images des travaux à Brignano Gera d'Adda : toiture et projet photovoltaïque de 122 kW.",
+      de:"Bilder der Arbeiten in Brignano Gera d'Adda: Dach und Photovoltaikprojekt mit 122 kW."
+    },
+    ginelli:{
+      it:"Intervento presso l'Azienda Agricola Ginelli a Bagnolo Cremasco, con fotovoltaico da 75 kW.",
+      en:"Work at Ginelli Farm in Bagnolo Cremasco, with a 75 kW photovoltaic project.",
+      fr:"Travaux à l'exploitation agricole Ginelli à Bagnolo Cremasco, avec un projet photovoltaïque de 75 kW.",
+      de:"Arbeiten auf dem Landwirtschaftsbetrieb Ginelli in Bagnolo Cremasco mit einem 75-kW-Photovoltaikprojekt."
+    }
   };
-  const escape=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const normalize=link=>{
-    const url=new URL(link);
-    if(url.protocol!=="https:"||url.hostname!=="www.instagram.com")throw Error("External origin not allowed");
-    return url.href;
+  const esc=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const local=(value)=> {
+    const p=String(value||"").replace(/^\/+/,"");
+    if(!/^assets\/instagram\/[a-z0-9-]+\/(?:image|poster|clip)-\d+\.(?:webp|mp4)$/.test(p))return "";
+    return p;
   };
-  const template=(post,lang,t)=>{
-    const copy=post[lang];
-    const img=post.type==="photos";
-    return '<article class="p10-social-work" data-instagram-id="'+post.id+'">'+
-     '<div class="p10-social-work-art '+(img?'p10-social-work-art--photo':'p10-social-work-art--video')+'">'+
-      '<div class="p10-social-work-sign" aria-hidden="true">'+(img?'<span class="p10-photo-icon"></span>':'<span class="p10-play-icon"></span>')+'</div>'+
-      '<span class="p10-work-type">'+escape(copy.label)+'</span>'+
-      '<div class="p10-work-art-title">'+escape(img?t.photos:t.video)+'</div>'+
-     '</div>'+
-     '<div class="p10-social-work-content"><div class="p10-social-work-meta">'+(post.date?'<time datetime="'+post.date+'">'+escape(post.date.replace(/-/g,"."))+'</time>':'<span>'+escape(t.archive)+'</span>')+'<span>'+escape(post.where)+'</span></div>'+
-      '<h3>'+escape(copy.title)+'</h3><p>'+escape(copy.desc)+'</p>'+
-      '<p class="p10-social-disclosure">'+escape(t.privacy)+'</p>'+
-      '<div class="p10-social-actions"><button type="button" class="p10-social-load" data-instagram-load="'+post.id+'" aria-controls="p10-social-frame-'+post.id+'" aria-expanded="false">'+escape(t.load)+' <span aria-hidden="true">↗</span></button>'+
-      '<a href="'+normalize(post.instagram)+'" target="_blank" rel="noopener noreferrer">'+escape(t.external)+' ↗</a></div>'+
-     '</div><div class="p10-social-embed" id="p10-social-frame-'+post.id+'" hidden></div></article>';
+  let manifestPromise=null;
+  const getManifest=()=>{
+    if(!manifestPromise){
+      manifestPromise=fetch("assets/instagram/manifest.json",{credentials:"same-origin"})
+        .then(r=>{if(!r.ok)throw Error("Local media unavailable");return r.json()})
+        .then(j=>j&&Array.isArray(j.media)?j.media:[])
+        .catch(e=>{console.warn("Grimaldelli local media:",e.message);return []});
+    }
+    return manifestPromise;
   };
-  function mount(route,lang,app){
-    const isHome=route==="/";
-    const isPortfolio=route==="/realizzazioni";
+  const card=(post,media,lang,t)=>{
+    const copy=post[lang],images=(media.images||[]).map(local).filter(Boolean);
+    const videos=(media.videos||[]).map(local).filter(Boolean);
+    if(!images.length&&!videos.length)return "";
+    const title=copy.title,desc=descriptions[post.id]?.[lang]||copy.desc;
+    const date=post.date?'<time datetime="'+esc(post.date)+'">'+esc(post.date.split("-").reverse().join("."))+'</time>':'<span>'+esc(t.archive)+'</span>';
+    let visual="";
+    if(videos.length){
+      visual='<video class="p10-work-video" controls playsinline preload="none" aria-label="'+esc(title)+'"'+(images[0]?' poster="'+esc(images[0])+'"':'')+'>'+
+        '<source src="'+esc(videos[0])+'" type="video/mp4">'+esc(t.watch)+'</video>';
+    }else{
+      visual='<button class="p10-work-expand" type="button" data-work-expand="'+esc(post.id)+'" aria-label="'+esc(t.expand)+': '+esc(title)+'">'+
+        '<img class="p10-work-image" loading="lazy" decoding="async" src="'+esc(images[0])+'" alt="'+esc(title)+'">'+
+        '<span class="p10-work-image-corner" aria-hidden="true">&#8599;</span></button>';
+    }
+    const gallery=images.length>1&&!videos.length?
+      '<div class="p10-work-carousel-nav" data-work-gallery="'+esc(post.id)+'">'+
+       '<button type="button" data-work-prev="'+esc(post.id)+'" aria-label="'+esc(t.previous)+'">&#8592;</button>'+
+       '<span class="p10-work-count" aria-live="polite">1 '+esc(t.of)+' '+images.length+'</span>'+
+       '<button type="button" data-work-next="'+esc(post.id)+'" aria-label="'+esc(t.next)+'">&#8594;</button></div>':'';
+    const type=videos.length?t.video:t.photos;
+    return '<article class="p10-social-work p10-work-card" data-work-id="'+esc(post.id)+'" data-work-current="0">'+
+      '<div class="p10-work-visual">'+visual+'<span class="p10-work-media-type">'+esc(type)+'</span></div>'+
+      gallery+
+      '<div class="p10-social-work-content"><div class="p10-social-work-meta">'+date+'<span>'+esc(post.where)+'</span></div>'+
+      '<h3>'+esc(title)+'</h3><p>'+esc(desc)+'</p></div></article>';
+  };
+  async function mount(route,lang,app){
+    const isHome=route==="/",isPortfolio=route==="/realizzazioni";
     const isBarn=route==="/soluzione/zootecnia"||route==="/prodotto/stalle";
     const isEnergy=route==="/soluzione/fotovoltaico";
     if(!isHome&&!isPortfolio&&!isBarn&&!isEnergy)return false;
     const language=ui[lang]?lang:"it",t=ui[language];
-    const selection=isHome?posts.slice(0,2):isBarn?posts.filter(p=>p.category==="livestock").slice(0,3):isEnergy?posts.filter(p=>p.category==="energy"):posts;
+    const firstLocation=window.location.href;
+    const media=await getManifest();
+    if(app.isConnected===false||window.location.href!==firstLocation)return false;
+    const lookup=new Map(media.map(x=>[x.id,x]));
+    const chosen=isHome?posts.slice(0,2):isBarn?posts.filter(p=>p.category==="livestock").slice(0,3):isEnergy?posts.filter(p=>p.category==="energy"):posts;
+    const selection=chosen.filter(x=>{
+       const m=lookup.get(x.id);
+       return m&&((m.images||[]).length||(m.videos||[]).length);
+    });
+    if(!selection.length)return false;
     const title=isPortfolio?t.projectsTitle:isBarn?t.sectorTitle:isEnergy?t.energyTitle:t.homeTitle;
-    const extra=isHome?'<a href="#/realizzazioni" class="p10-social-portfolio-link">'+escape(t.cta)+' <span aria-hidden="true">↗</span></a>':'';
+    const extra=isHome?'<a href="#/realizzazioni" class="p10-social-portfolio-link">'+esc(t.cta)+' <span aria-hidden="true">&#8599;</span></a>':'';
     const html='<section class="p10-social-showcase" id="p10-social-showcase" aria-labelledby="p10-social-showcase-title">'+
-      '<div class="section-container"><div class="p10-social-heading"><div><span class="p10-social-eyebrow">'+escape(t.kicker)+'</span>'+
-      '<h2 id="p10-social-showcase-title">'+title+'</h2></div><div class="p10-social-summary"><p>'+escape(t.intro)+'</p>'+extra+'</div></div>'+
-      '<div class="p10-social-grid '+(selection.length===1?'p10-social-grid--single':'')+'">'+selection.map(x=>template(x,language,t)).join("")+'</div>'+
-      '<p class="p10-social-source">'+escape(t.source)+'</p></div></section>';
+     '<div class="section-container"><div class="p10-social-heading"><div><span class="p10-social-eyebrow">'+esc(t.kicker)+'</span>'+
+     '<h2 id="p10-social-showcase-title">'+title+'</h2></div><div class="p10-social-summary"><p>'+esc(t.intro)+'</p>'+extra+'</div></div>'+
+     '<div class="p10-social-grid">'+selection.map(x=>card(x,lookup.get(x.id),language,t)).join("")+'</div>'+
+     '<p class="p10-social-source">'+esc(t.source)+'</p></div></section>';
     const anchor=isHome?app.querySelector(".social-teaser-section"):null;
     if(anchor)anchor.insertAdjacentHTML("beforebegin",html);
     else app.insertAdjacentHTML("beforeend",html);
     const section=app.querySelector("#p10-social-showcase");
-    section.addEventListener("click",ev=>{
-      const button=ev.target.closest("[data-instagram-load]");if(!button)return;
-      const id=button.getAttribute("data-instagram-load");
-      const item=selection.find(p=>p.id===id);
-      if(!item)return;
-      const area=section.querySelector("#p10-social-frame-"+id);
-      if(!area)return;
-      const active=button.getAttribute("aria-expanded")==="true";
-      if(active){
-        area.replaceChildren();area.hidden=true;
-        button.setAttribute("aria-expanded","false");button.firstChild.textContent=t.load+" ";
-        return;
+    if(!section)return false;
+    const galleryDialog=document.createElement("dialog");
+    galleryDialog.className="p10-work-dialog";
+    galleryDialog.innerHTML='<button type="button" class="p10-work-dialog-close" aria-label="'+esc(t.close)+'">&#10005;</button><img alt="">';
+    section.appendChild(galleryDialog);
+    galleryDialog.addEventListener("click",e=>{if(e.target===galleryDialog||e.target.closest(".p10-work-dialog-close"))galleryDialog.close()});
+    section.addEventListener("click",e=>{
+      const prev=e.target.closest("[data-work-prev]"),next=e.target.closest("[data-work-next]"),expand=e.target.closest("[data-work-expand]");
+      const button=prev||next||expand;
+      if(!button)return;
+      const id=button.getAttribute("data-work-prev")||button.getAttribute("data-work-next")||button.getAttribute("data-work-expand");
+      const item=selection.find(x=>x.id===id),m=lookup.get(id);
+      if(!item||!m)return;
+      const images=(m.images||[]).map(local).filter(Boolean);
+      if(!images.length)return;
+      const article=button.closest(".p10-work-card");
+      if(!article)return;
+      const current=Number(article.dataset.workCurrent)||0;
+      if(expand){
+        const image=galleryDialog.querySelector("img");
+        image.src=images[current];image.alt=item[language].title;
+        galleryDialog.showModal();return;
       }
-      const iframe=document.createElement("iframe");
-      iframe.src=normalize(item.embed);iframe.loading="lazy";iframe.title=item[language].title+" - Instagram";
-      iframe.referrerPolicy="strict-origin-when-cross-origin";
-      iframe.setAttribute("allow","fullscreen; picture-in-picture");
-      iframe.setAttribute("allowfullscreen","");
-      area.hidden=false;area.appendChild(iframe);
-      button.setAttribute("aria-expanded","true");button.firstChild.textContent=t.close+" ";
-      area.scrollIntoView({behavior:"smooth",block:"nearest"});
+      const idx=(current+(next?1:-1)+images.length)%images.length;
+      article.dataset.workCurrent=String(idx);
+      const img=article.querySelector(".p10-work-image");
+      if(img)img.src=images[idx];
+      const count=article.querySelector(".p10-work-count");
+      if(count)count.textContent=(idx+1)+" "+t.of+" "+images.length;
     });
     return true;
   }
