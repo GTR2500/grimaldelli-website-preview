@@ -1,0 +1,19 @@
+name: P10 - Syntax check JavaScript and PHP
+on:
+  push:
+    branches: [dev/p10-parity-forms-20261112]
+  pull_request:
+    branches: [main]
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: |
+          for source in site.js site-i18n.js site-forms.js site-company-parity.js site-locales.js site-news-locales.js product-locales.js; do
+            node --check "$source"
+          done
+      - name: Check PHP syntax
+        run: |
+          find api -type f -name '*.php' -print0 | xargs -0 -n 1 php -l
