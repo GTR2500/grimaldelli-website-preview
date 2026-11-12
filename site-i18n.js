@@ -41,13 +41,13 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     ${eyebrow(band[0],true)}<h2>${e(band[1])}<br><span class="serif">${e(band[2])}</span></h2>${action(band[3],"#/azienda","button-ghost")}</div></section>
     <section class="section projects-section"><div class="section-container">${head(L.nav[4],L.projects.title,L.projects.galleryText)}<div class="projects-grid">${[["stalle",0,L.projects.items[0]],["strutture-industriali",0,L.projects.items[1]]].map((x,i)=>`<a class="project-item reveal" href="#/realizzazioni"><div class="photo">${media(x[0],x[1],x[2])}</div><div class="project-title"><div><small>0${i+1}</small><h3>${e(x[2])}</h3></div><span class="project-icon">&#8599;</span></div></a>`).join("")}</div><div class="more-row reveal">${action(L.common.projects,"#/realizzazioni","button-outline")}</div></div></section>
     <section class="career-teaser"><div class="section-container career-teaser-inner"><div class="reveal">${eyebrow(L.nav[7],true)}<h2>${e(L.careers.headline)}</h2></div><div class="reveal delay-1"><p>${e(L.careers.text)}</p>${action(L.nav[7],"#/lavora-con-noi","button-ghost")}</div></div></section>
-    <section class="section social-teaser-section"><div class="section-container">${head(L.common.follow,L.home.socialTitle,L.home.socialText)}<div class="social-teaser-layout"><div class="social-teaser-image reveal">${media("stalle",2,L.projects.items[0])}</div><div class="social-teaser-copy reveal delay-1"><h3>${e(L.home.socialTitle)}</h3><p>${e(L.home.socialText)}</p>${socialBar}</div></div></div></section>`;
+    <section class="section social-teaser-section"><div class="section-container">${head(L.common.follow,L.home.socialTitle,L.home.socialText)}<div class="social-teaser-layout"><div class="social-teaser-image reveal">${media("stalle",2,L.projects.items[0])}</div><div class="social-teaser-copy reveal delay-1"><h3>${e(L.home.socialTitle)}</h3><p>${e(L.home.socialText)}</p>${socialBar}${action(L.nav[5],"#/dicono-di-noi","button-outline")}</div></div></div></section>`;
   } else if(path==="/azienda"){
     C.company();
     window.GrimaldelliCompany?.translate(lang,app);
   } else if(path==="/soluzioni"){
     app.innerHTML=`${header(L.solutions.eyebrow,L.solutions.title,L.solutions.lead,heroPhoto,"03")}
-    <section class="section solutions-section"><div class="section-container">${head(L.solutions.heading,L.solutions.title,L.solutions.lead,true)}${solutionsCards()}<p class="footnote">${e(L.solutions.illustration)}</p></div></section>`;
+    <section class="section solutions-section"><div class="section-container">${head(L.solutions.heading,L.solutions.title,L.solutions.lead,true)}${solutionsCards()}</div></section>`;
   } else if(path.startsWith("/soluzione/")){
     const slug=path.slice("/soluzione/".length),s=sol.find(x=>x.slug===slug);
     if(!s)return false;
