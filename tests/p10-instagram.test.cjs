@@ -10,9 +10,9 @@ const doc={createElement(tag){
 const sandbox={window:{},document:doc,URL,console};
 vm.runInNewContext(code,sandbox,{filename:"site-instagram.js"});
 const m=sandbox.window.GrimaldelliInstagram;
-assert.equal(m.posts.length,2);
+assert.equal(m.posts.length,7);
 for(const lang of ["it","en","fr","de"]){
-  for(const route of ["/","/realizzazioni","/soluzione/zootecnia","/prodotto/stalle"]){
+  for(const route of ["/","/realizzazioni","/soluzione/zootecnia","/prodotto/stalle","/soluzione/fotovoltaico"]){
     let html="",onClick;
     const area={hidden:true,children:[],appendChild(el){this.children.push(el)},replaceChildren(){this.children=[]},scrollIntoView(){}};
     const section={
@@ -27,7 +27,7 @@ for(const lang of ["it","en","fr","de"]){
     assert.ok(html.includes("p10-social-disclosure"));
     assert.ok(!html.includes("<iframe"));
     assert.equal(created.length,0,"media must not load before explicit user action");
-    const expected=route==="/soluzione/zootecnia"||route==="/prodotto/stalle"?1:2;
+    const expected=route==="/realizzazioni"?7:route==="/soluzione/zootecnia"||route==="/prodotto/stalle"?3:2;
     assert.equal((html.match(/class="p10-social-work"/g)||[]).length,expected);
     const props={ariaExpanded:"false"},button={firstChild:{textContent:"Visualizza il contenuto "},getAttribute(key){return key==="data-instagram-load"?"biloni":props[key]},setAttribute(k,v){props[k]=v}};
     const ev={target:{closest(){return button}}};
@@ -43,4 +43,4 @@ for(const lang of ["it","en","fr","de"]){
   }
 }
 assert.equal(m.mount("/contatti","it",{insertAdjacentHTML(){throw Error("Should not insert")}}),false);
-console.log("PASS: 4 languages x 4 routes, deferred external embeds, consent toggle and known links");
+console.log("PASS: 4 languages x 5 routes, 7 verified posts, deferred media, consent toggle and known links");
