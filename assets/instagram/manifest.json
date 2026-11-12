@@ -5,25 +5,34 @@
       "id": "biloni",
       "source": "https://www.instagram.com/p/DfnCdbEIRz8/",
       "images": [
-        "/assets/instagram/biloni/image-01.webp"
+        "/assets/instagram/biloni/poster-01.webp",
+        "/assets/instagram/biloni/image-02.webp"
       ],
-      "videos": []
+      "videos": [
+        "/assets/instagram/biloni/clip-01.mp4"
+      ]
     },
     {
       "id": "cadilana",
       "source": "https://www.instagram.com/reel/DfiO5WDOkg9/",
       "images": [
-        "/assets/instagram/cadilana/image-01.webp"
+        "/assets/instagram/cadilana/poster-01.webp",
+        "/assets/instagram/cadilana/image-02.webp"
       ],
-      "videos": []
+      "videos": [
+        "/assets/instagram/cadilana/clip-01.mp4"
+      ]
     },
     {
       "id": "bosetti",
       "source": "https://www.instagram.com/reel/Cs5KMF3Ivcp/",
       "images": [
-        "/assets/instagram/bosetti/image-01.webp"
+        "/assets/instagram/bosetti/poster-01.webp",
+        "/assets/instagram/bosetti/image-02.webp"
       ],
-      "videos": []
+      "videos": [
+        "/assets/instagram/bosetti/clip-01.mp4"
+      ]
     },
     {
       "id": "franciosi",
