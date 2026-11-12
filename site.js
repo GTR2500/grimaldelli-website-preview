@@ -354,8 +354,13 @@ function render(){
  const {path,params}=getPath();let pathname=path==='/'?'/':path.replace(/\/$/,'');
  $('#mobile-menu').classList.remove('is-open');$('#mobile-menu').setAttribute('aria-hidden','true');$('#menu-toggle').setAttribute('aria-expanded','false');
  $$('.nav-desktop a').forEach(a=>a.classList.toggle('active',a.dataset.nav===pathname));
- if(currentLocale!=='it' && window.GrimaldelliI18N){
-   window.GrimaldelliI18N.render(currentLocale,pathname,{app,photo,hero,eyebrow,top,action,sol,products,by,image,heroPhoto,otherPhoto,sedePhoto,solutionsCards,tile,socialLinks,coverage,wireGallery});
+ if((pathname==='/contatti'||pathname==='/lavora-con-noi')&&window.GrimaldelliForms){
+   window.GrimaldelliForms.render(pathname==='/contatti'?'contact':'career',currentLocale,{app,hero,eyebrow,photo,image});
+   if(currentLocale!=='it')window.GrimaldelliI18N.footer(currentLocale,{siteFooter,eyebrow,action,photo,socialLinks});
+   else baseFooter();
+ }
+ else if(currentLocale!=='it' && window.GrimaldelliI18N){
+   window.GrimaldelliI18N.render(currentLocale,pathname,{app,photo,hero,eyebrow,top,action,sol,products,by,image,heroPhoto,otherPhoto,sedePhoto,solutionsCards,tile,socialLinks,coverage,wireGallery,company});
    window.GrimaldelliI18N.footer(currentLocale,{siteFooter,eyebrow,action,photo,socialLinks});
  }else{
   if(pathname==='/'){homepage();app.insertAdjacentHTML('beforeend',socialTeaser());}
