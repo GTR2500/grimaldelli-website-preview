@@ -48,7 +48,8 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     app.innerHTML=`${header(L.products.eyebrow,L.products.title,L.products.lead,image("abbeveratoi",0),"04")}
     <section class="catalog-section"><div class="section-container"><div class="filterbar"><div class="filter-pills">${groups.map(([v,n],i)=>`<button class="filter-pill ${i===0?"active":""}" type="button" data-filter="${v}">${e(n)}</button>`).join("")}</div>
     <input id="catalog-search" class="search-field" type="search" aria-label="${e(L.common.search)}" placeholder="${e(L.common.search)}"></div><p id="catalog-count" style="font-size:11px;color:#77817a;margin:10px 0 36px"></p><div id="catalog-grid" class="catalog-grid"></div></div></section>`;
-    let selected="tutti",query="";
+    const requestedGroup=new URLSearchParams((location.hash.split("?")[1]||"")).get("gruppo");
+    let selected=groups.some(([v])=>v===requestedGroup)?requestedGroup:"tutti",query="";
     const out=()=>{
       let list=products.filter(p=>selected==="tutti"?p.group!=="archivio"&&p.group!=="modelli":p.group===selected);
       if(query)list=list.filter(p=>(p.title+" "+p.summary).toLowerCase().includes(query));
@@ -57,6 +58,7 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     };
     app.querySelectorAll("[data-filter]").forEach(button=>button.addEventListener("click",()=>{selected=button.dataset.filter;app.querySelectorAll("[data-filter]").forEach(b=>b.classList.toggle("active",b===button));out();}));
     app.querySelector("#catalog-search").addEventListener("input",evt=>{query=evt.target.value.toLowerCase().trim();out();});
+    app.querySelectorAll('[data-filter]').forEach(button=>button.classList.toggle('active',button.dataset.filter===selected));
     out();
   } else if(path.startsWith("/prodotto/")){
     const slug=decodeURIComponent(path.slice("/prodotto/".length)),p=by(slug);
@@ -121,7 +123,12 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
   const langs=["it","en","fr","de"],nav=document.querySelector(".nav-desktop"),mobile=document.querySelector(".mobile-menu-inner"),selector=document.querySelector(".language-switcher");
   if(selector){selector.querySelectorAll("a[data-lang]").forEach(a=>{const code=a.getAttribute("data-lang");a.setAttribute("href",location.pathname+"?lang="+code+"#"+(path||"/"));if(code===lang){a.setAttribute("aria-current","true");a.setAttribute("title",code.toUpperCase());}else a.removeAttribute("aria-current");});}
   document.documentElement.lang=lang;
-  if(lang==="it"){document.title="Grimaldelli | Soluzioni che prendono forma";return;}
+  if(lang==="it"){
+    const titles={"/":"Soluzioni che prendono forma","/azienda":"Azienda","/soluzioni":"Soluzioni","/prodotti":"Prodotti","/realizzazioni":"Realizzazioni","/dicono-di-noi":"Dicono di noi","/contatti":"Contatti","/lavora-con-noi":"Lavora con noi"};
+    const heading=document.querySelector('#app h1')?.textContent.replace(/\s+/g,' ').trim()||"Grimaldelli";
+    document.title="Grimaldelli | "+(titles[path]||heading);
+    return;
+  }
   const L=window.GRIMALDELLI_LOCALES?.[lang];if(!L)return;
   const paths=["/","/azienda","/soluzioni","/prodotti","/realizzazioni","/dicono-di-noi","/contatti"];
   paths.forEach((p,i)=>{const a=nav?.querySelector(`a[data-nav="${p}"]`);if(a){if(p==="/contatti"){const chevron=a.querySelector(".chevron");a.textContent=L.nav[i]+" ";if(chevron)a.appendChild(chevron);}else a.textContent=L.nav[i];}});
