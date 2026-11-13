@@ -1,13 +1,14 @@
 name: P10 - Browser QA Energia
 on:
   push:
-    branches: [dev/p10-energy-biogas-photovoltaico-20261113]
+    branches: [dev/p10-energy-biogas-photovoltaico-20261113, dev/p10-ftv-nas-20261113]
     paths:
       - 'site-energy.js'
       - 'site.js'
       - 'index.html'
       - 'editorial.css'
       - 'assets/energy/**'
+      - 'assets/energy/photovoltaic-nas/**'
       - 'tests/p10-energy-browser.cjs'
       - '.github/workflows/p10-energy-browser.yml'
 jobs:

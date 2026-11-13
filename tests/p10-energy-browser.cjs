@@ -26,7 +26,7 @@ const server=http.createServer((req,res)=>{
     const page=await context.newPage();
     page.on('pageerror',err=>errors.push({lang,width,error:String(err)}));
     page.on('response',r=>{if(r.status()>=400)faults.push({lang,width,status:r.status(),url:r.url()})});
-    for(const [route,expected] of [['/',2],['/realizzazioni',13],['/soluzione/biogas',8],['/soluzione/fotovoltaico',5]]){
+    for(const [route,expected] of [['/',2],['/realizzazioni',21],['/soluzione/biogas',8],['/soluzione/fotovoltaico',13]]){
      await page.goto(address+'?lang='+lang+'#'+route,{waitUntil:'domcontentloaded',timeout:35000});
      const target=route==='/'?'#p10-energy-home':'#p10-energy-portfolio';
      await page.locator(target).waitFor({timeout:18000});
