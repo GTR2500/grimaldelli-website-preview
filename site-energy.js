@@ -157,7 +157,7 @@ async function mount(route,lang,app){
     '<div class="p10-energy-sector-grid">'+(firstBiogas?sectorTile("biogas",firstBiogas,lang):"")+
     (firstSolar?sectorTile("solar",firstSolar,lang):"")+'</div></div></section>';
  }else{
-  const items=isBiogas?historical:isSolar?solar:[...historical.slice(0,6),...solar];
+  const items=isBiogas?historical:isSolar?solar:[...historical,...solar];
   if(!items.length)return false;
   const head=isBiogas?t.biogas:isSolar?t.solar:t.comparison;
   const intro=isBiogas?t.bioIntro:isSolar?t.solarIntro:t.homeLead;
