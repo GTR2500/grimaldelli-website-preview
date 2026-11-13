@@ -395,6 +395,7 @@ function render(){
  window.GrimaldelliInstagram?.mount(pathname,currentLocale,app);
  window.GrimaldelliEnergy?.mount(pathname,currentLocale,app);
  if(pathname==='/')window.GrimaldelliMarquee?.mount(currentLocale,app);
+ window.GrimaldelliMarketing?.mount(pathname,currentLocale,{app,params,products,sol});
  window.scrollTo({top:0,behavior:'instant'});
  setupReveals();
  if(pathname==='/'&&params.get('settori')==='1')requestAnimationFrame(()=>app.querySelector('#settori')?.scrollIntoView({block:'start',behavior:'auto'}));
