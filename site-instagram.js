@@ -389,6 +389,7 @@
       const count=article.querySelector(".p10-work-count");
       if(count)count.textContent=(idx+1)+" "+t.of+" "+images.length;
     });
+    if(isPortfolio)window.GrimaldelliProjects?.refresh();
     return true;
   }
   window.GrimaldelliInstagram={mount,posts,ui};
