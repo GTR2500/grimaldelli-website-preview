@@ -10,21 +10,21 @@
   <title>Grimaldelli | Soluzioni che prendono forma</title>
   <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?v=p10-icona-20261113">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-grimaldelli-32.png?v=p10-icona-20261113">
-  <link rel="stylesheet" href="editorial.css?v=p10-home-hero-restored-20261113">
-  <link rel="stylesheet" href="press-editorial.css?v=p10-story-outro-20261113">
+  <link rel="stylesheet" href="editorial.css?v=p10-site-structure-20261113">
+  <link rel="stylesheet" href="press-editorial.css?v=p10-site-structure-20261113">
   <script defer src="site-data.js?v=p10-editorial-20261112"></script>
-  <script defer src="site-locales.js?v=p10-products-energy-20261113"></script>
+  <script defer src="site-locales.js?v=p10-site-structure-20261113"></script>
   <script defer src="product-locales.js?v=p10-lingue-20261112"></script>
   <script defer src="site-news-locales.js?v=p10-lingue-20261112"></script>
   <script defer src="site-press-parity.js?v=p10-press-parity-20261112"></script>
-  <script defer src="site-i18n.js?v=p10-products-energy-20261113"></script>
+  <script defer src="site-i18n.js?v=p10-site-structure-20261113"></script>
   <script defer src="site-company-parity.js?v=p10-regression-verified-20261113"></script>
   <script defer src="site-forms.js?v=p10-parity-20261112"></script>
-  <script defer src="site-instagram.js?v=p10-gallery-hero-20261113-b"></script>
+  <script defer src="site-instagram.js?v=p10-site-structure-20261113"></script>
   <script defer src="site-energy.js?v=p10-gallery-hero-20261113-b"></script>
   <script defer src="site-marquee.js?v=p10-marquee-no-numbers-20261113"></script>
-  <script defer src="site-projects.js?v=p10-gallery-hero-20261113-b"></script>
-  <script defer src="site.js?v=p10-regression-verified-20261113"></script>
+  <script defer src="site-projects.js?v=p10-site-structure-20261113"></script>
+  <script defer src="site.js?v=p10-site-structure-20261113"></script>
 </head>
 <body>
   <div id="progress" class="scroll-progress" aria-hidden="true"></div>
@@ -35,17 +35,17 @@
       <nav class="nav-desktop" aria-label="Menu principale">
         <a href="#/" data-nav="/">Home</a>
         <a href="#/azienda" data-nav="/azienda">Azienda</a>
-        <a href="#/soluzioni" data-nav="/soluzioni">Soluzioni</a>
+        <details class="nav-drop nav-solutions-menu"><summary aria-label="Apri i settori Grimaldelli"><span class="nav-solutions-label-text">Soluzioni</span><span class="chevron" aria-hidden="true">&#8964;</span></summary><div class="drop-menu"><a data-sector-link="0" href="#/soluzione/strutture">Strutture metalliche</a><a data-sector-link="1" href="#/soluzione/zootecnia">Attrezzature zootecniche</a><a data-sector-link="2" href="#/soluzione/biogas">Biogas e biometano</a><a data-sector-link="3" href="#/soluzione/fotovoltaico">Impianti fotovoltaici</a></div></details>
         <a href="#/prodotti" data-nav="/prodotti">Prodotti</a>
         <a href="#/realizzazioni" data-nav="/realizzazioni">Realizzazioni</a>
         <a href="#/dicono-di-noi" data-nav="/dicono-di-noi">Dicono di noi</a>
-        <div class="nav-drop"><a href="#/contatti" data-nav="/contatti">Contatti <span class="chevron">&#8964;</span></a><div class="drop-menu"><a href="#/contatti">Parla con noi</a><a href="#/lavora-con-noi">Lavora con noi</a></div></div>
+        <div class="nav-drop nav-contact-menu"><a href="#/contatti" data-nav="/contatti">Contatti <span class="chevron">&#8964;</span></a><div class="drop-menu"><a href="#/contatti">Parla con noi</a><a href="#/lavora-con-noi">Lavora con noi</a></div></div>
       </nav>
       <div class="language-switcher" role="navigation" aria-label="Lingua / Language"><a data-lang="it" href="?lang=it#/" hreflang="it">IT</a><a data-lang="en" href="?lang=en#/" hreflang="en">EN</a><a data-lang="fr" href="?lang=fr#/" hreflang="fr">FR</a><a data-lang="de" href="?lang=de#/" hreflang="de">DE</a></div>
       <button class="nav-mobile-trigger" id="menu-toggle" aria-label="Apri menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true"><div class="mobile-menu-inner"><a href="#/">Home</a><a href="#/azienda">Azienda</a><a href="#/soluzioni">Soluzioni</a><a href="#/prodotti">Prodotti</a><a href="#/realizzazioni">Realizzazioni</a><a href="#/dicono-di-noi">Dicono di noi</a><a href="#/contatti">Contatti</a><a href="#/lavora-con-noi">Lavora con noi <span>&#8599;</span></a><p>GRIMALDELLI / DAL 1921</p></div></div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true"><div class="mobile-menu-inner"><a data-mobile-nav="0" href="#/">Home</a><a data-mobile-nav="1" href="#/azienda">Azienda</a><button class="mobile-solutions-toggle" type="button" data-mobile-solutions aria-controls="mobile-sector-links" aria-expanded="false"><span class="mobile-solutions-title">Soluzioni</span><span aria-hidden="true">+</span></button><div class="mobile-sector-links" id="mobile-sector-links" hidden><a data-sector-link="0" href="#/soluzione/strutture">Strutture metalliche</a><a data-sector-link="1" href="#/soluzione/zootecnia">Attrezzature zootecniche</a><a data-sector-link="2" href="#/soluzione/biogas">Biogas e biometano</a><a data-sector-link="3" href="#/soluzione/fotovoltaico">Impianti fotovoltaici</a></div><a data-mobile-nav="3" href="#/prodotti">Prodotti</a><a data-mobile-nav="4" href="#/realizzazioni">Realizzazioni</a><a data-mobile-nav="5" href="#/dicono-di-noi">Dicono di noi</a><a data-mobile-nav="6" href="#/contatti">Contatti</a><a data-mobile-nav="7" href="#/lavora-con-noi">Lavora con noi</a><p>GRIMALDELLI / DAL 1921</p></div></div>
   <div class="route-mask" id="route-mask" aria-hidden="true"></div>
   <main id="app" tabindex="-1"></main>
   <footer id="site-footer"></footer>
