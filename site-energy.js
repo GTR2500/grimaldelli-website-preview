@@ -121,15 +121,20 @@ const sectorTile=(kind,photo,lang)=>{
 };
 function wireGallery(section,cases,lang){
  const t=text[lang];
- const dlg=document.createElement("dialog");dlg.className="p10-energy-dialog";
+ const modes={it:["Mostra foto intera","Torna al ritaglio"],en:["Show full image","Return to crop"],fr:["Voir la photo entière","Revenir au cadrage"],de:["Ganzes Foto anzeigen","Zurück zum Ausschnitt"]};
+ const [fullLabel,cropLabel]=modes[lang]||modes.it;
+ const dlg=document.createElement("dialog");dlg.className="p10-energy-dialog is-framed";
  dlg.innerHTML='<button class="p10-energy-dialog-close" type="button" aria-label="'+esc(t.close)+'">&#10005;</button>'+
- '<img alt=""><div class="p10-energy-dialog-bottom"><button type="button" data-energy-prev aria-label="'+esc(t.previous)+'">&#8592;</button>'+
- '<span class="p10-energy-dialog-caption"></span>'+
+ '<div class="p10-energy-dialog-stage"><img alt=""></div><div class="p10-energy-dialog-bottom"><button type="button" data-energy-prev aria-label="'+esc(t.previous)+'">&#8592;</button>'+
+ '<span class="p10-energy-dialog-caption"></span><button type="button" class="p10-energy-view-toggle" data-energy-view-toggle aria-pressed="false">'+esc(fullLabel)+'</button>'+
  '<button type="button" data-energy-next aria-label="'+esc(t.next)+'">&#8594;</button></div>';
  section.appendChild(dlg);
  let selected=null,index=0;
  const refresh=()=>{
   if(!selected)return;
+  dlg.classList.add("is-framed");
+  const toggle=dlg.querySelector("[data-energy-view-toggle]");
+  toggle.textContent=fullLabel;toggle.setAttribute("aria-pressed","false");
   const src=selected.images[index];const image=dlg.querySelector("img");
   image.src=src;image.alt=selected.name+" ("+(index+1)+")";
   dlg.querySelector(".p10-energy-dialog-caption").textContent=selected.name+" · "+(index+1)+" / "+selected.images.length;
@@ -143,7 +148,11 @@ function wireGallery(section,cases,lang){
  });
  dlg.addEventListener("click",event=>{
   if(event.target===dlg||event.target.closest(".p10-energy-dialog-close")){dlg.close();return;}
-  if(event.target.closest("[data-energy-prev]")){index=(index-1+selected.images.length)%selected.images.length;refresh();}
+  if(event.target.closest("[data-energy-view-toggle]")){
+   const framed=dlg.classList.toggle("is-framed"),button=dlg.querySelector("[data-energy-view-toggle]");
+   button.textContent=framed?fullLabel:cropLabel;button.setAttribute("aria-pressed",String(!framed));
+  }
+  else if(event.target.closest("[data-energy-prev]")){index=(index-1+selected.images.length)%selected.images.length;refresh();}
   else if(event.target.closest("[data-energy-next]")){index=(index+1)%selected.images.length;refresh();}
  });
 }
