@@ -179,7 +179,7 @@ function sourceDetails(app,slug,t,lang){
  const productName=app.querySelector(".product-detail .detail-hero h2")?.textContent?.trim()||slug;
  const official=slug==="raschiatori-asporta-letame";
  const evidence=document.createElement("section");
- evidence.className="p10-mkt-product-evidence section-container";
+ evidence.className="p10-mkt-product-evidence";
  let body="";
  if(official){
   body='<ul class="p10-mkt-spec-list">'+SCRAPER_SPECS[lang].map(spec=>'<li>'+esc(spec)+'</li>').join("")+'</ul>'+
