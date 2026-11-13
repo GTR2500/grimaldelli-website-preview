@@ -10,14 +10,6 @@
       "source": "https://www.glcgrimaldelli.com/2023/11/16/az-agr-lupo-stanghellini-chieve-cr-biogas-300-kw/",
       "images": [
         {
-          "path": "assets/energy/biogas/lupo-stanghellini/04.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/SINOTTTICO-LUPO.jpg",
-          "width": 1925,
-          "height": 1039,
-          "size": 140060,
-          "sharpness": 62.26
-        },
-        {
           "path": "assets/energy/biogas/lupo-stanghellini/01.webp",
           "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0016.jpg",
           "width": 1440,
@@ -49,7 +41,9 @@
           "size": 185968,
           "sharpness": 37.47
         }
-      ]
+      ],
+      "cover": "assets/energy/biogas/lupo-stanghellini/01.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
     },
     {
       "id": "rota-villanova",
@@ -72,7 +66,7 @@
           "width": 720,
           "height": 540,
           "size": 84590,
-          "sharpness": 54.0
+          "sharpness": 54
         },
         {
           "path": "assets/energy/biogas/rota-villanova/03.webp",
@@ -90,7 +84,9 @@
           "size": 56634,
           "sharpness": 47.32
         }
-      ]
+      ],
+      "cover": "assets/energy/biogas/rota-villanova/02.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
     },
     {
       "id": "bianchessi",
@@ -171,7 +167,9 @@
           "size": 83484,
           "sharpness": 26.31
         }
-      ]
+      ],
+      "cover": "assets/energy/biogas/bianchessi/01.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
     },
     {
       "id": "rota-corte-palasio",
@@ -252,7 +250,9 @@
           "size": 127292,
           "sharpness": 28.73
         }
-      ]
+      ],
+      "cover": "assets/energy/biogas/rota-corte-palasio/04.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
     },
     {
       "id": "campagnari",
@@ -317,7 +317,9 @@
           "size": 218450,
           "sharpness": 32.93
         }
-      ]
+      ],
+      "cover": "assets/energy/biogas/campagnari/03.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
     },
     {
       "id": "quarantore",
@@ -364,7 +366,7 @@
           "width": 2560,
           "height": 1920,
           "size": 266988,
-          "sharpness": 31.0
+          "sharpness": 31
         },
         {
           "path": "assets/energy/biogas/quarantore/06.webp",
@@ -406,7 +408,9 @@
           "size": 87242,
           "sharpness": 31.51
         }
-      ]
+      ],
+      "cover": "assets/energy/biogas/quarantore/01.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
     },
     {
       "id": "balestrieri",
@@ -503,7 +507,9 @@
           "size": 133160,
           "sharpness": 60.18
         }
-      ]
+      ],
+      "cover": "assets/energy/biogas/balestrieri/09.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
     },
     {
       "id": "bondenta",
@@ -592,7 +598,9 @@
           "size": 146592,
           "sharpness": 43.26
         }
-      ]
+      ],
+      "cover": "assets/energy/biogas/bondenta/01.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
     }
   ]
 }
