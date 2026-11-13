@@ -11,8 +11,8 @@ const C={
  it:{
   home:"Strutture metalliche e attrezzature per allevamento, industria ed energia. Molte soluzioni nascono su misura, con qualità esecutiva e cura dei dettagli.",
   proof:[["1921","Una storia industriale che continua"],["4","Aree di specializzazione"],["Sul campo","Fotografie e interventi documentati"]],
-  specTitle:"Caratteristiche riportate nella scheda ufficiale",specNote:"Le caratteristiche si riferiscono alla documentazione pubblicata dall'azienda. Configurazione e disponibilità sono da verificare al momento della richiesta.",source:"Consulta la fonte tecnica originale",
-  archiveTitle:"Valutare la soluzione",archiveText:"L'archivio fotografico documenta la famiglia di prodotti; dimensioni, varianti e compatibilità dell'allestimento sono da verificare per il singolo impianto.",
+  specTitle:"Caratteristiche riportate nella scheda ufficiale",specNote:"Caratteristiche descritte nella documentazione Grimaldelli. Per configurazione, varianti e disponibilità è possibile richiedere una valutazione dedicata.",source:"Consulta la fonte tecnica originale",
+  archiveTitle:"Valutare la soluzione",archiveText:"Le fotografie mostrano la famiglia di prodotti. Per dimensioni, configurazioni e lavorazioni su misura, raccontaci la tua esigenza.",
   requirements:["Applicazione e tipologia di impianto","Dimensioni o quantità richieste","Località del progetto e tempi indicativi"],
   enquiry:"Richiedi informazioni su questo prodotto",sectorTitle:"Il perimetro del nostro intervento",
   sectorText:[
@@ -31,7 +31,7 @@ const C={
   home:"Steelwork and livestock equipment for agriculture, industry and energy. Many solutions are made to requirements, with skilled workmanship and care in every detail.",
   proof:[["1921","A lasting industrial history"],["4","Fields of expertise"],["On site","Documented work and photographs"]],
   specTitle:"Features listed in the official product information",specNote:"These specifications come from the company's published information. Configuration and availability must be checked when enquiring.",source:"View the original product information",
-  archiveTitle:"Assess the right solution",archiveText:"The photo archive illustrates the product family. Dimensions, variants and compatibility must be confirmed for each installation.",
+  archiveTitle:"Assess the right solution",archiveText:"The photographs show this product family. Tell us about your application to discuss dimensions, configurations and custom work.",
   requirements:["Application and type of facility","Required dimensions or quantity","Project location and indicative timeline"],
   enquiry:"Enquire about this product",sectorTitle:"Scope of our work",
   sectorText:[
@@ -49,7 +49,7 @@ const C={
   home:"Structures métalliques et équipements d'élevage pour l'agriculture, l'industrie et l'énergie. De nombreuses solutions sont sur mesure, avec qualité d'exécution et soin du détail.",
   proof:[["1921","Une histoire industrielle"],["4","Domaines d'expertise"],["Sur le terrain","Travaux et photos documentés"]],
   specTitle:"Caractéristiques publiées dans la fiche officielle",specNote:"Ces indications proviennent de la documentation publiée par l'entreprise. La configuration et la disponibilité doivent être confirmées.",source:"Consulter la fiche produit originale",
-  archiveTitle:"Évaluer la solution",archiveText:"Les photos illustrent la gamme. Les dimensions, variantes et compatibilités doivent être vérifiées pour chaque installation.",
+  archiveTitle:"Évaluer la solution",archiveText:"Les photographies présentent cette famille de produits. Décrivez votre besoin pour étudier les dimensions, configurations et adaptations sur mesure.",
   requirements:["Application et type d'installation","Dimensions ou quantités demandées","Localisation et calendrier envisagé"],
   enquiry:"Demander des informations sur ce produit",sectorTitle:"Notre périmètre d'intervention",
   sectorText:[
@@ -67,7 +67,7 @@ const C={
   home:"Stahlbau und Stalleinrichtungen für Landwirtschaft, Industrie und Energie. Viele Lösungen entstehen nach Maß, mit hoher Ausführungsqualität und Liebe zum Detail.",
   proof:[["1921","Industrielle Geschichte"],["4","Kompetenzbereiche"],["Vor Ort","Dokumentierte Arbeiten und Fotos"]],
   specTitle:"Angaben aus der offiziellen Produktbeschreibung",specNote:"Die Angaben stammen aus den veröffentlichten Informationen des Unternehmens. Ausführung und Verfügbarkeit sind anzufragen.",source:"Originale Produktinformation ansehen",
-  archiveTitle:"Die passende Lösung prüfen",archiveText:"Das Bildarchiv zeigt die Produktfamilie. Maße, Varianten und Eignung müssen für jede Anlage bestätigt werden.",
+  archiveTitle:"Die passende Lösung prüfen",archiveText:"Die Fotos zeigen diese Produktfamilie. Beschreiben Sie Ihre Anforderungen für Maße, Ausführungen und individuelle Anpassungen.",
   requirements:["Anwendungsfall und Anlagentyp","Gewünschte Maße oder Menge","Projektort und ungefährer Zeitplan"],
   enquiry:"Informationen zu diesem Produkt anfordern",sectorTitle:"Umfang unserer Leistungen",
   sectorText:[
@@ -162,13 +162,13 @@ const CUSTOM={
 
 const SCRAPER_SPECS={
  it:[
-  "Zugseil aus Polyester oder Edelstahl",
-  "Frostschutz-Zyklus vorgesehen",
-  "Leistungsbereich laut offizieller Produktbeschreibung: 0,76–1,1 kW",
-  "Computersteuerung und elektrische Tagesprogrammierung",
-  "Betrieb mit oder ohne Führungsnut",
-  "Motoren bodennah oder erhöht montierbar",
-  "Starres Räumschild oder Ausführung mit gelenkigen Flügeln"
+ "Trazione mediante fune in poliestere oppure cavo in acciaio inox",
+ "Ciclo antighiaccio previsto nella scheda ufficiale",
+ "Potenza indicata: 0,76–1,1 kW, in funzione della configurazione",
+ "Controllo computerizzato e temporizzatore per programmazione giornaliera",
+ "Funzionamento con o senza incavo guida",
+ "Motori installabili a terra o in posizione rialzata",
+ "Blocco raschiante fisso oppure con ali snodate"
  ],
  en:[
   "High-strength polyester rope or stainless-steel cable",
@@ -198,15 +198,7 @@ const SCRAPER_SPECS={
   "Festes Räumschild oder bewegliche Flügel"
  ]
 };
-SCRAPER_SPECS.it=[
- "Trazione mediante fune in poliestere oppure cavo in acciaio inox",
- "Ciclo antighiaccio previsto nella scheda ufficiale",
- "Potenza indicata: 0,76–1,1 kW, in funzione della configurazione",
- "Controllo computerizzato e temporizzatore per programmazione giornaliera",
- "Funzionamento con o senza incavo guida",
- "Motori installabili a terra o in posizione rialzata",
- "Blocco raschiante fisso oppure con ali snodate"
-];
+
 function esc(value){return String(value==null?"":value).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]});}
 function ui(ctx,lang){return C[lang]||C.it;}
 function upsertMeta(selector,attr,key,value){
