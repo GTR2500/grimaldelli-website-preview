@@ -87,3 +87,20 @@ Non attribuire punteggi 10/10 senza un periodo di dati confrontabili e un test c
 - Non rimuovere `noindex` dalla preview.
 - Non dichiarare funzionante l'invio email tramite form prima di test su infrastruttura reale.
 - Verificare preventivamente backup, migrazione hosting P05 del 26/11/2026 (annunciata, non verificata), e approvazione CTO prima di qualsiasi modifica al dominio ufficiale.
+
+## Posizionamento distintivo: realizzazioni su misura
+
+**Messaggio guida:** «Il catalogo è un punto di partenza. Il resto nasce su misura.»
+
+Una parte rilevante delle strutture metalliche, delle attrezzature e delle lavorazioni viene realizzata o adattata alle esigenze del singolo progetto. Il messaggio commerciale deve mostrare comprensione dell'applicazione, qualità dell'esecuzione e cura dei dettagli.
+
+**Applicazione editoriale**
+- Home: promessa distintiva e invito a descrivere l'esigenza.
+- Prodotti: catalogo come orientamento, non perimetro rigido. Specificare standard, configurabile o su specifica solo quando verificato.
+- Settori: esprimere capacità di valutare lavorazioni su specifica senza ampliare impropriamente le forniture.
+- Contatti: richiesta dedicata al lavoro su misura, con spazio per funzione, vincoli e dimensioni.
+- Realizzazioni: presentare casi documentati esigenza → intervento → dettaglio esecutivo appena disponibili fonti e autorizzazioni.
+
+**Vincoli di veridicità:** non affermare che tutti i prodotti siano personalizzati, non attribuire forniture complete di impianti energetici senza evidenza, non divulgare dati finanziari interni. Non inventare materiali, tolleranze, certificazioni o prestazioni.
+
+**Test:** p10-marketing.test.cjs e p10-marketing-browser.cjs proteggono il messaggio nelle quattro lingue, su Home, catalogo, schede, settori e richieste contestuali.
