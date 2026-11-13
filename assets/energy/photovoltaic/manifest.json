@@ -8,6 +8,13 @@
       "source": "https://www.glcgrimaldelli.com/2023/12/15/soc-agr-franciosi-ossago-lodigiano-lo-impianto-fotovoltaico-3456-kw/",
       "images": [
         {
+          "path": "assets/energy/photovoltaic/soc-agr-franciosi-ossago-lodigiano-lo-impianto-fotovoltaico-3456-kw/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/12/IMG-20231107-WA0028.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 404826
+        },
+        {
           "path": "assets/energy/photovoltaic/soc-agr-franciosi-ossago-lodigiano-lo-impianto-fotovoltaico-3456-kw/04.webp",
           "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/12/IMG-20231107-WA0032.jpg",
           "width": 1536,
@@ -29,20 +36,14 @@
           "bytes": 250892
         },
         {
-          "path": "assets/energy/photovoltaic/soc-agr-franciosi-ossago-lodigiano-lo-impianto-fotovoltaico-3456-kw/01.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/12/IMG-20231107-WA0028.jpg",
-          "width": 1440,
-          "height": 1080,
-          "bytes": 404826
-        },
-        {
           "path": "assets/energy/photovoltaic/soc-agr-franciosi-ossago-lodigiano-lo-impianto-fotovoltaico-3456-kw/02.webp",
           "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/12/IMG-20231215-WA0004.jpg",
           "width": 1440,
           "height": 1080,
           "bytes": 227220
         }
-      ]
+      ],
+      "cover": "assets/energy/photovoltaic/soc-agr-franciosi-ossago-lodigiano-lo-impianto-fotovoltaico-3456-kw/01.webp"
     },
     {
       "id": "soc-agr-aurora-credera-rubbiano-cr-impianto-fotovoltaico-da-1224-kw",
@@ -85,7 +86,8 @@
           "height": 540,
           "bytes": 107714
         }
-      ]
+      ],
+      "cover": "assets/energy/photovoltaic/soc-agr-aurora-credera-rubbiano-cr-impianto-fotovoltaico-da-1224-kw/01.webp"
     },
     {
       "id": "soc-agr-locatelli-castelvisconti-cr-impianto-fotovoltaico-1224-kw",
@@ -94,25 +96,18 @@
       "source": "https://www.glcgrimaldelli.com/2023/12/06/soc-agr-locatelli-castelvisconti-cr-impianto-fotovoltaico-1224-kw/",
       "images": [
         {
-          "path": "assets/energy/photovoltaic/soc-agr-locatelli-castelvisconti-cr-impianto-fotovoltaico-1224-kw/03.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/12/IMG-20231206-WA0015.jpg",
-          "width": 1600,
-          "height": 1200,
-          "bytes": 340280
-        },
-        {
-          "path": "assets/energy/photovoltaic/soc-agr-locatelli-castelvisconti-cr-impianto-fotovoltaico-1224-kw/06.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/12/Immagine-2023-12-06-165912.jpg",
-          "width": 2150,
-          "height": 752,
-          "bytes": 17864
-        },
-        {
           "path": "assets/energy/photovoltaic/soc-agr-locatelli-castelvisconti-cr-impianto-fotovoltaico-1224-kw/01.webp",
           "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/12/IMG-20231206-WA0013.jpg",
           "width": 1440,
           "height": 1080,
           "bytes": 206280
+        },
+        {
+          "path": "assets/energy/photovoltaic/soc-agr-locatelli-castelvisconti-cr-impianto-fotovoltaico-1224-kw/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/12/IMG-20231206-WA0015.jpg",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 340280
         },
         {
           "path": "assets/energy/photovoltaic/soc-agr-locatelli-castelvisconti-cr-impianto-fotovoltaico-1224-kw/02.webp",
@@ -128,7 +123,8 @@
           "height": 1080,
           "bytes": 288806
         }
-      ]
+      ],
+      "cover": "assets/energy/photovoltaic/soc-agr-locatelli-castelvisconti-cr-impianto-fotovoltaico-1224-kw/01.webp"
     },
     {
       "id": "soc-agr-nisoli-brignano-gera-dadda-bg-campo-fotovoltaico-da-1224-kw",
@@ -157,7 +153,8 @@
           "height": 810,
           "bytes": 310294
         }
-      ]
+      ],
+      "cover": "assets/energy/photovoltaic/soc-agr-nisoli-brignano-gera-dadda-bg-campo-fotovoltaico-da-1224-kw/01.webp"
     }
   ],
   "note": "Public Grimaldelli archive, nameplate capacity as stated in article title; verify work scope separately."
