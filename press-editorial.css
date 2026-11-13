@@ -174,3 +174,7 @@
 .company-story-chapter blockquote{font-size:25px}
 .company-story-outro{padding:28px 24px}
 }
+
+/* P10: indici delle quattro sezioni storiche leggibili su desktop e mobile. */
+.company-story-index{font-size:clamp(16px,1.35vw,19px);letter-spacing:.075em;line-height:1.4;color:#a85222;font-weight:800}
+@media(max-width:650px){.company-story-index{font-size:16px;letter-spacing:.06em;padding:0}}
