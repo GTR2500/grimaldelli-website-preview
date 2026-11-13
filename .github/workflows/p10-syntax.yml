@@ -1,7 +1,7 @@
 name: P10 - Syntax check JavaScript and PHP
 on:
   push:
-    branches: [dev/p10-parity-forms-20261112, dev/p10-instagram-realizzazioni-20261112, dev/p10-media-local-firstparty-20261112, dev/p10-energy-biogas-photovoltaico-20261113]
+    branches: [dev/p10-parity-forms-20261112, dev/p10-instagram-realizzazioni-20261112, dev/p10-media-local-firstparty-20261112, dev/p10-energy-biogas-photovoltaico-20261113, dev/p10-ftv-nas-20261113]
   pull_request:
     branches: [main]
 jobs:
