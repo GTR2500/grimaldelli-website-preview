@@ -1,0 +1,35 @@
+name: P10 - Browser QA marketing e mobile
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site.js'
+      - 'site-marketing.js'
+      - 'site-projects.js'
+      - 'site-energy.js'
+      - 'site-i18n.js'
+      - 'site-locales.js'
+      - 'site-company-parity.js'
+      - 'site-forms.js'
+      - 'site-data.js'
+      - 'index.html'
+      - 'editorial.css'
+      - 'press-editorial.css'
+      - 'tests/p10-marketing-browser.cjs'
+      - '.github/workflows/p10-marketing-browser.yml'
+  workflow_dispatch:
+jobs:
+  responsive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser dependencies
+        run: |
+          npm install --no-save --no-package-lock --quiet playwright
+          npx playwright install --with-deps chromium
+      - name: Verify 4 languages and mobile/desktop marketing journeys
+        run: node tests/p10-marketing-browser.cjs
