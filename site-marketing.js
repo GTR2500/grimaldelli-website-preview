@@ -85,7 +85,7 @@ const C={
 
 /* Custom fabrication is the positioning. Avoid claiming that every standard
  * product is bespoke or that Grimaldelli supplies an entire energy plant.
- * No financial efficiency or EBITDA figures are public-facing.
+ * Commercial claims should remain attributable to the company.
  */
 const CUSTOM={
  it:{
@@ -240,7 +240,7 @@ function setMetadata(route,lang,ctx,t){
  upsertMeta('meta[property="og:title"]',"property","og:title",document.title);
  upsertMeta('meta[property="og:description"]',"property","og:description",description.slice(0,190));
 }
-function home(app,t){
+function home(app,t,lang){
  const subtitle=app.querySelector(".hero-salvirola .hero-bottom p");
  if(subtitle)subtitle.textContent=t.home;
  const strap=app.querySelector(".marquee-strap");
@@ -249,7 +249,7 @@ function home(app,t){
  section.innerHTML='<div class="section-container p10-mkt-proof-row">'+t.proof.map(item=>
   '<div class="p10-mkt-proof"><strong>'+esc(item[0])+'</strong><span>'+esc(item[1])+'</span></div>').join("")+'</div>';
  strap.insertAdjacentElement("afterend",section);
- const c=CUSTOM[document.documentElement.lang]||CUSTOM.it;
+ const c=CUSTOM[lang]||CUSTOM.it;
  const feature=document.createElement("section");
  feature.className="p10-mkt-custom-feature";feature.id="su-misura";
  feature.innerHTML='<div class="section-container p10-mkt-custom-inner">'+
@@ -369,7 +369,7 @@ function mount(route,lang,ctx){
  const app=ctx?.app;if(!app)return;
  const t=ui(ctx,lang);
  setMetadata(route,lang,ctx,t);
- if(route==="/")home(app,t);
+ if(route==="/")home(app,t,lang);
  else if(route==="/prodotti")catalogue(app,lang);
  else if(route.startsWith("/prodotto/"))sourceDetails(app,route.split("/").pop(),t,lang);
  else if(route.startsWith("/soluzione/"))solution(app,route,t,lang);
