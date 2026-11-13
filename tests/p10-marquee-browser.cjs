@@ -20,8 +20,7 @@ const server=http.createServer((req,res)=>{
    const page=await context.newPage();
    page.on("pageerror",e=>errors.push(String(e)));
    await page.goto(origin+"?lang="+lang+"#/",{waitUntil:"domcontentloaded",timeout:30000});
-   const item=page.locator(".p10-marquee-count");
-   await item.first().waitFor({timeout:14000});
+   await page.locator(".p10-marquee").waitFor({timeout:14000});
    const qa=await page.locator(".p10-marquee").evaluate(node=>{
     const track=node.querySelector(".p10-marquee-track"),seq=[...node.querySelectorAll(".p10-marquee-sequence")];
     return{
@@ -40,10 +39,7 @@ const server=http.createServer((req,res)=>{
    assert.ok(Math.abs(qa.widths[0]-qa.widths[1])<1,lang+" broken seamless loop");
    assert.equal(qa.links.length,4);
    assert.deepEqual(qa.links.map(x=>x.href),["#/soluzione/strutture","#/soluzione/zootecnia","#/soluzione/biogas","#/soluzione/fotovoltaico"]);
-   assert.ok(qa.links[2].text.includes("8"),lang+" bio count");
-   assert.ok(qa.links[3].text.includes("13"),lang+" photovoltaic count");
-   assert.ok(!qa.links[0].text.match(/\d+\s/),lang+" invented steel count");
-   assert.ok(!qa.links[1].text.match(/\d+\s/),lang+" invented livestock count");
+   assert.ok(qa.links.every(x=>!/\d/.test(x.text)),lang+" numeric project counts must be absent");
    assert.equal(qa.animation,"p10-marquee-scroll");
    assert.ok(qa.overflow<=qa.viewport+2,lang+" horizontal overflow "+width);
    if(lang==="it"&&width===1440){
@@ -55,7 +51,7 @@ const server=http.createServer((req,res)=>{
    await firstLink.click({timeout:12000});
    await page.waitForURL(/#\/soluzione\/strutture/,{timeout:10000});
    await page.locator(".solution-detail").waitFor({timeout:12000});
-   results.push({lang,width,counts:[8,13],links:4,sectorNavigation:true,seamless:true});
+   results.push({lang,width,noNumericClaims:true,links:4,sectorNavigation:true,seamless:true});
    await context.close();
   }
  }
