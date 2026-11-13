@@ -149,7 +149,7 @@ window.GRIMALDELLI_LOCALES = {
     "products": {
       "eyebrow": "PRODUCTS / CATALOGUE",
       "title": "Products built around real needs.",
-      "lead": "Explore our equipment, steel structures and selected product lines.",
+      "lead": "Explore our equipment, steel structures, product families and energy-sector applications.",
       "detailIntro": "For technical details, configurations and availability, please contact our team.",
       "filter": "Filter products",
       "count": "items"
@@ -356,7 +356,7 @@ window.GRIMALDELLI_LOCALES = {
     "products": {
       "eyebrow": "PRODUITS / CATALOGUE",
       "title": "Des produits adaptés aux besoins réels.",
-      "lead": "Découvrez nos équipements, structures métalliques et gammes de produits.",
+      "lead": "Découvrez nos équipements, structures métalliques et applications pour le secteur de l’énergie.",
       "detailIntro": "Pour connaître les caractéristiques, les configurations et la disponibilité, contactez notre équipe.",
       "filter": "Filtrer les produits",
       "count": "produits"
@@ -563,7 +563,7 @@ window.GRIMALDELLI_LOCALES = {
     "products": {
       "eyebrow": "PRODUKTE / KATALOG",
       "title": "Produkte für die Praxis.",
-      "lead": "Entdecken Sie unsere Stalleinrichtungen, Stahlkonstruktionen und Produktlinien.",
+      "lead": "Entdecken Sie unsere Stalleinrichtungen, Stahlkonstruktionen und Anwendungen für den Energiesektor.",
       "detailIntro": "Weitere Informationen zu technischen Eigenschaften, Ausführungen und Verfügbarkeit erhalten Sie von unserem Team.",
       "filter": "Produkte filtern",
       "count": "Produkte"
