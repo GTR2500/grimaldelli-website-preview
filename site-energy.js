@@ -105,7 +105,7 @@ const caseCard=(p,lang,kind)=>{
  if(!p.images?.length)return "";
  const first=within(p.images[0]);if(!first)return "";
  const n=kind==="biogas"?fieldName(p.name,lang):p.name;
- return '<article class="p10-energy-case" data-energy-case="'+esc(p.id)+'">'+
+ return '<article class="p10-energy-case" data-energy-sector="'+(kind==="biogas"?"biogas":"fotovoltaico")+'" data-energy-case="'+esc(p.id)+'">'+
  '<div class="p10-energy-case-image"><img src="'+esc(first)+'" loading="lazy" decoding="async" alt="'+esc(n)+'">'+
  '<span class="p10-energy-kind">'+esc(kind==="biogas"?t.biogas:t.solar)+'</span></div>'+
  '<div class="p10-energy-case-body"><div class="p10-energy-case-head"><div><h3>'+esc(n)+'</h3><p>'+esc(p.place)+'</p></div>'+
@@ -198,7 +198,9 @@ async function mount(route,lang,app){
     '<span>'+esc(t.notEpc)+'</span></div></div></section>';
  }
  const marker=isHome?app.querySelector(".feature-section"):null;
+ const projectsSlot=isProjects?app.querySelector("#p10-projects-energy-slot"):null;
  if(marker)marker.insertAdjacentHTML("beforebegin",html);
+ else if(projectsSlot)projectsSlot.insertAdjacentHTML("beforeend",html);
  else app.insertAdjacentHTML("beforeend",html);
  const section=app.querySelector(isHome?"#p10-energy-home":"#p10-energy-portfolio");
  if(!section)return false;
@@ -209,6 +211,7 @@ async function mount(route,lang,app){
   ];
   wireGallery(section,cases,lang);
  }
+ if(isProjects)window.GrimaldelliProjects?.refresh();
  return true;
 }
 window.GrimaldelliEnergy={mount,text};
