@@ -361,10 +361,16 @@
     const section=app.querySelector("#p10-social-showcase");
     if(!section)return false;
     const galleryDialog=document.createElement("dialog");
-    galleryDialog.className="p10-work-dialog";
-    galleryDialog.innerHTML='<button type="button" class="p10-work-dialog-close" aria-label="'+esc(t.close)+'">&#10005;</button><img alt="">';
+    galleryDialog.className="p10-work-dialog is-framed";
+    const viewLabels={it:["Mostra foto intera","Torna al ritaglio"],en:["Show full image","Return to crop"],fr:["Voir la photo entière","Revenir au cadrage"],de:["Ganzes Foto anzeigen","Zurück zum Ausschnitt"]};
+    const [fullLabel,cropLabel]=viewLabels[language]||viewLabels.it;
+    galleryDialog.innerHTML='<button type="button" class="p10-work-dialog-close" aria-label="'+esc(t.close)+'">&#10005;</button><div class="p10-work-dialog-stage"><img alt=""></div><button type="button" class="p10-work-dialog-view" data-work-view-toggle aria-pressed="false">'+esc(fullLabel)+'</button>';
     section.appendChild(galleryDialog);
-    galleryDialog.addEventListener("click",e=>{if(e.target===galleryDialog||e.target.closest(".p10-work-dialog-close"))galleryDialog.close()});
+    galleryDialog.addEventListener("click",e=>{
+      const toggle=e.target.closest("[data-work-view-toggle]");
+      if(toggle){const framed=galleryDialog.classList.toggle("is-framed");toggle.textContent=framed?fullLabel:cropLabel;toggle.setAttribute("aria-pressed",String(!framed));return;}
+      if(e.target===galleryDialog||e.target.closest(".p10-work-dialog-close"))galleryDialog.close();
+    });
     section.addEventListener("click",e=>{
       const prev=e.target.closest("[data-work-prev]"),next=e.target.closest("[data-work-next]"),expand=e.target.closest("[data-work-expand]");
       const button=prev||next||expand;
@@ -380,6 +386,8 @@
       if(expand){
         const image=galleryDialog.querySelector("img");
         image.src=images[current];image.alt=item[language].title;
+        galleryDialog.classList.add("is-framed");
+        const toggle=galleryDialog.querySelector("[data-work-view-toggle]");toggle.textContent=fullLabel;toggle.setAttribute("aria-pressed","false");
         galleryDialog.showModal();return;
       }
       const idx=(current+(next?1:-1)+images.length)%images.length;
