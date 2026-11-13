@@ -8,7 +8,6 @@
   const map=new Map(shared.map(x=>[x[0],x[ix]]));
   const h=window.GRIMALDELLI_LOCALES?.[lang]?.company?.history||[];
   historyIt.forEach((row,i)=>{if(!h[i])return;map.set(row[0],h[i][1]);map.set(row[1],h[i][2]);});
-  map.set('ANNI SESSANTA',({en:'1960s',fr:'Années 1960',de:'1960er-Jahre'})[lang]);
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const unmapped=[];let count=0;
   while(walker.nextNode()){
    const n=walker.currentNode,raw=n.nodeValue,trim=raw.trim();if(!trim)continue;
