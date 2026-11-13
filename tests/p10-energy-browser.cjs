@@ -38,7 +38,7 @@ const server=http.createServer((req,res)=>{
      const result=await page.evaluate(sel=>{
       const root=document.querySelector(sel);
       return{count:root.querySelectorAll('.p10-energy-case,.p10-energy-tile').length,
-       images:[...root.querySelectorAll('img')].map(x=>({src:x.getAttribute('src'),width:x.naturalWidth})),
+       images:[...root.querySelectorAll('img[src]')].map(x=>({src:x.getAttribute('src'),width:x.naturalWidth})),
        overflow:document.documentElement.scrollWidth>window.innerWidth+2,
        links:[...root.querySelectorAll('a')].map(x=>x.getAttribute('href')),
        heading:document.querySelector('#app h1')?.innerText||''};
