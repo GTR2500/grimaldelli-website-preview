@@ -1,0 +1,598 @@
+{
+  "archive": "https://www.glcgrimaldelli.com/category/biogas/",
+  "note": "Plant capacities from historical Grimaldelli posts; not evidence of EPC/entire-plant supply",
+  "projects": [
+    {
+      "id": "lupo-stanghellini",
+      "name": "Az. Agr. Lupo Stanghellini Chieve (CR) – Biogas 300 kW",
+      "place": "Chieve (CR)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/16/az-agr-lupo-stanghellini-chieve-cr-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/lupo-stanghellini/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/SINOTTTICO-LUPO.jpg",
+          "width": 1925,
+          "height": 1039,
+          "size": 140060,
+          "sharpness": 62.26
+        },
+        {
+          "path": "assets/energy/biogas/lupo-stanghellini/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0016.jpg",
+          "width": 1440,
+          "height": 1080,
+          "size": 228054,
+          "sharpness": 40.41
+        },
+        {
+          "path": "assets/energy/biogas/lupo-stanghellini/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0014.jpg",
+          "width": 1440,
+          "height": 1080,
+          "size": 348580,
+          "sharpness": 52.02
+        },
+        {
+          "path": "assets/energy/biogas/lupo-stanghellini/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0015.jpg",
+          "width": 1440,
+          "height": 1080,
+          "size": 234410,
+          "sharpness": 41.06
+        },
+        {
+          "path": "assets/energy/biogas/lupo-stanghellini/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0017.jpg",
+          "width": 1440,
+          "height": 1080,
+          "size": 185968,
+          "sharpness": 37.47
+        }
+      ]
+    },
+    {
+      "id": "rota-villanova",
+      "name": "Soc. Agr. Rota Villanova Del Sillaro (LO) – Biogas 300 kW",
+      "place": "Villanova del Sillaro (LO)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/16/soc-agr-rota-villanova-del-sillaro-lo-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/rota-villanova/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/centrale-termica.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 219468,
+          "sharpness": 47.89
+        },
+        {
+          "path": "assets/energy/biogas/rota-villanova/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0008.jpg",
+          "width": 720,
+          "height": 540,
+          "size": 84590,
+          "sharpness": 54.0
+        },
+        {
+          "path": "assets/energy/biogas/rota-villanova/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Immagine-WhatsApp-2023-11-16-ore-14.23.55_6693b37e-modificata.jpg",
+          "width": 720,
+          "height": 540,
+          "size": 71510,
+          "sharpness": 47.56
+        },
+        {
+          "path": "assets/energy/biogas/rota-villanova/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0009-POP.jpg",
+          "width": 720,
+          "height": 540,
+          "size": 56634,
+          "sharpness": 47.32
+        }
+      ]
+    },
+    {
+      "id": "bianchessi",
+      "name": "Az. Agr. Bianchessi Castelgabbiano (CR) – Biogas 300 kW",
+      "place": "Castelgabbiano (CR)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/14/az-agr-bianchessi-castelgabbiano-cr-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/bianchessi/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0015.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 189050,
+          "sharpness": 45.66
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0020.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 199270,
+          "sharpness": 46.26
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/09.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0019.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 182774,
+          "sharpness": 36.08
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Vista-forntale-motore.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 149222,
+          "sharpness": 29.07
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/06.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0010.jpg",
+          "width": 1204,
+          "height": 1600,
+          "size": 207902,
+          "sharpness": 45.52
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/08.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0013.jpg",
+          "width": 1204,
+          "height": 1600,
+          "size": 167386,
+          "sharpness": 43.54
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0008.jpg",
+          "width": 1204,
+          "height": 1600,
+          "size": 60378,
+          "sharpness": 22.27
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/07.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Zona-targhe-Stamford.jpg",
+          "width": 1204,
+          "height": 1600,
+          "size": 80936,
+          "sharpness": 17.51
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/QCBT-e-QACC.jpg",
+          "width": 940,
+          "height": 1333,
+          "size": 83484,
+          "sharpness": 26.31
+        }
+      ]
+    },
+    {
+      "id": "rota-corte-palasio",
+      "name": "Soc. Agr. Rota Corte Palasio (LO) – Biogas 300 kW",
+      "place": "Corte Palasio (LO)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/14/soc-agr-rota-corte-palasio-lo-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Zona-motore-2.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 190322,
+          "sharpness": 36.2
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/08.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/L.T.-1.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 157104,
+          "sharpness": 33.03
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/09.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Zona-motore-1.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 158018,
+          "sharpness": 32.46
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Caricatore-da-20-mc-3.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 152044,
+          "sharpness": 32.03
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230615-WA0017.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 162280,
+          "sharpness": 31.9
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Digestore-1.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 100288,
+          "sharpness": 27.28
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Copertura-pompa-centrale-2.jpg",
+          "width": 1204,
+          "height": 1600,
+          "size": 135982,
+          "sharpness": 41.69
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/07.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Pompa-centrale.jpg",
+          "width": 1204,
+          "height": 1600,
+          "size": 109590,
+          "sharpness": 29.51
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/06.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230615-WA0021.jpg",
+          "width": 1204,
+          "height": 1600,
+          "size": 127292,
+          "sharpness": 28.73
+        }
+      ]
+    },
+    {
+      "id": "campagnari",
+      "name": "Soc. Agr. Campagnari Marmirolo (MN) – Biogas 300 kW",
+      "place": "Marmirolo (MN)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/10/soc-agr-campagnari-marmirolo-mn-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/campagnari/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.38-3.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 298872,
+          "sharpness": 46.46
+        },
+        {
+          "path": "assets/energy/biogas/campagnari/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.38.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 378596,
+          "sharpness": 57.98
+        },
+        {
+          "path": "assets/energy/biogas/campagnari/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.39-2.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 270478,
+          "sharpness": 42.8
+        },
+        {
+          "path": "assets/energy/biogas/campagnari/07.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.41-5.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 267836,
+          "sharpness": 42.74
+        },
+        {
+          "path": "assets/energy/biogas/campagnari/06.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.41-1.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 262882,
+          "sharpness": 36.82
+        },
+        {
+          "path": "assets/energy/biogas/campagnari/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.39-4.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 280554,
+          "sharpness": 34.87
+        },
+        {
+          "path": "assets/energy/biogas/campagnari/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.38-1.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 218450,
+          "sharpness": 32.93
+        }
+      ]
+    },
+    {
+      "id": "quarantore",
+      "name": "Soc. Agr. “Quarantore” San Martino dall’Argine (MN) – Biogas 249 kW",
+      "place": "San Martino dall'Argine (MN)",
+      "declared_plant_power_kw": 249,
+      "source": "https://www.glcgrimaldelli.com/2023/11/10/soc-agr-quarantore-san-martino-dallargine-mn-biogas-249-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/quarantore/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1063-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 376158,
+          "sharpness": 53.81
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1057-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 289016,
+          "sharpness": 55.36
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/07.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1067-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 356564,
+          "sharpness": 62.7
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/08.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1068-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 356052,
+          "sharpness": 61.05
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/09.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1069-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 266988,
+          "sharpness": 31.0
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/06.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1059-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 240614,
+          "sharpness": 29.44
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1056-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 119966,
+          "sharpness": 26.82
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1058-1-scaled.jpg",
+          "width": 1920,
+          "height": 2560,
+          "size": 151670,
+          "sharpness": 44.55
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/10.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1073-1-scaled.jpg",
+          "width": 2560,
+          "height": 936,
+          "size": 67260,
+          "sharpness": 26.62
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/5-1.jpeg",
+          "width": 1600,
+          "height": 1197,
+          "size": 87242,
+          "sharpness": 31.51
+        }
+      ]
+    },
+    {
+      "id": "balestrieri",
+      "name": "Az. Agr. Balestrieri San Daniele Po (CR) – Biogas 300 kW",
+      "place": "San Daniele Po (CR)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/10/az-agr-balestrieri-san-daniele-po-cr-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/balestrieri/09.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6390.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 233336,
+          "sharpness": 42.88
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6385.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 126654,
+          "sharpness": 38.62
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/06.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6386.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 102824,
+          "sharpness": 32.45
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6395.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 125736,
+          "sharpness": 32.18
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6392.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 223834,
+          "sharpness": 31.44
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/08.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6388.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 124040,
+          "sharpness": 31.05
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/11.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6399.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 86412,
+          "sharpness": 29.59
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6380.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 158060,
+          "sharpness": 26.92
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/10.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6394.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 110658,
+          "sharpness": 24.58
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6383.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 135554,
+          "sharpness": 17.85
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/07.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Cattura.jpg",
+          "width": 1720,
+          "height": 926,
+          "size": 133160,
+          "sharpness": 60.18
+        }
+      ]
+    },
+    {
+      "id": "bondenta",
+      "name": "Soc. Agr. Bondenta Campagnola Cr. (CR) – Biogas 300 kW",
+      "place": "Campagnola Cremasca (CR)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/10/soc-agr-bondenta-campagnola-cr-cr-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/bondenta/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_3787-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 239632,
+          "sharpness": 52.83
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/07.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171030_122534-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 146950,
+          "sharpness": 40.63
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/09.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171030_122537-modificata-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 238940,
+          "sharpness": 37.93
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171201_105830-REV01-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 159906,
+          "sharpness": 33.93
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/10.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171201_105112-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 112844,
+          "sharpness": 32.79
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20170728_103601-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 107202,
+          "sharpness": 31.26
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/06.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171030_122504-re01-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 182440,
+          "sharpness": 31.26
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171201_105420-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 95708,
+          "sharpness": 26.9
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/08.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171122_140348-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 113730,
+          "sharpness": 26.32
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171201_105944-scaled.jpg",
+          "width": 1440,
+          "height": 2560,
+          "size": 146592,
+          "sharpness": 43.26
+        }
+      ]
+    }
+  ]
+}
