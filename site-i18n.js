@@ -184,7 +184,7 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
   paths.forEach((p,i)=>{const a=nav?.querySelector(`a[data-nav="${p}"]`);if(a){if(p==="/contatti"){const chevron=a.querySelector(".chevron");a.textContent=L.nav[i]+" ";if(chevron)a.appendChild(chevron);}else a.textContent=L.nav[i];}});
   nav?.querySelectorAll(".nav-contact-menu .drop-menu a").forEach((a,i)=>a.textContent=L.links[i]||a.textContent);
   const label=nav?.querySelector(".nav-solutions-label-text");if(label)label.textContent=L.nav[2];
-   const sectorNames=(L.sols||[]).map(row=>String(row[0]).replace(/<br\\s*\\/?>/gi," "));
+   const sectorNames=(L.sols||[]).map(row=>String(row[0]).replace(/<br\s*\/?>/gi," "));
    document.querySelectorAll('[data-sector-link]').forEach(link=>{const ix=Number(link.getAttribute('data-sector-link'));if(sectorNames[ix])link.textContent=sectorNames[ix];});
    mobile?.querySelectorAll('[data-mobile-nav]').forEach(a=>{const ix=Number(a.getAttribute('data-mobile-nav'));if(L.nav[ix])a.textContent=L.nav[ix];});
    const mobileTitle=mobile?.querySelector(".mobile-solutions-title");if(mobileTitle)mobileTitle.textContent=L.nav[2];
