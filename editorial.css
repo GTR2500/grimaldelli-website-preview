@@ -312,3 +312,54 @@ outline:2px solid #ea7228;outline-offset:2px}
   .p10-work-media-type{top:12px;left:12px}
 }
 @media(prefers-reduced-motion:reduce){.p10-work-image{transition:none}.p10-work-expand:hover .p10-work-image{transform:none}}
+
+
+/* P10 | Sector-balanced energy portfolio, first-party verified photographs */
+.p10-energy-feature,.p10-energy-portfolio{background:#eef0e8;color:#17231c;padding:clamp(72px,8vw,126px) 0;overflow:hidden}
+.p10-energy-feature-header{display:grid;grid-template-columns:1.35fr .75fr;gap:10px 65px;align-items:end;margin-bottom:38px}
+.p10-energy-overline{font-size:10px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:#46574a;display:inline-flex;align-items:center;gap:12px}
+.p10-energy-overline::before{content:"";background:#eb7629;width:18px;height:2px;display:block}
+.p10-energy-feature-header .p10-energy-overline{grid-column:1/-1}
+.p10-energy-feature h2,.p10-energy-portfolio-head h2{font-size:clamp(46px,5.4vw,84px);letter-spacing:-.077em;line-height:1.07;font-weight:650;overflow-wrap:break-word;margin:12px 0 0}
+.p10-energy-feature h2 em{font-family:Georgia,serif;font-weight:500;font-style:italic;color:#eb772c;letter-spacing:-.07em}
+.p10-energy-feature-header p,.p10-energy-portfolio-head p{font-size:15px;line-height:1.78;max-width:490px;color:#505d51;margin:0}
+.p10-energy-sector-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.p10-energy-tile{background:#fff;display:grid;grid-template-columns:1fr;min-width:0;text-decoration:none;color:#13231b;border:1px solid #dee1da;transition:box-shadow .25s,transform .25s}
+.p10-energy-tile:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(29,51,38,.12)}
+.p10-energy-tile:focus-visible,.p10-energy-open:focus-visible{outline:3px solid #ea7528;outline-offset:3px}
+.p10-energy-tile-media{height:clamp(220px,26vw,340px);background:#263c2e;overflow:hidden}
+.p10-energy-tile-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.p10-energy-tile:hover img{transform:scale(1.035)}
+.p10-energy-tile-copy{padding:clamp(23px,3vw,37px)}
+.p10-energy-tile h3{font-size:clamp(30px,3vw,42px);font-weight:650;letter-spacing:-.065em;margin:12px 0}
+.p10-energy-tile p{font-size:14px;line-height:1.68;color:#586259;margin-bottom:24px;min-height:90px}
+.p10-energy-sector-cta{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:800;color:#a84b21;display:flex;gap:18px;align-items:center}
+.p10-energy-sector-cta b{font-size:20px}
+.p10-energy-portfolio{background:#f1f0e9}
+.p10-energy-portfolio-head{display:grid;grid-template-columns:1.2fr .8fr;align-items:end;gap:30px 70px;margin-bottom:40px}
+.p10-energy-portfolio-head h2{margin:15px 0 0}
+.p10-energy-case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.p10-energy-case{background:white;border:1px solid #dedfd8;min-width:0;display:flex;flex-direction:column}
+.p10-energy-case-image{height:230px;position:relative;overflow:hidden;background:#17291d}
+.p10-energy-case-image img{width:100%;height:100%;display:block;object-fit:cover}
+.p10-energy-kind{position:absolute;top:17px;left:17px;padding:9px 12px;background:rgba(20,35,26,.86);color:#fff;text-transform:uppercase;letter-spacing:.11em;font-size:9px;font-weight:750}
+.p10-energy-case-body{padding:26px 25px 28px;display:flex;flex-direction:column;flex:1}
+.p10-energy-case-head{display:flex;gap:16px;align-items:start;justify-content:space-between}
+.p10-energy-case h3{font-size:clamp(24px,2.2vw,31px);line-height:1.17;letter-spacing:-.05em;font-weight:680;margin:0 0 10px}
+.p10-energy-case-head p{font-size:12px;color:#636f64;line-height:1.6;margin:0}
+.p10-energy-capacity{color:#d86122;font-size:12px;font-weight:800;white-space:nowrap;padding-top:3px}
+.p10-energy-scope{font-size:12px;color:#607064;line-height:1.7;margin:20px 0 28px;flex:1}
+.p10-energy-open{background:transparent;cursor:pointer;text-align:left;color:#1f3e2b;border:none;border-top:1px solid #dde3da;padding:17px 0 0;display:flex;align-items:center;justify-content:space-between;font:inherit;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:.04em}
+.p10-energy-open span{font-size:22px;color:#e7732b}
+.p10-energy-footnote{display:flex;justify-content:space-between;gap:18px;line-height:1.6;margin-top:25px;color:#68766a;font-size:11px}
+.p10-energy-footnote span:last-child{max-width:600px;text-align:right}
+.p10-energy-dialog{position:fixed;background:#0b120e;padding:16px;border:0;max-width:94vw;max-height:94vh;color:#fff;box-shadow:0 16px 80px rgba(0,0,0,.5)}
+.p10-energy-dialog::backdrop{background:rgba(2,14,5,.84)}
+.p10-energy-dialog img{width:auto;height:auto;max-width:calc(94vw - 32px);max-height:calc(94vh - 100px);display:block;object-fit:contain}
+.p10-energy-dialog-close{position:absolute;right:20px;top:18px;border:0;background:#eb772b;color:#fff;border-radius:50%;font-size:17px;width:40px;height:40px;cursor:pointer}
+.p10-energy-dialog-bottom{display:flex;align-items:center;gap:20px;justify-content:space-between;padding-top:15px}
+.p10-energy-dialog-bottom button{width:42px;height:42px;cursor:pointer;font-size:23px;background:#243f2c;color:white;border:1px solid #59705b}
+.p10-energy-dialog-caption{font-size:12px;line-height:1.45;text-align:center}
+@media(max-width:1000px){.p10-energy-case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.p10-energy-portfolio-head{grid-template-columns:1fr}}
+@media(max-width:750px){.p10-energy-feature-header{display:block}.p10-energy-feature-header p{margin:24px 0 0}.p10-energy-sector-grid,.p10-energy-case-grid{grid-template-columns:1fr}.p10-energy-tile p{min-height:0}.p10-energy-case-image{height:260px}.p10-energy-footnote{display:block}.p10-energy-footnote span{display:block;margin-top:6px}.p10-energy-footnote span:last-child{text-align:left}}
+@media(prefers-reduced-motion:reduce){.p10-energy-tile,.p10-energy-tile img{transition:none}.p10-energy-tile:hover,.p10-energy-tile:hover img{transform:none}}
