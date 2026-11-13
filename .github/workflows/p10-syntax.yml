@@ -1,7 +1,7 @@
 name: P10 - Syntax check JavaScript and PHP
 on:
   push:
-    branches: [dev/p10-parity-forms-20261112, dev/p10-instagram-realizzazioni-20261112, dev/p10-media-local-firstparty-20261112, dev/p10-energy-biogas-photovoltaico-20261113, dev/p10-ftv-nas-20261113]
+    branches: [main, dev/p10-parity-forms-20261112, dev/p10-instagram-realizzazioni-20261112, dev/p10-media-local-firstparty-20261112, dev/p10-energy-biogas-photovoltaico-20261113, dev/p10-ftv-nas-20261113]
   pull_request:
     branches: [main]
 jobs:
@@ -11,13 +11,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check JavaScript syntax
         run: |
-          for source in site.js site-energy.js site-instagram.js site-i18n.js site-forms.js site-company-parity.js site-locales.js site-news-locales.js product-locales.js; do
+          for source in site.js site-projects.js site-energy.js site-instagram.js site-i18n.js site-forms.js site-company-parity.js site-locales.js site-news-locales.js product-locales.js; do
             node --check "$source"
           done
       - name: Test Instagram media loading and language coverage
         run: node tests/p10-instagram.test.cjs
       - name: Test energy portfolio language parity and source assets
         run: node tests/p10-energy.test.cjs
+      - name: Guard approved content against regressions
+        run: node tests/p10-regression-critical.cjs
       - name: Check PHP syntax
         run: |
           find api -type f -name '*.php' -print0 | xargs -0 -n 1 php -l
