@@ -28,4 +28,10 @@ assert.ok(!js.includes('fetch(')&&!js.includes('XMLHttpRequest'),'Marketing enha
 assert.ok(html.includes('noindex,nofollow,noarchive'),'Private preview must remain noindex');
 assert.ok(html.includes('og:image')&&html.includes('og:description'),'Social-sharing baseline metadata missing');
 assert.ok(site.includes("{year:'1964'"),'Approved 1964 chronology missing');
+for(const token of ['p10-mkt-custom-feature','p10-mkt-catalog-note','p10-mkt-product-custom','p10-mkt-solution-custom','su-misura=1','customRequest','customIntro']){
+ assert.ok(js.includes(token),'Missing tailored-manufacturing feature '+token);
+}
+assert.ok(css.includes('P10_CUSTOM_FABRICATION_POSITIONING'),'Missing bespoke visual system');
+assert.ok(html.includes('p10-su-misura-20261113'),'Stale cache version for bespoke messaging');
+assert.ok(!/EBITDA|500k|500\.000/i.test(js),'Internal financial metrics may not be published or committed in site copy');
 console.log('P10_MARKETING_TEST_PASS: documented specs, lead context, honest demo mail, four languages and metadata');
