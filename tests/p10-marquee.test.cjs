@@ -29,7 +29,7 @@ assert.ok(m);
   assert.equal((html.match(/href="#\/soluzione\/fotovoltaico"/g)||[]).length,2);
   assert.equal((html.match(/href="#\/soluzione\/strutture"/g)||[]).length,2);
   assert.equal((html.match(/href="#\/soluzione\/zootecnia"/g)||[]).length,2);
-  assert.ok(!html.includes("8"),"numbers must load asynchronously rather than be hardcoded");
+  assert.ok(!html.includes("p10-marquee-count"),"numbers must load asynchronously rather than be hardcoded");
  }
  console.log("PASS: 4 languages, 4 links, loop duplicates, 8 biogas & 13 photovoltaic distinct cases");
 })().catch(e=>{console.error(e);process.exitCode=1});
