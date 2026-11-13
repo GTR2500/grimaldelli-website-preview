@@ -1,0 +1,294 @@
+{
+  "source": "Grimaldelli internal photovoltaic project photographic archive",
+  "projects": [
+    {
+      "id": "bettoni-gaia-bordolano-cr",
+      "name": "Bettoni Gaia",
+      "place": "Bordolano (CR)",
+      "year": 2023,
+      "capacity": "",
+      "images": [
+        {
+          "path": "assets/energy/photovoltaic-nas/bettoni-gaia-bordolano-cr/01.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 394952
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/bettoni-gaia-bordolano-cr/02.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 375150
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/bettoni-gaia-bordolano-cr/03.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 278454
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/bettoni-gaia-bordolano-cr/04.webp",
+          "width": 1600,
+          "height": 1204,
+          "web_bytes": 124688
+        }
+      ],
+      "source": "Archivio fotografico aziendale Grimaldelli",
+      "source_provenance": "Corporate photovoltaic job photo folder (internal archive)",
+      "technical_scope_verified": false
+    },
+    {
+      "id": "baldini-borgo-vigilio-mn",
+      "name": "Baldini",
+      "place": "Borgo Virgilio (MN)",
+      "year": 2023,
+      "capacity": "",
+      "images": [
+        {
+          "path": "assets/energy/photovoltaic-nas/baldini-borgo-vigilio-mn/01.webp",
+          "width": 1600,
+          "height": 720,
+          "web_bytes": 157798
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/baldini-borgo-vigilio-mn/02.webp",
+          "width": 1600,
+          "height": 720,
+          "web_bytes": 123212
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/baldini-borgo-vigilio-mn/03.webp",
+          "width": 1600,
+          "height": 720,
+          "web_bytes": 115604
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/baldini-borgo-vigilio-mn/04.webp",
+          "width": 1600,
+          "height": 720,
+          "web_bytes": 126032
+        }
+      ],
+      "source": "Archivio fotografico aziendale Grimaldelli",
+      "source_provenance": "Corporate photovoltaic job photo folder (internal archive)",
+      "technical_scope_verified": false
+    },
+    {
+      "id": "parati-madignano-cr",
+      "name": "Parati",
+      "place": "Madignano (CR)",
+      "year": 2023,
+      "capacity": "",
+      "images": [
+        {
+          "path": "assets/energy/photovoltaic-nas/parati-madignano-cr/01.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 416016
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/parati-madignano-cr/02.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 441286
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/parati-madignano-cr/03.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 312288
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/parati-madignano-cr/04.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 345974
+        }
+      ],
+      "source": "Archivio fotografico aziendale Grimaldelli",
+      "source_provenance": "Corporate photovoltaic job photo folder (internal archive)",
+      "technical_scope_verified": false
+    },
+    {
+      "id": "go-farm-gozzini-casalmorano-cr",
+      "name": "GO FARM Gozzini",
+      "place": "Casalmorano (CR)",
+      "year": 2023,
+      "capacity": "",
+      "images": [
+        {
+          "path": "assets/energy/photovoltaic-nas/go-farm-gozzini-casalmorano-cr/01.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 357262
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/go-farm-gozzini-casalmorano-cr/02.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 322070
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/go-farm-gozzini-casalmorano-cr/03.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 356298
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/go-farm-gozzini-casalmorano-cr/04.webp",
+          "width": 1204,
+          "height": 1600,
+          "web_bytes": 57890
+        }
+      ],
+      "source": "Archivio fotografico aziendale Grimaldelli",
+      "source_provenance": "Corporate photovoltaic job photo folder (internal archive)",
+      "technical_scope_verified": false
+    },
+    {
+      "id": "severgnini-casale-cremasco-cr",
+      "name": "Severgnini",
+      "place": "Casale Cremasco (CR)",
+      "year": 2023,
+      "capacity": "",
+      "images": [
+        {
+          "path": "assets/energy/photovoltaic-nas/severgnini-casale-cremasco-cr/01.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 418136
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/severgnini-casale-cremasco-cr/02.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 247210
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/severgnini-casale-cremasco-cr/03.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 153450
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/severgnini-casale-cremasco-cr/04.webp",
+          "width": 1440,
+          "height": 1080,
+          "web_bytes": 480070
+        }
+      ],
+      "source": "Archivio fotografico aziendale Grimaldelli",
+      "source_provenance": "Corporate photovoltaic job photo folder (internal archive)",
+      "technical_scope_verified": false
+    },
+    {
+      "id": "salomoni-cremona-cr",
+      "name": "Salomoni",
+      "place": "Cremona (CR)",
+      "year": 2024,
+      "capacity": "",
+      "images": [
+        {
+          "path": "assets/energy/photovoltaic-nas/salomoni-cremona-cr/01.webp",
+          "width": 2040,
+          "height": 1536,
+          "web_bytes": 398658
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/salomoni-cremona-cr/02.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 152418
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/salomoni-cremona-cr/03.webp",
+          "width": 2040,
+          "height": 1536,
+          "web_bytes": 440738
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/salomoni-cremona-cr/04.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 204798
+        }
+      ],
+      "source": "Archivio fotografico aziendale Grimaldelli",
+      "source_provenance": "Corporate photovoltaic job photo folder (internal archive)",
+      "technical_scope_verified": false
+    },
+    {
+      "id": "orsini-montanaso-lombardo-lo",
+      "name": "Orsini",
+      "place": "Montanaso Lombardo (LO)",
+      "year": 2023,
+      "capacity": "",
+      "images": [
+        {
+          "path": "assets/energy/photovoltaic-nas/orsini-montanaso-lombardo-lo/01.webp",
+          "width": 4032,
+          "height": 2268,
+          "web_bytes": 251826
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/orsini-montanaso-lombardo-lo/02.webp",
+          "width": 4032,
+          "height": 2268,
+          "web_bytes": 233742
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/orsini-montanaso-lombardo-lo/03.webp",
+          "width": 1600,
+          "height": 1200,
+          "web_bytes": 137572
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/orsini-montanaso-lombardo-lo/04.webp",
+          "width": 1600,
+          "height": 1200,
+          "web_bytes": 181800
+        }
+      ],
+      "source": "Archivio fotografico aziendale Grimaldelli",
+      "source_provenance": "Corporate photovoltaic job photo folder (internal archive)",
+      "technical_scope_verified": false
+    },
+    {
+      "id": "livraschino-morandi-castelverde-cr",
+      "name": "Livraschino (Morandi)",
+      "place": "Castelverde (CR)",
+      "year": 2024,
+      "capacity": "",
+      "images": [
+        {
+          "path": "assets/energy/photovoltaic-nas/livraschino-morandi-castelverde-cr/01.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 262006
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/livraschino-morandi-castelverde-cr/02.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 263022
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/livraschino-morandi-castelverde-cr/03.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 308188
+        },
+        {
+          "path": "assets/energy/photovoltaic-nas/livraschino-morandi-castelverde-cr/04.webp",
+          "width": 2048,
+          "height": 1536,
+          "web_bytes": 247902
+        }
+      ],
+      "source": "Archivio fotografico aziendale Grimaldelli",
+      "source_provenance": "Corporate photovoltaic job photo folder (internal archive)",
+      "technical_scope_verified": false
+    }
+  ],
+  "public_note": "Site images selected from owned project photos; name, location and year from archive directory; technical scope/capacity not independently verified."
+}
