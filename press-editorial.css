@@ -174,11 +174,3 @@
 .company-story-chapter blockquote{font-size:25px}
 .company-story-outro{padding:28px 24px}
 }
-
-/* Single CTA at the end of the company page: original interview PDF. */
-.company-interview-footer{background:#f9f8f4;color:#1c2924;padding:clamp(55px,7vw,100px) 0}
-.company-interview-footer-inner{max-width:1080px;margin:0 auto;padding-top:34px;border-top:1px solid #bcc7bb;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
-.company-interview-footer-copy{min-width:0;flex:1 1 330px}
-.company-interview-footer .company-interview-overline{color:#ac5b29}
-.company-interview-footer h2{font-size:clamp(26px,3.3vw,47px);line-height:1.16;letter-spacing:-.045em;font-weight:550;margin:13px 0 0}
-@media(max-width:650px){.company-interview-footer-inner{align-items:stretch;gap:25px}.company-interview-footer .company-read-link{width:100%}}
