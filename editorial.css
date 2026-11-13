@@ -75,13 +75,11 @@
 .sede-meta>div{padding:18px 20px;border:1px solid rgba(18,22,20,.1);background:rgba(255,255,255,.72)}
 .sede-meta small{display:block;font-size:10px;letter-spacing:.14em;color:#8b857d;margin-bottom:10px}
 .sede-meta strong,.sede-meta a{font-size:15px;line-height:1.7;color:#151a18;text-decoration:none}
-.sede-photo-frame{position:relative;overflow:hidden;min-height:500px;background:#1c2320}
-.sede-photo-frame img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.6,.2,1);filter:saturate(.88)}
-.sede-photo-frame:hover img{transform:scale(1.04)}
-.sede-photo-frame:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 42%,rgba(0,0,0,.62))}
-.sede-photo-frame span{position:absolute;left:24px;bottom:24px;z-index:2;color:#fff;font-size:11px;letter-spacing:.16em;background:rgba(0,0,0,.45);padding:10px 12px}
-@media(max-width:960px){.sede-layout{grid-template-columns:1fr}.sede-photo-frame{min-height:400px}}
-@media(max-width:640px){.sede-meta{grid-template-columns:1fr}.sede-copy h2{font-size:clamp(48px,11vw,70px)}.sede-photo-frame{min-height:300px;margin-top:20px}}
+.sede-photo-frame{position:relative;display:flex;flex-direction:column;overflow:hidden;min-height:0;background:transparent}
+.sede-photo-frame img{display:block;width:100%;height:auto;object-fit:contain;filter:none}
+.sede-photo-frame span{display:block;position:static;color:#40574a;font-size:10px;letter-spacing:.14em;background:transparent;padding:14px 0 0}
+@media(max-width:960px){.sede-layout{grid-template-columns:1fr}}
+@media(max-width:640px){.sede-meta{grid-template-columns:1fr}.sede-copy h2{font-size:clamp(48px,11vw,70px)}.sede-photo-frame{margin-top:20px}}
 
 /* Finale - immagine reale della sede a Salvirola in apertura, dal sito ufficiale */
 .hero-salvirola{min-height:min(790px,calc(100svh - 111px));background:#151a1a}
