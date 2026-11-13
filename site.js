@@ -387,6 +387,7 @@ function render(){
   baseFooter();
  }
  window.GrimaldelliI18N?.shell(currentLocale,pathname);
+ window.GrimaldelliProjects?.mount(pathname,currentLocale,app);
  window.GrimaldelliInstagram?.mount(pathname,currentLocale,app);
  window.GrimaldelliEnergy?.mount(pathname,currentLocale,app);
  if(pathname==='/')window.GrimaldelliMarquee?.mount(currentLocale,app);
