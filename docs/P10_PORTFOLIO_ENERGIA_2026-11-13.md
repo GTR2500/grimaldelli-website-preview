@@ -60,19 +60,40 @@ Manifest: `assets/energy/photovoltaic/manifest.json`. Selezionate copertine dei 
 - Non vengono modificati DNS, sito pubblico ufficiale o Aruba.
 - Il repository GitHub resta la fonte unica.
 
-## Parte non conclusa — archivio \\server
+## Aggiornamento operativo: fotografie dal NAS aziendale (13 novembre 2026)
 
-La richiesta originale include la scansione completa del percorso:
+L'accesso con Desktop Commander, account **Lavoro**, è riuscito. La precedente segnalazione di blocco era riferita all'account Backup, non all'account Lavoro.
 
-`\\server\Energie\Fotovoltaico\FTV - GRIMALDELLI\Bettoni Gaia - Bordolano - CR\2023 - FTV11734\10. GSE\DOCS RENDICONTAZIONE\FOTO`
+La cartella principale Fotovoltaico contiene **235 directory di primo livello**, molte delle quali sono amministrative o modelli. Il primo censimento ha identificato **46 cartelle di commesse con raccolte fotografiche di almeno quattro immagini**. Sono stati generati ed esaminati **12 provini di commesse**, selezionando gli scatti più pertinenti al sito.
 
-Il connettore Desktop Commander su MZB ha restituito il blocco **limite mensile raggiunto**. L'archivio UNC non è stato letto, quindi **non** dichiariamo selezionate le fotografie di Bettoni Gaia né censite tutte le commesse esistenti sulla condivisione.
+Sono stati aggiunti al repository, su `dev/p10-ftv-nas-20261113`, **8 progetti e 32 fotografie** (4 per progetto) ottimizzate in WebP senza metadati EXIF:
 
-Quando tornerà disponibile il collegamento, la priorità sarà leggere l'indice delle commesse fotovoltaiche, generare provini, fare selezione editoriale di 3–5 immagini per intervento, verificare diritti di pubblicazione, metadata e classificazione, integrare i casi aggiuntivi senza duplicati. Non importare file di rendicontazione e documenti GSE non destinati alla pubblicazione.
+| Realizzazione | Località | Anno da cartella di commessa |
+|---|---|---:|
+| Bettoni Gaia | Bordolano (CR) | 2023 |
+| Baldini | Borgo Virgilio (MN) | 2023 |
+| Parati | Madignano (CR) | 2023 |
+| GO FARM Gozzini | Casalmorano (CR) | 2023 |
+| Severgnini | Casale Cremasco (CR) | 2023 |
+| Salomoni | Cremona (CR) | 2024 |
+| Orsini | Montanaso Lombardo (LO) | 2023 |
+| Livraschino (Morandi) | Castelverde (CR) | 2024 |
 
-## Attività successive
+Le nuove gallerie sono gestite da `assets/energy/photovoltaic-nas/manifest.json`, senza URL di rete, path UNC, nomi degli originali e dati personali. Il filtro editoriale ha scartato foto ripetitive, targhe dei componenti, misure e schermate di controllo. Il caso Canavesi non è stato pubblicato perché le immagini disponibili nel primo campione non erano sufficientemente rappresentative.
 
-1. Verifica qualitativa e approvazione dei testi tecnici e delle fotografie delle 13 realizzazioni inserite.
-2. Accesso al NAS aziendale e completamento selezione Fotovoltaico dagli originali.
-3. Per ciascun caso: se disponibili, dati verificati sulla lavorazione eseguita, materiali, componenti e ruolo Grimaldelli; evitare la semplice ripetizione delle potenze.
-4. Test finale sul dominio ufficiale e collaudo form; nessun deploy in produzione senza autorizzazione.
+Il portafoglio Fotovoltaico comprende ora **13 casi distinti**: 8 appena selezionati dal NAS più 5 dal sito storico e dalla raccolta Instagram. Il portafoglio Energia complessivo presenta **21 casi**, di cui 8 Biogas e 13 Fotovoltaico.
+
+**Importante:** gli anni riportati sono riferimenti della cartella di commessa, non prove di collaudo o completamento. Non vengono indicate potenze per le nuove 8 commesse, perché questo dato non è stato verificato. I dettagli tecnici e le responsabilità contrattuali andranno controllati sulla documentazione tecnica prima di aggiungere descrizioni più specifiche.
+
+### Materiale non importato
+
+- Documenti di rendicontazione GSE, pratiche autorizzative, preventivi, documenti commerciali, report amministrativi.
+- Fotografie di targhette e numeri di serie, misuratori e identificativi.
+- Altre fotografie delle 46 raccolte candidate non ancora sottoposte a selezione editoriale.
+
+### Stato rilascio
+
+- Sviluppo nel branch GitHub, senza copie DEV permanenti.
+- Sintassi e test Chromium delle quattro lingue richiesti prima del merge.
+- Il sito ufficiale Aruba resta invariato.
+- Da completare in futuro la selezione estesa sulle restanti cartelle e una revisione dei dati tecnici e delle liberatorie applicabili.
