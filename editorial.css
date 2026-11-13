@@ -423,18 +423,6 @@ outline:2px solid #ea7228;outline-offset:2px}
 @media(max-width:900px){.p10-projects-picker-head{display:block}.p10-projects-picker-head p{margin:16px 0 0;max-width:540px}.p10-projects-selector-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.p10-projects-tile{min-height:185px}}
 @media(max-width:540px){.page-hero.p10-projects-hero.photo{min-height:325px;padding:60px 0 36px}.p10-projects-hero.page-hero h1{font-size:clamp(50px,11vw,66px)}.p10-projects-picker{padding:35px 0 30px}.p10-projects-picker-head h2{font-size:clamp(33px,8vw,46px)}.p10-projects-selector-grid{gap:10px}.p10-projects-tile{min-height:165px}.p10-projects-tile-info{padding:13px}.p10-projects-tile-info strong{font-size:clamp(17px,4.6vw,22px);padding-right:18px}.p10-projects-tile-info>span{right:12px;bottom:14px;font-size:22px}.p10-projects-picker-bottom{align-items:flex-start}.p10-projects-selection-note{max-width:100%}}
 
-/* P10: sede in Home — preserve the photograph rather than covering half with a black gradient. */
-.hero-salvirola .hero-image{opacity:1;filter:saturate(1.02) contrast(1.015)}
-.hero-salvirola .hero-shade{
- background:linear-gradient(90deg,rgba(12,21,19,.65) 0%,rgba(12,21,19,.49) 24%,rgba(12,21,19,.22) 48%,rgba(12,21,19,.03) 77%,transparent 100%),
- linear-gradient(0deg,rgba(12,21,19,.21) 0%,transparent 35%);
-}
-.hero-salvirola h1,.hero-salvirola .hero-bottom p{text-shadow:0 2px 20px rgba(0,0,0,.42)}
-@media(max-width:960px){
- .hero-salvirola .hero-image{opacity:1}
- .hero-salvirola .hero-shade{background:linear-gradient(90deg,rgba(12,21,19,.73) 0%,rgba(12,21,19,.43) 57%,rgba(12,21,19,.14) 100%),linear-gradient(0deg,rgba(12,21,19,.19),transparent 45%)}
-}
-
 /* P10: thumbnail-consistent enlargement with a reversible full-image mode. */
 .p10-energy-dialog{width:min(1160px,96vw);max-width:96vw;padding:16px;background:#13231d}
 .p10-energy-dialog-stage{width:100%;height:min(68vh,720px);background:#0c1712;overflow:hidden}
