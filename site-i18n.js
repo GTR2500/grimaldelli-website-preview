@@ -30,12 +30,12 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     app.innerHTML=`
     <section class="hero hero-salvirola">${photo(sedePhoto,"Grimaldelli headquarters in Salvirola","hero-image","eager")}<div class="hero-shade"></div><div class="hero-grid"></div>
       <div class="hero-content"><div class="hero-pre">${eyebrow(L.home.eyebrow,true)}</div><h1>${L.home.hero.map((x,i)=>`<span class="mask-text"><span class="${i===2?"serif":""}">${e(x)}</span></span>`).join("")}</h1>
-      <div class="hero-bottom"><p>${e(L.home.lead)}</p>${action(L.common.explore,"#/soluzioni")}${action(L.common.projects,"#/realizzazioni","button-ghost")}</div></div>
+      <div class="hero-bottom"><p>${e(L.home.lead)}</p>${action(L.common.explore,"#/?settori=1")}${action(L.common.projects,"#/realizzazioni","button-ghost")}</div></div>
       <div class="hero-counter">SALVIROLA / CREMONA <span>${e(L.common.more)}</span></div><div class="hero-side">GRIMALDELLI / SALVIROLA (CR) / ITALIA</div></section>
     <div class="marquee-strap"><div class="marquee-track">${Array(2).fill(ticker.map(x=>'<span>'+e(x)+'</span><b>+</b>').join('')).join('')}</div></div>
     <section class="section intro-section"><div class="section-container intro-layout"><div class="intro-copy reveal">${eyebrow(L.home.identity)}<h2>${e(L.home.introTitle)}</h2><p>${e(L.home.introText)}</p><a href="#/azienda" class="text-link">${e(L.common.history)} <span aria-hidden="true">&#8599;</span></a></div><div class="intro-image reveal delay-1">${photo(otherPhoto,"Grimaldelli steelwork")}<div class="intro-index"><b>1921</b><small>${e(L.since)}</small></div></div></div></section>
     <section class="section sede-section"><div class="section-container sede-layout"><div class="sede-copy reveal">${eyebrow("SALVIROLA / CREMONA")}<h2>${e(L.home.headquarters)}</h2><p>${e(L.home.headquartersText)}</p><div class="sede-meta"><div><small>${e(L.common.address)}</small><strong>Strada Provinciale 20<br>26010 Salvirola (CR)</strong></div><div><small>${e(L.common.contact)}</small><strong><a href="tel:+39037372435">+39 0373 72435</a><br><a href="mailto:${mail}">${mail}</a></strong></div></div>${action(L.nav[6],"#/contatti","button-outline")}</div><div class="sede-visual reveal delay-1"><div class="sede-photo-frame">${photo(sedePhoto,"Grimaldelli Salvirola")}<span>SALVIROLA / CREMONA</span></div></div></div></section>
-    <section class="section solutions-section"><div class="section-container">${head(L.home.areasTitle,L.solutions.title,L.home.areasText,true)}${solutionsCards()}</div></section>
+    <section class="section solutions-section" id="settori"><div class="section-container">${head(L.home.areasTitle,L.solutions.title,L.home.areasText,true)}${solutionsCards()}</div></section>
     <section class="section feature-section"><div class="section-container">${head(L.nav[3],L.products.title,L.products.lead)}<div class="feature-grid">${featured.map((p,i)=>card(p.title,p.images?.[0]?.src||heroPhoto,"#/prodotto/"+p.slug,i)).join("")}</div><div class="more-row reveal">${action(L.common.catalog,"#/prodotti","button-outline")}</div></div></section>
     <section class="editorial-band">${photo(image("stalle",11),e(L.projects.items[0]))}<div class="section-container reveal">
     ${eyebrow(band[0],true)}<h2>${e(band[1])}<br><span class="serif">${e(band[2])}</span></h2>${action(band[3],"#/azienda","button-ghost")}</div></section>
@@ -45,16 +45,13 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
   } else if(path==="/azienda"){
     C.company();
     window.GrimaldelliCompany?.translate(lang,app);
-  } else if(path==="/soluzioni"){
-    app.innerHTML=`${header(L.solutions.eyebrow,L.solutions.title,L.solutions.lead,heroPhoto,"03")}
-    <section class="section solutions-section"><div class="section-container">${head(L.solutions.heading,L.solutions.title,L.solutions.lead,true)}${solutionsCards()}</div></section>`;
   } else if(path.startsWith("/soluzione/")){
     const slug=path.slice("/soluzione/".length),s=sol.find(x=>x.slug===slug);
     if(!s)return false;
     const isEnergy=s.type==="concept";const group=slug==="strutture"?"strutture":"zootecnia";
     const list=products.filter(p=>p.group===group).slice(0,6);
     app.innerHTML=`${header(L.solutions.eyebrow,s.name,e(s.desc),s.img,s.idx)}
-    <section class="section solution-detail"><div class="section-container detail-hero"><div class="reveal">${eyebrow(L.solutions.detailTitle)}<h2>${s.name}</h2><p>${e(s.desc)} ${e(L.solutions.detailText)}</p>${action(isEnergy?L.common.info:L.common.catalog,isEnergy?"#/contatti":`#/prodotti?gruppo=${group}`)}</div>${photo(s.img,s.label,"","eager")}</div>
+    <section class="section solution-detail"><div class="section-container detail-hero"><div class="reveal">${eyebrow(L.solutions.detailTitle)}<h2>${s.name}</h2><p>${e(s.desc)} ${e(L.solutions.detailText)}</p><div class="solution-detail-actions">${action(isEnergy?L.common.info:L.common.catalog,isEnergy?"#/contatti":`#/prodotti?gruppo=${group}`)}${action(L.common.projects,`#/realizzazioni?settore=${slug}`,"button-outline")}</div></div>${photo(s.img,s.label,"","eager")}</div>
     ${!isEnergy?`<div class="section-container detail-copy">${head(L.nav[3],L.products.title)}<div class="feature-grid">${list.map(p=>card(p.title,p.images?.[0]?.src||heroPhoto,"#/prodotto/"+p.slug)).join("")}</div></div>`:""}</section>`;
   } else if(path==="/prodotti"){
     const groups=[["tutti",L.common.all],["strutture",L.common.metal],["zootecnia",L.common.livestock],["modelli",L.common.models],["biogas",products.find(p=>p.group==="biogas")?.title||"Biogas"],["fotovoltaico",products.find(p=>p.group==="fotovoltaico")?.title||"Photovoltaics"]];
@@ -82,12 +79,7 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
       <div class="detail-copy">${head(L.common.gallery,L.common.photos)}<div class="product-gallery">${images.map((im,i)=>`<figure><button type="button" class="gallery-photo" data-gallery="${i}" aria-label="${e(L.common.photos)} ${i+1}">${photo(im.src,im.caption)}</button><figcaption>${e(im.caption)}</figcaption></figure>`).join("")}</div></div><a class="text-link" href="#/prodotti">&#8592; ${e(L.common.back)}</a></div></section>`;
     wireGallery(images);
   } else if(path==="/realizzazioni"){
-    const ids=[["stalle",0],["strutture-industriali",0],["pensiline",0],["autocatture",0],["raschiatori-asporta-letame",0],["battifianco",0]];
-    const images=ids.map(([s,i],j)=>({src:image(s,i),caption:L.projects.items[j]}));
-    app.innerHTML=`${header(L.projects.eyebrow,L.projects.title,L.projects.lead,image("stalle",11),"05")}
-    <section class="section"><div class="section-container">${head(L.common.gallery,L.projects.gallery,L.projects.galleryText)}
-    <div class="feature-grid">${images.map((im,i)=>`<div class="feature-tile reveal"><button type="button" data-gallery="${i}" class="gallery-photo feature-image" style="display:block;width:100%">${photo(im.src,im.caption)}</button><div class="feature-title"><h3>${e(im.caption)}</h3><span>&#8599;</span></div></div>`).join("")}</div></div></section>`;
-    wireGallery(images);
+    app.innerHTML=`${header(L.projects.eyebrow,L.projects.title,L.projects.lead,image("stalle",11),"05")}<div id="p10-projects-content" class="p10-projects-content"><div id="p10-projects-social-slot"></div><div id="p10-projects-energy-slot"></div></div>`;
   } else if(path==="/dicono-di-noi"){
     const pressHtml=pressEditorial();
     app.innerHTML=`${header(L.press.eyebrow,L.press.title,L.press.lead,image("strutture-industriali",2),"08")}${pressHtml}
@@ -190,8 +182,12 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
   const L=window.GRIMALDELLI_LOCALES?.[lang];if(!L)return;
   const paths=["/","/azienda","/soluzioni","/prodotti","/realizzazioni","/dicono-di-noi","/contatti"];
   paths.forEach((p,i)=>{const a=nav?.querySelector(`a[data-nav="${p}"]`);if(a){if(p==="/contatti"){const chevron=a.querySelector(".chevron");a.textContent=L.nav[i]+" ";if(chevron)a.appendChild(chevron);}else a.textContent=L.nav[i];}});
-  nav?.querySelectorAll(".drop-menu a").forEach((a,i)=>a.textContent=L.links[i]||a.textContent);
-  mobile?.querySelectorAll('a[href^="#/"]').forEach((a,i)=>{if(i<L.nav.length)a.innerHTML=L.nav[i];});
+  nav?.querySelectorAll(".nav-contact-menu .drop-menu a").forEach((a,i)=>a.textContent=L.links[i]||a.textContent);
+  const label=nav?.querySelector(".nav-solutions-label-text");if(label)label.textContent=L.nav[2];
+   const sectorNames=(L.sols||[]).map(row=>String(row[0]).replace(/<br\\s*\\/?>/gi," "));
+   document.querySelectorAll('[data-sector-link]').forEach(link=>{const ix=Number(link.getAttribute('data-sector-link'));if(sectorNames[ix])link.textContent=sectorNames[ix];});
+   mobile?.querySelectorAll('[data-mobile-nav]').forEach(a=>{const ix=Number(a.getAttribute('data-mobile-nav'));if(L.nav[ix])a.textContent=L.nav[ix];});
+   const mobileTitle=mobile?.querySelector(".mobile-solutions-title");if(mobileTitle)mobileTitle.textContent=L.nav[2];
   const band=document.querySelector(".preview-label");if(band){const s=band.querySelectorAll("span");if(s.length>=3){s[1].textContent="GRIMALDELLI / "+L.lang.toUpperCase();s[2].textContent="SALVIROLA / ITALIA";}}
   const routeIndex=paths.indexOf(path);
   const routeName=routeIndex>=0?L.nav[routeIndex]:path==="/lavora-con-noi"?L.nav[7]:path.startsWith("/prodotto/")?L.nav[3]:path.startsWith("/soluzione/")?L.nav[2]:L.nav[0];
