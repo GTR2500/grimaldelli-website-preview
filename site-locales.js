@@ -116,7 +116,7 @@ window.GRIMALDELLI_LOCALES = {
       "title": "Four fields. One reliable partner.",
       "lead": "Our activities span steel structures, livestock facilities and specialist components for the energy sector.",
       "heading": "Explore our expertise",
-      "illustration": "Biogas and photovoltaic images are illustrations, not photographs of Grimaldelli installations.",
+      "illustration": "Photos from Grimaldelli's archive and official publications; the exact supply scope depends on each project.",
       "detailTitle": "Solutions tailored to your needs",
       "detailText": "Get in touch with our team to discuss your technical requirements."
     },
@@ -323,7 +323,7 @@ window.GRIMALDELLI_LOCALES = {
       "title": "Quatre domaines. Un seul partenaire.",
       "lead": "Nos activités couvrent les structures métalliques, l'élevage et les composants spécialisés pour le secteur énergétique.",
       "heading": "Découvrez nos spécialités",
-      "illustration": "Les images du biogaz et du photovoltaïque sont des illustrations, et non des photographies de réalisations Grimaldelli.",
+      "illustration": "Photographies issues des archives et des publications officielles de Grimaldelli ; le périmètre des fournitures dépend du projet.",
       "detailTitle": "Des solutions adaptées à vos besoins",
       "detailText": "Contactez notre équipe pour discuter de vos exigences techniques."
     },
@@ -530,7 +530,7 @@ window.GRIMALDELLI_LOCALES = {
       "title": "Vier Bereiche. Ein Partner.",
       "lead": "Unsere Arbeit umfasst Stahlkonstruktionen, Stalleinrichtungen und Spezialkomponenten für den Energiesektor.",
       "heading": "Unsere Fachgebiete",
-      "illustration": "Die Abbildungen zu Biogas und Photovoltaik sind Illustrationen und keine Fotografien von Grimaldelli-Projekten.",
+      "illustration": "Fotos aus dem Grimaldelli-Archiv und offiziellen Veröffentlichungen; der genaue Leistungsumfang hängt vom Projekt ab.",
       "detailTitle": "Lösungen nach Ihren Anforderungen",
       "detailText": "Sprechen Sie mit unserem Team über Ihre technischen Anforderungen."
     },
