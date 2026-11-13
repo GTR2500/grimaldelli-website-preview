@@ -57,7 +57,7 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     <section class="section solution-detail"><div class="section-container detail-hero"><div class="reveal">${eyebrow(L.solutions.detailTitle)}<h2>${s.name}</h2><p>${e(s.desc)} ${e(L.solutions.detailText)}</p>${action(isEnergy?L.common.info:L.common.catalog,isEnergy?"#/contatti":`#/prodotti?gruppo=${group}`)}</div>${photo(s.img,s.label,"","eager")}</div>
     ${!isEnergy?`<div class="section-container detail-copy">${head(L.nav[3],L.products.title)}<div class="feature-grid">${list.map(p=>card(p.title,p.images?.[0]?.src||heroPhoto,"#/prodotto/"+p.slug)).join("")}</div></div>`:""}</section>`;
   } else if(path==="/prodotti"){
-    const groups=[["tutti",L.common.all],["strutture",L.common.metal],["zootecnia",L.common.livestock],["modelli",L.common.models]];
+    const groups=[["tutti",L.common.all],["strutture",L.common.metal],["zootecnia",L.common.livestock],["modelli",L.common.models],["biogas",products.find(p=>p.group==="biogas")?.title||"Biogas"],["fotovoltaico",products.find(p=>p.group==="fotovoltaico")?.title||"Photovoltaics"]];
     app.innerHTML=`${header(L.products.eyebrow,L.products.title,L.products.lead,image("abbeveratoi",0),"04")}
     <section class="catalog-section"><div class="section-container"><div class="filterbar"><div class="filter-pills">${groups.map(([v,n],i)=>`<button class="filter-pill ${i===0?"active":""}" type="button" data-filter="${v}">${e(n)}</button>`).join("")}</div>
     <input id="catalog-search" class="search-field" type="search" aria-label="${e(L.common.search)}" placeholder="${e(L.common.search)}"></div><p id="catalog-count" style="font-size:11px;color:#77817a;margin:10px 0 36px"></p><div id="catalog-grid" class="catalog-grid"></div></div></section>`;
@@ -66,7 +66,7 @@ window.GrimaldelliI18N={render:function renderLocalized(lang,path,C){
     const out=()=>{
       let list=products.filter(p=>selected==="tutti"?p.group!=="archivio"&&p.group!=="modelli":p.group===selected);
       if(query)list=list.filter(p=>(p.title+" "+p.summary).toLowerCase().includes(query));
-      app.querySelector("#catalog-grid").innerHTML=list.map(p=>`<a href="#/prodotto/${encodeURIComponent(p.slug)}" class="catalog-card reveal"><div class="crop">${photo(p.images?.[0]?.src||heroPhoto,p.title)}</div><div class="name">${e(p.title)}</div><div class="meta">${e(p.group==="strutture"?L.common.metal:p.group==="modelli"?L.common.models:L.common.livestock)}</div></a>`).join("")||`<p>${e(L.common.search)}: 0</p>`;
+      app.querySelector("#catalog-grid").innerHTML=list.map(p=>`<a href="${e(p.catalogUrl||`#/prodotto/${encodeURIComponent(p.slug)}`)}" class="catalog-card reveal"><div class="crop">${photo(p.images?.[0]?.src||heroPhoto,p.title)}</div><div class="name">${e(p.title)}</div><div class="meta">${e(p.catalogMeta|| (p.group==="strutture"?L.common.metal:p.group==="modelli"?L.common.models:L.common.livestock))}</div></a>`).join("")||`<p>${e(L.common.search)}: 0</p>`;
       app.querySelector("#catalog-count").textContent=`${list.length} ${L.products.count}`;
     };
     app.querySelectorAll("[data-filter]").forEach(button=>button.addEventListener("click",()=>{selected=button.dataset.filter;app.querySelectorAll("[data-filter]").forEach(b=>b.classList.toggle("active",b===button));out();}));
