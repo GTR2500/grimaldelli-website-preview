@@ -23,8 +23,8 @@ const C={
   ],
   context:"Riferimento della richiesta",preview:"Questa è una preview: il modulo web non invia richieste. Puoi usare l'email con oggetto e contesto già preparati.",email:"Prepara un'email",formHelp:"Per una risposta utile, descrivi impianto, località, dimensioni e tempistiche.",
   subject:"Richiesta informazioni Grimaldelli",product:"Prodotto",sector:"Settore",project:"Progetto",note:"Informazioni sul contesto del progetto",location:"Località",quantity:"Dimensioni o quantità",timing:"Tempistiche",
-  trustTitle:"Materiale documentato, perimetro da confermare",
-  trustText:"Le fotografie e i dati degli impianti illustrano i progetti documentati; le specifiche forniture Grimaldelli vanno riferite al singolo intervento.",
+  trustTitle:"Progetti e fotografie dal nostro archivio",
+  trustText:"Le schede raccolgono fotografie, video e informazioni sui progetti presentati. Ogni intervento ha caratteristiche proprie.",
   pressLabel:"Rassegna stampa e fonti pubbliche",pressText:"Articoli, interviste e documenti verificabili: distinti dalle recensioni e dalle testimonianze dei clienti."
  },
  en:{
@@ -42,7 +42,7 @@ const C={
   ],
   context:"Enquiry reference",preview:"This is a preview: the web form cannot submit. You can prepare an email with the relevant subject and project context.",email:"Prepare an email",formHelp:"Describe the facility, location, dimensions and timeline to help us respond.",
   subject:"Grimaldelli enquiry",product:"Product",sector:"Sector",project:"Project",note:"Project details",location:"Location",quantity:"Dimensions or quantity",timing:"Timeline",
-  trustTitle:"Documented projects, project-specific scope",trustText:"Photos and plant details describe the featured projects; Grimaldelli's actual supply must be established for each intervention.",
+  trustTitle:"Projects from our archive",trustText:"Project photographs, videos and information illustrate the work presented. Every project has its own requirements.",
   pressLabel:"Press coverage and public sources",pressText:"Verifiable articles, interviews and documents, distinct from customer reviews or testimonials."
  },
  fr:{
@@ -60,7 +60,7 @@ const C={
   ],
   context:"Référence de la demande",preview:"Il s'agit d'un aperçu : le formulaire ne peut pas envoyer de message. Vous pouvez préparer un courriel avec le contexte du projet.",email:"Préparer un courriel",formHelp:"Précisez l'installation, le lieu, les dimensions et le calendrier.",
   subject:"Demande d'informations Grimaldelli",product:"Produit",sector:"Secteur",project:"Projet",note:"Contexte du projet",location:"Localité",quantity:"Dimensions ou quantité",timing:"Délais",
-  trustTitle:"Projets documentés, prestations à confirmer",trustText:"Les photos et les puissances concernent les projets présentés ; le périmètre exact des travaux de Grimaldelli dépend de chacun.",
+  trustTitle:"Projets et photographies de nos archives",trustText:"Les fiches présentent les photographies, les vidéos et les informations des projets sélectionnés. Chaque réalisation répond à des besoins spécifiques.",
   pressLabel:"Presse et sources publiques",pressText:"Articles, interviews et documents vérifiables, distincts des avis ou témoignages de clients."
  },
  de:{
@@ -78,7 +78,7 @@ const C={
   ],
   context:"Bezug der Anfrage",preview:"Dies ist eine Vorschau: Das Webformular versendet keine Anfragen. Eine E-Mail mit vorbereitetem Betreff und Kontext ist möglich.",email:"E-Mail vorbereiten",formHelp:"Bitte Anlage, Standort, Maße und Zeitrahmen angeben.",
   subject:"Anfrage an Grimaldelli",product:"Produkt",sector:"Bereich",project:"Projekt",note:"Projektbeschreibung",location:"Standort",quantity:"Maße oder Menge",timing:"Zeitrahmen",
-  trustTitle:"Dokumentierte Projekte, Leistungsumfang je Auftrag",trustText:"Fotos und Anlagenangaben beziehen sich auf dokumentierte Projekte; der genaue Lieferumfang von Grimaldelli ist je Auftrag zu prüfen.",
+  trustTitle:"Projekte aus unserem Archiv",trustText:"Fotos, Videos und Projektdaten zeigen dokumentierte Arbeiten. Jedes Projekt hat eigene Anforderungen.",
   pressLabel:"Presse und öffentliche Quellen",pressText:"Nachprüfbare Artikel, Interviews und Dokumente, nicht mit Kundenbewertungen gleichzusetzen."
  }
 };
