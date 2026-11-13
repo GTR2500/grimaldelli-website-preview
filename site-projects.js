@@ -41,6 +41,18 @@ function apply(){
    }
   }
  }
+ const social=c.app.querySelector("#p10-social-showcase");
+ if(social){
+  const posts=window.GrimaldelliInstagram?.posts||[];
+  let visible=0;
+  social.querySelectorAll("[data-work-id]").forEach(card=>{
+   const post=posts.find(p=>p.id===card.getAttribute("data-work-id"));
+   const keep=sector==="tutti"||(sector==="zootecnia"&&post?.category==="livestock")||(sector==="fotovoltaico"&&post?.category==="energy");
+   card.hidden=!keep;
+   if(keep)visible++;
+  });
+  social.hidden=visible===0;
+ }
  c.picker.querySelectorAll("[data-p10-project-sector]").forEach(button=>{
   const on=button.getAttribute("data-p10-project-sector")===sector;
   button.setAttribute("aria-pressed",String(on));
