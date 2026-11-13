@@ -363,3 +363,31 @@ outline:2px solid #ea7228;outline-offset:2px}
 @media(max-width:1000px){.p10-energy-case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.p10-energy-portfolio-head{grid-template-columns:1fr}}
 @media(max-width:750px){.p10-energy-feature-header{display:block}.p10-energy-feature-header p{margin:24px 0 0}.p10-energy-sector-grid,.p10-energy-case-grid{grid-template-columns:1fr}.p10-energy-tile p{min-height:0}.p10-energy-case-image{height:260px}.p10-energy-footnote{display:block}.p10-energy-footnote span{display:block;margin-top:6px}.p10-energy-footnote span:last-child{text-align:left}}
 @media(prefers-reduced-motion:reduce){.p10-energy-tile,.p10-energy-tile img{transition:none}.p10-energy-tile:hover,.p10-energy-tile:hover img{transform:none}}
+
+/* P10 continuous clickable sector marquee with verified first-party project totals */
+.p10-marquee{height:76px;padding:0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:flex-start}
+.p10-marquee .p10-marquee-track{display:flex;align-items:center;gap:0;width:max-content;min-width:0;flex-shrink:0;white-space:nowrap;animation:p10-marquee-scroll 42s linear infinite}
+.p10-marquee-sequence{display:flex;gap:0;align-items:center;flex:0 0 auto;min-width:max-content}
+.p10-marquee-link{display:inline-flex;align-items:center;gap:13px;padding:14px 19px;min-height:60px;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;transition:background .15s,color .15s}
+.p10-marquee-link:hover{color:#b9551f;background:rgba(235,118,41,.08);border-bottom-color:var(--orange)}
+.p10-marquee-link:focus-visible{outline:2px solid var(--orange);outline-offset:-3px;background:#fff}
+.p10-marquee-name{font-size:11px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
+.p10-marquee-count{display:inline-flex;align-items:center;gap:5px;font-size:10px;letter-spacing:.04em;font-weight:650;color:#5a655f;text-transform:none}
+.p10-marquee-count strong{font-size:16px;font-weight:800;letter-spacing:-.03em;color:var(--orange)}
+.p10-marquee-chevron{font-size:15px;color:var(--orange);opacity:.85}
+.p10-marquee-plus{display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:20px;font-weight:500;padding:0 14px}
+@keyframes p10-marquee-scroll{to{transform:translate3d(-50%,0,0)}}
+.p10-marquee:hover .p10-marquee-track,.p10-marquee:focus-within .p10-marquee-track{animation-play-state:paused}
+@media(max-width:700px){
+.p10-marquee{height:66px}
+.p10-marquee-link{padding:10px 14px;gap:8px;min-height:54px}
+.p10-marquee-name{font-size:10px;letter-spacing:.09em}
+.p10-marquee-count{font-size:10px}
+.p10-marquee-count strong{font-size:14px}
+.p10-marquee-plus{padding:0 9px}
+}
+@media(prefers-reduced-motion:reduce){
+.p10-marquee{overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin}
+.p10-marquee .p10-marquee-track{animation:none!important}
+.p10-marquee .p10-marquee-sequence[aria-hidden="true"]{display:none}
+}
