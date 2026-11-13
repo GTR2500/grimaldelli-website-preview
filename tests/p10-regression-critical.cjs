@@ -60,3 +60,18 @@ for (const name of ['favicon.ico','assets/favicon-grimaldelli-32.png'])
   assert.ok(fs.existsSync(path.join(root,name)), 'Favicon file missing: ' + name);
 
 console.log('P10_REGRESSION_GUARD_PASS: Azienda years, interview, four sectors, Home image, favicon');
+
+/* Approved 2026-11-13 IA update: eliminate duplicate Soluzioni overview. */
+const updatedIndex=read('index.html'), updatedI18n=read('site-i18n.js'), updatedProjects=read('site-projects.js');
+assert.ok(updatedIndex.includes('nav-solutions-menu')&&updatedIndex.includes('mobile-sector-links'),'Desktop/mobile sector menus missing');
+assert.ok(updatedIndex.includes('href="#/soluzione/fotovoltaico"'),'Direct sector links missing');
+assert.ok(!updatedIndex.includes('href="#/soluzioni"'),'Deprecated overview remains linked');
+assert.ok(site.includes("pathname==='/soluzioni'")&&site.includes("params.get('settori')==='1'"),'Legacy route / Home CTA must lead to the four sectors');
+assert.ok(site.includes("$$('.nav-desktop a').forEach("),'Navigation must use querySelectorAll; wrong selector empties every page');
+assert.ok(!site.includes(" $('.nav-desktop a').forEach("),'Runtime-breaking single-element selector returned');
+assert.ok(updatedProjects.includes('p10-projects-tabs')&&updatedProjects.includes('p10-social-showcase'),'Compact project filters missing');
+assert.ok(site.includes('p10-projects-social-slot')&&updatedI18n.includes('p10-projects-social-slot'),'Realizzazioni must render source-backed media');
+assert.ok(!site.includes('GALLERIA SELEZIONATA'),'Duplicate generic catalogue gallery returned');
+assert.ok(!site.includes('sono illustrazioni e non fotografie'),'Obsolete illustrative photo note returned');
+assert.ok(read('press-editorial.css').includes('font-size:clamp(18px,1.55vw,22px)'),'Azienda chapter labels need the approved larger font');
+console.log('P10_STRUCTURE_GUARD_PASS: sector menu, portfolio, readable story labels and runtime selector');
