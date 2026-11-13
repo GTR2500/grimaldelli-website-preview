@@ -49,10 +49,12 @@ const server=http.createServer((req,res)=>{
    if(lang==="it"&&width===1440){
      await page.locator(".p10-marquee").screenshot({path:path.join(root,"p10-marquee-qa.png")});
    }
-   // navigation is a hash route and must show the appropriate sector
-   await page.locator('.p10-marquee-sequence:first-child a[href="#/soluzione/fotovoltaico"]').click();
-   await page.waitForURL(/#\/soluzione\/fotovoltaico/,{timeout:10000});
-   await page.locator("#p10-energy-portfolio").waitFor({timeout:12000});
+   // Hover freezes the ticker for keyboard/mouse users; click a currently visible sector.
+   await page.locator(".p10-marquee").hover();
+   const firstLink=page.locator('.p10-marquee-sequence:first-child a[href="#/soluzione/strutture"]');
+   await firstLink.click({timeout:12000});
+   await page.waitForURL(/#\/soluzione\/strutture/,{timeout:10000});
+   await page.locator(".solution-detail").waitFor({timeout:12000});
    results.push({lang,width,counts:[8,13],links:4,sectorNavigation:true,seamless:true});
    await context.close();
   }
