@@ -1,0 +1,358 @@
+{
+  "archive": "https://www.glcgrimaldelli.com/category/biogas/",
+  "note": "Plant capacities from historical Grimaldelli posts; not evidence of EPC/entire-plant supply",
+  "projects": [
+    {
+      "id": "lupo-stanghellini",
+      "name": "Az. Agr. Lupo Stanghellini Chieve (CR) – Biogas 300 kW",
+      "place": "Chieve (CR)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/16/az-agr-lupo-stanghellini-chieve-cr-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/lupo-stanghellini/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0016.jpg",
+          "width": 1440,
+          "height": 1080,
+          "size": 228054,
+          "sharpness": 40.41
+        },
+        {
+          "path": "assets/energy/biogas/lupo-stanghellini/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0014.jpg",
+          "width": 1440,
+          "height": 1080,
+          "size": 348580,
+          "sharpness": 52.02
+        },
+        {
+          "path": "assets/energy/biogas/lupo-stanghellini/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0015.jpg",
+          "width": 1440,
+          "height": 1080,
+          "size": 234410,
+          "sharpness": 41.06
+        },
+        {
+          "path": "assets/energy/biogas/lupo-stanghellini/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0017.jpg",
+          "width": 1440,
+          "height": 1080,
+          "size": 185968,
+          "sharpness": 37.47
+        }
+      ],
+      "cover": "assets/energy/biogas/lupo-stanghellini/01.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
+    },
+    {
+      "id": "rota-villanova",
+      "name": "Soc. Agr. Rota Villanova Del Sillaro (LO) – Biogas 300 kW",
+      "place": "Villanova del Sillaro (LO)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/16/soc-agr-rota-villanova-del-sillaro-lo-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/rota-villanova/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/centrale-termica.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 219468,
+          "sharpness": 47.89
+        },
+        {
+          "path": "assets/energy/biogas/rota-villanova/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0008.jpg",
+          "width": 720,
+          "height": 540,
+          "size": 84590,
+          "sharpness": 54
+        },
+        {
+          "path": "assets/energy/biogas/rota-villanova/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Immagine-WhatsApp-2023-11-16-ore-14.23.55_6693b37e-modificata.jpg",
+          "width": 720,
+          "height": 540,
+          "size": 71510,
+          "sharpness": 47.56
+        },
+        {
+          "path": "assets/energy/biogas/rota-villanova/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20231116-WA0009-POP.jpg",
+          "width": 720,
+          "height": 540,
+          "size": 56634,
+          "sharpness": 47.32
+        }
+      ],
+      "cover": "assets/energy/biogas/rota-villanova/02.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
+    },
+    {
+      "id": "bianchessi",
+      "name": "Az. Agr. Bianchessi Castelgabbiano (CR) – Biogas 300 kW",
+      "place": "Castelgabbiano (CR)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/14/az-agr-bianchessi-castelgabbiano-cr-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/bianchessi/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0015.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 189050,
+          "sharpness": 45.66
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0020.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 199270,
+          "sharpness": 46.26
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/09.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0019.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 182774,
+          "sharpness": 36.08
+        },
+        {
+          "path": "assets/energy/biogas/bianchessi/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Vista-forntale-motore.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 149222,
+          "sharpness": 29.07
+        }
+      ],
+      "cover": "assets/energy/biogas/bianchessi/01.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
+    },
+    {
+      "id": "rota-corte-palasio",
+      "name": "Soc. Agr. Rota Corte Palasio (LO) – Biogas 300 kW",
+      "place": "Corte Palasio (LO)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/14/soc-agr-rota-corte-palasio-lo-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Zona-motore-2.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 190322,
+          "sharpness": 36.2
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/08.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/L.T.-1.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 157104,
+          "sharpness": 33.03
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/09.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Zona-motore-1.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 158018,
+          "sharpness": 32.46
+        },
+        {
+          "path": "assets/energy/biogas/rota-corte-palasio/02.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Caricatore-da-20-mc-3.jpg",
+          "width": 1600,
+          "height": 1204,
+          "size": 152044,
+          "sharpness": 32.03
+        }
+      ],
+      "cover": "assets/energy/biogas/rota-corte-palasio/04.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
+    },
+    {
+      "id": "campagnari",
+      "name": "Soc. Agr. Campagnari Marmirolo (MN) – Biogas 300 kW",
+      "place": "Marmirolo (MN)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/10/soc-agr-campagnari-marmirolo-mn-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/campagnari/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.38-3.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 298872,
+          "sharpness": 46.46
+        },
+        {
+          "path": "assets/energy/biogas/campagnari/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.38.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 378596,
+          "sharpness": 57.98
+        },
+        {
+          "path": "assets/energy/biogas/campagnari/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.39-2.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 270478,
+          "sharpness": 42.8
+        },
+        {
+          "path": "assets/energy/biogas/campagnari/07.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.41-5.jpeg",
+          "width": 1600,
+          "height": 1200,
+          "size": 267836,
+          "sharpness": 42.74
+        }
+      ],
+      "cover": "assets/energy/biogas/campagnari/03.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
+    },
+    {
+      "id": "quarantore",
+      "name": "Soc. Agr. “Quarantore” San Martino dall’Argine (MN) – Biogas 249 kW",
+      "place": "San Martino dall'Argine (MN)",
+      "declared_plant_power_kw": 249,
+      "source": "https://www.glcgrimaldelli.com/2023/11/10/soc-agr-quarantore-san-martino-dallargine-mn-biogas-249-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/quarantore/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1063-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 376158,
+          "sharpness": 53.81
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/04.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1057-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 289016,
+          "sharpness": 55.36
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/07.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1067-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 356564,
+          "sharpness": 62.7
+        },
+        {
+          "path": "assets/energy/biogas/quarantore/08.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1068-1-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 356052,
+          "sharpness": 61.05
+        }
+      ],
+      "cover": "assets/energy/biogas/quarantore/01.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
+    },
+    {
+      "id": "balestrieri",
+      "name": "Az. Agr. Balestrieri San Daniele Po (CR) – Biogas 300 kW",
+      "place": "San Daniele Po (CR)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/10/az-agr-balestrieri-san-daniele-po-cr-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/balestrieri/09.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6390.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 233336,
+          "sharpness": 42.88
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/05.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6385.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 126654,
+          "sharpness": 38.62
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/06.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6386.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 102824,
+          "sharpness": 32.45
+        },
+        {
+          "path": "assets/energy/biogas/balestrieri/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6395.jpg",
+          "width": 2016,
+          "height": 1512,
+          "size": 125736,
+          "sharpness": 32.18
+        }
+      ],
+      "cover": "assets/energy/biogas/balestrieri/09.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
+    },
+    {
+      "id": "bondenta",
+      "name": "Soc. Agr. Bondenta Campagnola Cr. (CR) – Biogas 300 kW",
+      "place": "Campagnola Cremasca (CR)",
+      "declared_plant_power_kw": 300,
+      "source": "https://www.glcgrimaldelli.com/2023/11/10/soc-agr-bondenta-campagnola-cr-cr-biogas-300-kw/",
+      "images": [
+        {
+          "path": "assets/energy/biogas/bondenta/01.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_3787-scaled.jpg",
+          "width": 2560,
+          "height": 1920,
+          "size": 239632,
+          "sharpness": 52.83
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/07.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171030_122534-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 146950,
+          "sharpness": 40.63
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/09.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171030_122537-modificata-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 238940,
+          "sharpness": 37.93
+        },
+        {
+          "path": "assets/energy/biogas/bondenta/03.webp",
+          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171201_105830-REV01-scaled.jpg",
+          "width": 2560,
+          "height": 1440,
+          "size": 159906,
+          "sharpness": 33.93
+        }
+      ],
+      "cover": "assets/energy/biogas/bondenta/01.webp",
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
+    }
+  ]
+}

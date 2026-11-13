@@ -1,0 +1,42 @@
+name: P10 - Recupero archivio Biogas Grimaldelli
+on:
+  push:
+    branches: [dev/p10-energy-biogas-photovoltaico-20261113]
+    paths:
+      - 'scripts/p10_acquire_biogas_archive.py'
+      - '.github/workflows/p10-biogas-import.yml'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --quiet requests beautifulsoup4 Pillow
+      - name: Download and filter archive images
+        run: python scripts/p10_acquire_biogas_archive.py
+      - name: Verify manifest and images
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          d=json.loads(pathlib.Path('assets/energy/biogas/manifest.json').read_text())
+          assert len(d['projects'])>=3
+          for p in d['projects']:
+              for img in p['images']:
+                  f=pathlib.Path(img['path'])
+                  assert f.is_file() and f.stat().st_size>14000,f
+          print('PROJECTS',len(d['projects']),'IMAGES',sum(len(p['images']) for p in d['projects']))
+          PY
+      - name: Commit source-backed first party images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/energy/biogas
+          if ! git diff --cached --quiet; then
+            git commit -m "P10: importa foto Biogas dal sito storico Grimaldelli"
+            git push origin HEAD:dev/p10-energy-biogas-photovoltaico-20261113
+          fi

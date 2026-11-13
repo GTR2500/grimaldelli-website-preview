@@ -1,0 +1,24 @@
+name: P10 - Browser QA Energia
+on:
+  push:
+    branches: [dev/p10-energy-biogas-photovoltaico-20261113]
+    paths:
+      - 'site-energy.js'
+      - 'site.js'
+      - 'index.html'
+      - 'editorial.css'
+      - 'assets/energy/**'
+      - 'tests/p10-energy-browser.cjs'
+      - '.github/workflows/p10-energy-browser.yml'
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock --quiet playwright
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/p10-energy-browser.cjs
