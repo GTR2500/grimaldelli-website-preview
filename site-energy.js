@@ -69,9 +69,14 @@ const solarCases=[
 ];
 const languages=Object.keys(text);
 const esc=s=>String(s??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
-const within=src=>typeof src==="string"&&/^assets\/(?:instagram\/(?:nisoli|ginelli)\/image-\d+\.webp|energy\/biogas\/[a-z0-9-]+\/\d+\.webp)$/.test(src)?src:"";
+const within=src=>typeof src==="string"&&/^assets\/(?:instagram\/(?:nisoli|ginelli)\/image-\d+\.webp|energy\/(?:biogas|photovoltaic)\/[a-z0-9-]+\/\d+\.webp)$/.test(src)?src:"";
 const pathOf=ref=>typeof ref==="string"&&ref.startsWith("assets/")?ref:ref?.replace(/^\/+/,"")||"";
-let manifestPromise;
+let manifestPromise,solarManifestPromise;
+const photovoltaic=()=>{
+ if(!solarManifestPromise)solarManifestPromise=fetch("assets/energy/photovoltaic/manifest.json",{cache:"force-cache",credentials:"same-origin"})
+   .then(r=>r.ok?r.json():{projects:[]}).then(j=>Array.isArray(j.projects)?j.projects:[]).catch(()=>[]);
+ return solarManifestPromise;
+};
 const biogas=()=>{
  if(!manifestPromise)manifestPromise=fetch("assets/energy/biogas/manifest.json",{cache:"force-cache",credentials:"same-origin"})
    .then(r=>r.ok?r.json():{projects:[]}).then(j=>Array.isArray(j.projects)?j.projects:[]).catch(()=>[]);
@@ -143,9 +148,25 @@ async function mount(route,lang,app){
  if(!(isHome||isProjects||isBiogas||isSolar))return false;
  const t=text[lang]||text.it;
  const origin=window.location.href;
- const historical=(await biogas()).map(normalized).filter(p=>p.images.length);
+ const [oldBiogas,oldSolar]=await Promise.all([biogas(),photovoltaic()]);
+ const historical=oldBiogas.map(normalized).filter(p=>p.images.length);
  if(app.isConnected===false||window.location.href!==origin)return false;
- const solar=solarCases.filter(p=>p.images.every(within));
+ const historicalSolar=oldSolar.map(p=>({
+   id:p.id,
+   name:p.name.replace(/(?:impianto|campo)\s+fotovoltaico[\s\S]*/i,"").replace(/[-–\s]+$/,"").trim(),
+   place:(p.name.match(/(?:Ossago Lodigiano|Credera Rubbiano|Castelvisconti|Brignano Gera D[’']Adda)\s*\([A-Z]{2}\)/i)||[])[0]||"",
+   capacity:p.capacity||"",
+   source:p.source,
+   images:p.images.map(x=>within(pathOf(x.path))).filter(Boolean)
+ })).filter(p=>p.images.length);
+ const solarUnique=historicalSolar.filter(p=>!p.id.includes("nisoli"));
+ const nisoliArchive=historicalSolar.find(p=>p.id.includes("nisoli"));
+ const solar=[
+   ...solarUnique,
+   ...solarCases.map(p=>p.id==="nisoli"&&nisoliArchive?
+      {...p,capacity:nisoliArchive.capacity||p.capacity,
+       images:[...nisoliArchive.images,...p.images]}:p)
+ ].filter(p=>p.images.every(within));
  if(!historical.length&&!solar.length)return false;
  let html="";
  if(isHome){
