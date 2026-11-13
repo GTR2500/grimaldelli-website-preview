@@ -216,7 +216,7 @@ function upsertMeta(selector,attr,key,value){
 }
 function setMetadata(route,lang,ctx,t){
  const titleByRoute={
-  "/":t.home.split(":")[0],
+  "/":{it:"Strutture e lavorazioni su misura",en:"Made-to-requirement steelwork and equipment",fr:"Structures et équipements sur mesure",de:"Stahlbau und Stalltechnik nach Maß"}[lang],
   "/azienda":{it:"Dal 1921: storia e competenze",en:"Company history since 1921",fr:"Histoire de l'entreprise depuis 1921",de:"Unternehmensgeschichte seit 1921"}[lang],
   "/prodotti":{it:"Catalogo prodotti e strutture",en:"Products and steel structures",fr:"Catalogue produits et structures",de:"Produkte und Stahlkonstruktionen"}[lang],
   "/realizzazioni":{it:"Lavori e realizzazioni documentati",en:"Documented projects",fr:"Réalisations documentées",de:"Dokumentierte Referenzen"}[lang],
