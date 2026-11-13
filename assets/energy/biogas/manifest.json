@@ -43,7 +43,8 @@
         }
       ],
       "cover": "assets/energy/biogas/lupo-stanghellini/01.webp",
-      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
     },
     {
       "id": "rota-villanova",
@@ -86,7 +87,8 @@
         }
       ],
       "cover": "assets/energy/biogas/rota-villanova/02.webp",
-      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
     },
     {
       "id": "bianchessi",
@@ -126,50 +128,11 @@
           "height": 1204,
           "size": 149222,
           "sharpness": 29.07
-        },
-        {
-          "path": "assets/energy/biogas/bianchessi/06.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0010.jpg",
-          "width": 1204,
-          "height": 1600,
-          "size": 207902,
-          "sharpness": 45.52
-        },
-        {
-          "path": "assets/energy/biogas/bianchessi/08.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0013.jpg",
-          "width": 1204,
-          "height": 1600,
-          "size": 167386,
-          "sharpness": 43.54
-        },
-        {
-          "path": "assets/energy/biogas/bianchessi/04.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230921-WA0008.jpg",
-          "width": 1204,
-          "height": 1600,
-          "size": 60378,
-          "sharpness": 22.27
-        },
-        {
-          "path": "assets/energy/biogas/bianchessi/07.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Zona-targhe-Stamford.jpg",
-          "width": 1204,
-          "height": 1600,
-          "size": 80936,
-          "sharpness": 17.51
-        },
-        {
-          "path": "assets/energy/biogas/bianchessi/03.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/QCBT-e-QACC.jpg",
-          "width": 940,
-          "height": 1333,
-          "size": 83484,
-          "sharpness": 26.31
         }
       ],
       "cover": "assets/energy/biogas/bianchessi/01.webp",
-      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
     },
     {
       "id": "rota-corte-palasio",
@@ -209,50 +172,11 @@
           "height": 1204,
           "size": 152044,
           "sharpness": 32.03
-        },
-        {
-          "path": "assets/energy/biogas/rota-corte-palasio/01.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230615-WA0017.jpg",
-          "width": 1600,
-          "height": 1204,
-          "size": 162280,
-          "sharpness": 31.9
-        },
-        {
-          "path": "assets/energy/biogas/rota-corte-palasio/05.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Digestore-1.jpg",
-          "width": 1600,
-          "height": 1204,
-          "size": 100288,
-          "sharpness": 27.28
-        },
-        {
-          "path": "assets/energy/biogas/rota-corte-palasio/03.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Copertura-pompa-centrale-2.jpg",
-          "width": 1204,
-          "height": 1600,
-          "size": 135982,
-          "sharpness": 41.69
-        },
-        {
-          "path": "assets/energy/biogas/rota-corte-palasio/07.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Pompa-centrale.jpg",
-          "width": 1204,
-          "height": 1600,
-          "size": 109590,
-          "sharpness": 29.51
-        },
-        {
-          "path": "assets/energy/biogas/rota-corte-palasio/06.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG-20230615-WA0021.jpg",
-          "width": 1204,
-          "height": 1600,
-          "size": 127292,
-          "sharpness": 28.73
         }
       ],
       "cover": "assets/energy/biogas/rota-corte-palasio/04.webp",
-      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
     },
     {
       "id": "campagnari",
@@ -292,34 +216,11 @@
           "height": 1200,
           "size": 267836,
           "sharpness": 42.74
-        },
-        {
-          "path": "assets/energy/biogas/campagnari/06.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.41-1.jpeg",
-          "width": 1600,
-          "height": 1200,
-          "size": 262882,
-          "sharpness": 36.82
-        },
-        {
-          "path": "assets/energy/biogas/campagnari/01.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.39-4.jpeg",
-          "width": 1600,
-          "height": 1200,
-          "size": 280554,
-          "sharpness": 34.87
-        },
-        {
-          "path": "assets/energy/biogas/campagnari/02.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/WhatsApp-Image-2022-06-09-at-11.23.38-1.jpeg",
-          "width": 1600,
-          "height": 1200,
-          "size": 218450,
-          "sharpness": 32.93
         }
       ],
       "cover": "assets/energy/biogas/campagnari/03.webp",
-      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
     },
     {
       "id": "quarantore",
@@ -359,58 +260,11 @@
           "height": 1920,
           "size": 356052,
           "sharpness": 61.05
-        },
-        {
-          "path": "assets/energy/biogas/quarantore/09.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1069-1-scaled.jpg",
-          "width": 2560,
-          "height": 1920,
-          "size": 266988,
-          "sharpness": 31
-        },
-        {
-          "path": "assets/energy/biogas/quarantore/06.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1059-1-scaled.jpg",
-          "width": 2560,
-          "height": 1920,
-          "size": 240614,
-          "sharpness": 29.44
-        },
-        {
-          "path": "assets/energy/biogas/quarantore/03.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1056-1-scaled.jpg",
-          "width": 2560,
-          "height": 1920,
-          "size": 119966,
-          "sharpness": 26.82
-        },
-        {
-          "path": "assets/energy/biogas/quarantore/05.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1058-1-scaled.jpg",
-          "width": 1920,
-          "height": 2560,
-          "size": 151670,
-          "sharpness": 44.55
-        },
-        {
-          "path": "assets/energy/biogas/quarantore/10.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_1073-1-scaled.jpg",
-          "width": 2560,
-          "height": 936,
-          "size": 67260,
-          "sharpness": 26.62
-        },
-        {
-          "path": "assets/energy/biogas/quarantore/02.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/5-1.jpeg",
-          "width": 1600,
-          "height": 1197,
-          "size": 87242,
-          "sharpness": 31.51
         }
       ],
       "cover": "assets/energy/biogas/quarantore/01.webp",
-      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
     },
     {
       "id": "balestrieri",
@@ -450,66 +304,11 @@
           "height": 1512,
           "size": 125736,
           "sharpness": 32.18
-        },
-        {
-          "path": "assets/energy/biogas/balestrieri/04.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6392.jpg",
-          "width": 2016,
-          "height": 1512,
-          "size": 223834,
-          "sharpness": 31.44
-        },
-        {
-          "path": "assets/energy/biogas/balestrieri/08.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6388.jpg",
-          "width": 2016,
-          "height": 1512,
-          "size": 124040,
-          "sharpness": 31.05
-        },
-        {
-          "path": "assets/energy/biogas/balestrieri/11.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6399.jpg",
-          "width": 2016,
-          "height": 1512,
-          "size": 86412,
-          "sharpness": 29.59
-        },
-        {
-          "path": "assets/energy/biogas/balestrieri/02.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6380.jpg",
-          "width": 2016,
-          "height": 1512,
-          "size": 158060,
-          "sharpness": 26.92
-        },
-        {
-          "path": "assets/energy/biogas/balestrieri/10.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6394.jpg",
-          "width": 2016,
-          "height": 1512,
-          "size": 110658,
-          "sharpness": 24.58
-        },
-        {
-          "path": "assets/energy/biogas/balestrieri/03.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/IMG_6383.jpg",
-          "width": 2016,
-          "height": 1512,
-          "size": 135554,
-          "sharpness": 17.85
-        },
-        {
-          "path": "assets/energy/biogas/balestrieri/07.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/Cattura.jpg",
-          "width": 1720,
-          "height": 926,
-          "size": 133160,
-          "sharpness": 60.18
         }
       ],
       "cover": "assets/energy/biogas/balestrieri/09.webp",
-      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
     },
     {
       "id": "bondenta",
@@ -549,58 +348,11 @@
           "height": 1440,
           "size": 159906,
           "sharpness": 33.93
-        },
-        {
-          "path": "assets/energy/biogas/bondenta/10.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171201_105112-scaled.jpg",
-          "width": 2560,
-          "height": 1440,
-          "size": 112844,
-          "sharpness": 32.79
-        },
-        {
-          "path": "assets/energy/biogas/bondenta/02.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20170728_103601-scaled.jpg",
-          "width": 2560,
-          "height": 1440,
-          "size": 107202,
-          "sharpness": 31.26
-        },
-        {
-          "path": "assets/energy/biogas/bondenta/06.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171030_122504-re01-scaled.jpg",
-          "width": 2560,
-          "height": 1440,
-          "size": 182440,
-          "sharpness": 31.26
-        },
-        {
-          "path": "assets/energy/biogas/bondenta/04.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171201_105420-scaled.jpg",
-          "width": 2560,
-          "height": 1440,
-          "size": 95708,
-          "sharpness": 26.9
-        },
-        {
-          "path": "assets/energy/biogas/bondenta/08.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171122_140348-scaled.jpg",
-          "width": 2560,
-          "height": 1440,
-          "size": 113730,
-          "sharpness": 26.32
-        },
-        {
-          "path": "assets/energy/biogas/bondenta/05.webp",
-          "origin": "https://www.glcgrimaldelli.com/wp-content/uploads/2023/11/20171201_105944-scaled.jpg",
-          "width": 1440,
-          "height": 2560,
-          "size": 146592,
-          "sharpness": 43.26
         }
       ],
       "cover": "assets/energy/biogas/bondenta/01.webp",
-      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli."
+      "editorialNote": "Copertina selezionata per pertinenza visiva; la potenza riguarda l'impianto e non il perimetro della fornitura Grimaldelli.",
+      "editorialSelection": "Galleria selezionata: massimo quattro immagini per progetto; copertina verificata visivamente."
     }
   ]
 }
