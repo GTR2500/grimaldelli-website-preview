@@ -27,8 +27,8 @@ const tag=(g)=>g==='strutture'?'Strutture':g==='zootecnia'?'Zootecnia':g==='mode
 const sol=[
   {slug:'strutture',idx:'01',name:'Strutture<br>metalliche',label:'Carpenteria e strutture',img:image('stalle',0),type:'foto',desc:'Dalle strutture per il settore agricolo alle applicazioni industriali.'},
   {slug:'zootecnia',idx:'02',name:'Attrezzature<br>zootecniche',label:'Spazi di allevamento',img:image('autocatture',0),type:'foto',desc:'Allestimenti e attrezzature per gli ambienti dedicati agli animali.'},
-  {slug:'biogas',idx:'03',name:'Biogas e<br>biometano',label:'Allacciamenti e carpenterie',img:energy('biogas'),type:'concept',desc:'Carpenterie metalliche e collegamenti per applicazioni nel settore biogas e biometano.'},
-  {slug:'fotovoltaico',idx:'04',name:'Impianti<br>fotovoltaici',label:'Energia rinnovabile',img:energy('fotovoltaico'),type:'concept',desc:'Strutture e componenti metallici per applicazioni nel settore fotovoltaico.'}
+  {slug:'biogas',idx:'03',name:'Biogas e<br>biometano',label:'Allacciamenti e carpenterie',img:'assets/energy/biogas/campagnari/03.webp',type:'concept',desc:'Carpenterie metalliche e collegamenti per applicazioni nel settore biogas e biometano.'},
+  {slug:'fotovoltaico',idx:'04',name:'Impianti<br>fotovoltaici',label:'Energia rinnovabile',img:'assets/energy/photovoltaic/soc-agr-aurora-credera-rubbiano-cr-impianto-fotovoltaico-da-1224-kw/01.webp',type:'concept',desc:'Strutture e componenti metallici per applicazioni nel settore fotovoltaico.'}
 ];
 if(currentLocale!=="it"){
   const localizedSolutions=window.GRIMALDELLI_LOCALES?.[currentLocale]?.sols||[];
