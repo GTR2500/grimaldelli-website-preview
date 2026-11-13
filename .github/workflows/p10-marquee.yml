@@ -1,0 +1,31 @@
+name: P10 - Marquee QA
+on:
+  push:
+    branches: [dev/p10-marquee-continuo-contatori-20261113]
+    paths:
+      - site-marquee.js
+      - site.js
+      - site-i18n.js
+      - editorial.css
+      - index.html
+      - 'tests/p10-marquee*.cjs'
+      - .github/workflows/p10-marquee.yml
+jobs:
+  marquee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify JavaScript syntax
+        run: |
+          node --check site-marquee.js
+          node --check site.js
+      - name: Verify project counts and translated links
+        run: node tests/p10-marquee.test.cjs
+      - run: npm install --no-save --no-package-lock --quiet playwright
+      - run: npx playwright install --with-deps chromium
+      - name: Browser QA across four languages and two viewports
+        run: node tests/p10-marquee-browser.cjs
