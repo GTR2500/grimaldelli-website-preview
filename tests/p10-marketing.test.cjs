@@ -34,4 +34,13 @@ for(const token of ['p10-mkt-custom-feature','p10-mkt-catalog-note','p10-mkt-pro
 assert.ok(css.includes('P10_CUSTOM_FABRICATION_POSITIONING'),'Missing bespoke visual system');
 assert.ok(html.includes('p10-su-misura-20261113'),'Stale cache version for bespoke messaging');
 assert.ok(!/EBITDA|500k|500\.000/i.test(js),'Internal financial metrics may not be published or committed in site copy');
+const energy=read('site-energy.js');
+const translations=read('site-company-parity.js');
+assert.ok(!/Grimaldelli non si presenta come costruttore|does not claim to build entire plants|non a un ruolo di fornitore EPC|sans impliquer une fourniture clés en main|komplette Anlagen zu errichten/.test(energy),'Defensive internal review wording leaked into energy pages');
+assert.ok(!translations.includes('sono illustrazioni e non fotografie di realizzazioni aziendali'),'Old incorrect photography disclaimer returned');
+assert.ok(!js.includes('SCRAPER_SPECS.it=['),'Duplicated language override returned');
+assert.ok(!/500[., ]?000|500k|EBITDA per dipendente/i.test(js+site+energy),'Internal financial data must never appear in the public pages');
+for(const text of ['Progetti e fotografie dal nostro archivio','Projects from our archive','Projets et photographies de nos archives','Projekte aus unserem Archiv']){
+ assert.ok(js.includes(text),'Public-facing portfolio wording missing: '+text);
+}
 console.log('P10_MARKETING_TEST_PASS: documented specs, lead context, honest demo mail, four languages and metadata');
