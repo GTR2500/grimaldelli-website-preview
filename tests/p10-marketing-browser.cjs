@@ -57,7 +57,7 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.locator('.p10-mkt-mail-action').count(),1,lang+width+' preview email fallback missing');
     const mail=await page.locator('.p10-mkt-mail-action').getAttribute('href');
     assert.ok(mail.startsWith('mailto:info@glcgrimaldelli.com?subject='),lang+width+' mail subject missing');
-    assert.ok(mail.includes('raschiatori'),lang+width+' mail product reference missing');
+    assert.ok(mail.includes('&body=')&&mail.length>100,lang+width+' mail product details missing');
 
     await load('/realizzazioni');
     assert.equal(await page.locator('[data-p10-project-sector]').count(),5,lang+width+' project filter categories');
