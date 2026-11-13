@@ -365,7 +365,7 @@ function render(){
  if(pathname==='/soluzioni'){location.replace(location.pathname+location.search+'#/?settori=1');return;}
  $('#mobile-menu').classList.remove('is-open');$('#mobile-menu').setAttribute('aria-hidden','true');$('#menu-toggle').setAttribute('aria-expanded','false');
  resetMobileSectors();
- $('.nav-desktop a').forEach(a=>a.classList.toggle('active',a.dataset.nav===pathname));
+ $$('.nav-desktop a').forEach(a=>a.classList.toggle('active',a.dataset.nav===pathname));
  $('.nav-solutions-menu')?.classList.toggle('active',pathname.startsWith('/soluzione/'));
  if($('.nav-solutions-menu'))$('.nav-solutions-menu').open=false;
  if((pathname==='/contatti'||pathname==='/lavora-con-noi')&&window.GrimaldelliForms){
