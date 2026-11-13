@@ -69,9 +69,14 @@ const solarCases=[
 ];
 const languages=Object.keys(text);
 const esc=s=>String(s??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
-const within=src=>typeof src==="string"&&/^assets\/(?:instagram\/(?:nisoli|ginelli)\/image-\d+\.webp|energy\/(?:biogas|photovoltaic)\/[a-z0-9-]+\/\d+\.webp)$/.test(src)?src:"";
+const within=src=>typeof src==="string"&&/^assets\/(?:instagram\/(?:nisoli|ginelli)\/image-\d+\.webp|energy\/(?:biogas|photovoltaic|photovoltaic-nas)\/[a-z0-9-]+\/\d+\.webp)$/.test(src)?src:"";
 const pathOf=ref=>typeof ref==="string"&&ref.startsWith("assets/")?ref:ref?.replace(/^\/+/,"")||"";
-let manifestPromise,solarManifestPromise;
+let manifestPromise,solarManifestPromise,nasManifestPromise;
+const photovoltaicNas=()=>{
+ if(!nasManifestPromise)nasManifestPromise=fetch("assets/energy/photovoltaic-nas/manifest.json",{cache:"force-cache",credentials:"same-origin"})
+  .then(r=>r.ok?r.json():{projects:[]}).then(j=>Array.isArray(j.projects)?j.projects:[]).catch(()=>[]);
+ return nasManifestPromise;
+};
 const photovoltaic=()=>{
  if(!solarManifestPromise)solarManifestPromise=fetch("assets/energy/photovoltaic/manifest.json",{cache:"force-cache",credentials:"same-origin"})
    .then(r=>r.ok?r.json():{projects:[]}).then(j=>Array.isArray(j.projects)?j.projects:[]).catch(()=>[]);
@@ -148,7 +153,7 @@ async function mount(route,lang,app){
  if(!(isHome||isProjects||isBiogas||isSolar))return false;
  const t=text[lang]||text.it;
  const origin=window.location.href;
- const [oldBiogas,oldSolar]=await Promise.all([biogas(),photovoltaic()]);
+ const [oldBiogas,oldSolar,nasSolar]=await Promise.all([biogas(),photovoltaic(),photovoltaicNas()]);
  const historical=oldBiogas.map(normalized).filter(p=>p.images.length);
  if(app.isConnected===false||window.location.href!==origin)return false;
  const historicalSolar=oldSolar.map(p=>({
@@ -161,7 +166,9 @@ async function mount(route,lang,app){
  })).filter(p=>p.images.length);
  const solarUnique=historicalSolar.filter(p=>!p.id.includes("nisoli"));
  const nisoliArchive=historicalSolar.find(p=>p.id.includes("nisoli"));
+ const nasSolarCases=nasSolar.map(p=>({id:p.id,name:p.name,place:p.place||"",capacity:p.capacity||"",source:p.source,images:(p.images||[]).map(i=>within(pathOf(i.path))).filter(Boolean)})).filter(p=>p.images.length);
  const solar=[
+   ...nasSolarCases,
    ...solarUnique,
    ...solarCases.map(p=>p.id==="nisoli"&&nisoliArchive?
       {...p,capacity:nisoliArchive.capacity||p.capacity,
