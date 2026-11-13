@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check JavaScript syntax
         run: |
-          for source in site.js site-projects.js site-energy.js site-instagram.js site-i18n.js site-forms.js site-company-parity.js site-locales.js site-news-locales.js product-locales.js; do
+          for source in site.js site-marketing.js site-projects.js site-energy.js site-instagram.js site-i18n.js site-forms.js site-company-parity.js site-locales.js site-news-locales.js product-locales.js; do
             node --check "$source"
           done
       - name: Test Instagram media loading and language coverage
@@ -20,6 +20,8 @@ jobs:
         run: node tests/p10-energy.test.cjs
       - name: Guard approved content against regressions
         run: node tests/p10-regression-critical.cjs
+      - name: Verify source-backed marketing and lead conversion behavior
+        run: node tests/p10-marketing.test.cjs
       - name: Check PHP syntax
         run: |
           find api -type f -name '*.php' -print0 | xargs -0 -n 1 php -l
