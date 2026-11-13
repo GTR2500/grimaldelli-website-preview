@@ -40,6 +40,14 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.locator('.p10-mkt-proof').count(),3,lang+width+' Home trust strip');
     assert.ok((await page.locator('.hero-salvirola .hero-bottom p').innerText()).length>95,lang+width+' Home value proposition too short');
 
+    assert.equal(await page.locator('.p10-mkt-custom-feature').count(),1,lang+width+' bespoke Home story missing');
+    assert.equal(await page.locator('.p10-mkt-custom-values li').count(),3,lang+width+' custom-work process missing');
+    assert.ok((await page.locator('.p10-mkt-custom-action').getAttribute('href')).includes('su-misura=1'),lang+width+' made-to-measure CTA missing');
+
+    await load('/prodotti');
+    assert.equal(await page.locator('.p10-mkt-catalog-note').count(),1,lang+width+' bespoke catalogue message missing');
+    assert.ok((await page.locator('.p10-mkt-catalog-action').getAttribute('href')).includes('su-misura=1'),lang+width+' catalogue custom CTA missing');
+
     await load('/azienda');
     assert.ok(await page.locator('.company-history-year').filter({hasText:'1964'}).count(),lang+width+' 1964 missing');
     const chapterSize=await page.locator('.company-story-index').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize));
@@ -51,6 +59,13 @@ const server=http.createServer((req,res)=>{
     const enquiry=await page.locator('.product-detail .detail-hero a[href*="contatti?prodotto="]').getAttribute('href');
     assert.ok(enquiry.includes('raschiatori-asporta-letame'),lang+width+' enquiry lost product context');
 
+    assert.equal(await page.locator('.p10-mkt-product-custom').count(),1,lang+width+' product custom-fabrication proposition missing');
+    assert.ok((await page.locator('.p10-mkt-product-custom a').getAttribute('href')).includes('su-misura=1'),lang+width+' bespoke product CTA missing');
+
+    await load('/soluzione/biogas');
+    assert.equal(await page.locator('.p10-mkt-solution-custom').count(),1,lang+width+' sector tailoring message missing');
+    assert.ok((await page.locator('.p10-mkt-solution-custom a').getAttribute('href')).includes('su-misura=1'),lang+width+' sector custom CTA missing');
+
     await load('/contatti?prodotto=raschiatori-asporta-letame');
     assert.equal(await page.locator('.p10-mkt-contact-context').count(),1,lang+width+' request context missing');
     assert.ok((await page.locator('textarea[name="message"]').inputValue()).length>35,lang+width+' prefilled request context missing');
@@ -58,6 +73,14 @@ const server=http.createServer((req,res)=>{
     const mail=await page.locator('.p10-mkt-mail-action').getAttribute('href');
     assert.ok(mail.startsWith('mailto:info@glcgrimaldelli.com?subject='),lang+width+' mail subject missing');
     assert.ok(mail.includes('&body=')&&mail.length>100,lang+width+' mail product details missing');
+
+    await load('/contatti?prodotto=raschiatori-asporta-letame&su-misura=1');
+    assert.ok((await page.locator('textarea[name="message"]').inputValue()).length>50,lang+width+' bespoke product enquiry not prefilled');
+    assert.ok((await page.locator('.p10-mkt-contact-context').innerText()).length>25,lang+width+' bespoke product enquiry context missing');
+
+    await load('/contatti?su-misura=1');
+    assert.ok((await page.locator('textarea[name="message"]').inputValue()).length>40,lang+width+' direct bespoke enquiry not prefilled');
+    assert.equal(await page.locator('.p10-mkt-contact-context').count(),1,lang+width+' direct bespoke enquiry notice missing');
 
     await load('/realizzazioni');
     assert.equal(await page.locator('[data-p10-project-sector]').count(),5,lang+width+' project filter categories');
