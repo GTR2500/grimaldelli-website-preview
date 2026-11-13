@@ -1,7 +1,7 @@
 name: P10 - Marquee QA
 on:
   push:
-    branches: [dev/p10-marquee-continuo-contatori-20261113]
+    branches: [dev/p10-marquee-continuo-contatori-20261113, dev/p10-marquee-size-20261113]
     paths:
       - site-marquee.js
       - site.js
