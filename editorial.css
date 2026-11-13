@@ -488,3 +488,54 @@ outline:2px solid #ea7228;outline-offset:2px}
 @media(max-width:1250px){.nav-solutions-menu summary{font-size:10px}}
 @media(max-width:1100px){.nav-solutions-menu summary{font-size:11px}}
 @media(max-width:700px){.p10-projects-filter-head{display:block}.p10-projects-filter-head p{margin-top:10px}.p10-projects-tab{padding:11px 12px;font-size:12px}.p10-projects-filter{padding-top:25px}.solution-detail-actions{display:flex;flex-direction:column;align-items:stretch}}
+
+/* P10 2026-11-13 – source-backed marketing enhancement; responsive across languages. */
+.p10-mkt-proof-strip{background:#fffdfa;border-bottom:1px solid #dadbd4;color:#1d2c25}
+.p10-mkt-proof-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding-top:20px;padding-bottom:20px}
+.p10-mkt-proof{display:flex;align-items:center;gap:17px;padding:5px 20px 5px 0;min-width:0}
+.p10-mkt-proof+.p10-mkt-proof{border-left:1px solid #d8dcd4;padding-left:26px}
+.p10-mkt-proof strong{color:#b75e2c;font-size:clamp(21px,2vw,29px);line-height:1;font-weight:680;white-space:nowrap}
+.p10-mkt-proof span{font-size:clamp(12px,1vw,14px);line-height:1.45;color:#4b5950}
+.p10-mkt-product-evidence{display:grid;grid-template-columns:minmax(220px,.85fr) minmax(0,1.4fr);gap:clamp(20px,5vw,65px);margin:42px 0 32px;padding:34px 0 38px;border-top:1px solid #ccd3c9;border-bottom:1px solid #ccd3c9}
+.p10-mkt-evidence-head>span{display:block;margin-bottom:16px;font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:#ae5b29}
+.p10-mkt-evidence-head h3{font-size:clamp(28px,3vw,41px);font-weight:610;line-height:1.12;letter-spacing:-.055em;margin:0}
+.p10-mkt-evidence-content p{color:#4b5952;line-height:1.78;margin:0 0 17px;font-size:15px}
+.p10-mkt-evidence-content ul{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:1fr;gap:12px}
+.p10-mkt-evidence-content li{position:relative;padding-left:24px;color:#24352c;font-size:14px;line-height:1.65}
+.p10-mkt-evidence-content li:before{position:absolute;left:0;top:.4em;content:"";border:2px solid #c5682e;border-radius:100%;width:8px;height:8px}
+.p10-mkt-evidence-content .p10-mkt-source{margin-top:23px;color:#67736a;font-size:12px;line-height:1.75}
+.p10-mkt-source a{display:inline-block;color:#9a501e;text-decoration:underline;text-underline-offset:3px;font-weight:750}
+.p10-mkt-related{margin-bottom:40px;padding-bottom:10px}
+.p10-mkt-related .text-link{font-size:13px}
+.p10-mkt-sector-note{border-left:3px solid #d27d45;padding:12px 18px 12px 21px;margin:27px 0 13px;max-width:620px;background:#f3f3eb}
+.p10-mkt-sector-note strong{font-size:11px;text-transform:uppercase;letter-spacing:.11em;color:#a55727}
+.p10-mkt-sector-note p{margin:9px 0 0!important;font-size:14px!important;line-height:1.75!important;color:#394c40!important}
+.p10-mkt-contact-context{border-top:2px solid #d1793e;padding:17px 0 15px;margin:14px 0 19px;color:#24382c}
+.p10-mkt-contact-context strong{font-size:15px;line-height:1.55}
+.p10-mkt-contact-context p{font-size:13px;line-height:1.6;color:#506256;margin:6px 0 0}
+.p10-mkt-preview-contact{background:#eff1ea;border:1px solid #d7ded0;padding:17px 19px;margin:0 0 20px;color:#24382c}
+.p10-mkt-preview-contact p{margin:0 0 15px;font-size:13px;line-height:1.65}
+.p10-mkt-mail-action{display:inline-flex;align-items:center;gap:8px;background:#1c3328;padding:12px 16px;font-size:12px;letter-spacing:.04em;font-weight:780;color:#fff;text-decoration:none}
+.p10-mkt-mail-action:hover,.p10-mkt-mail-action:focus-visible{background:#b96530;color:#fff}
+.p10-mkt-project-note{border-top:1px solid #cad0c8;margin:36px auto 50px;padding:19px 0 15px;max-width:1080px;color:#536055;font-size:12px;line-height:1.8}
+.p10-mkt-project-note strong{color:#1e3226;font-weight:760}
+.p10-mkt-press-note{border-bottom:1px solid #d0d7cf;padding-top:17px;padding-bottom:17px;font-size:13px;line-height:1.65;color:#4b6052}
+.p10-mkt-press-note strong{color:#22372c}
+@media(max-width:900px){
+ .p10-mkt-proof-row{padding-top:14px;padding-bottom:14px}
+ .p10-mkt-proof{gap:10px;padding-right:10px}
+ .p10-mkt-proof+.p10-mkt-proof{padding-left:13px}
+ .p10-mkt-proof span{font-size:11px}
+ .p10-mkt-product-evidence{grid-template-columns:1fr;gap:18px;margin-top:26px;padding:26px 0}
+}
+@media(max-width:600px){
+ .p10-mkt-proof-row{grid-template-columns:1fr;gap:0;padding-top:10px;padding-bottom:10px}
+ .p10-mkt-proof{padding:12px 0;gap:20px}
+ .p10-mkt-proof+.p10-mkt-proof{border-left:0;border-top:1px solid #e4e5dd;padding-left:0}
+ .p10-mkt-proof strong{min-width:86px;font-size:22px}
+ .p10-mkt-proof span{font-size:13px}
+ .p10-mkt-evidence-head h3{font-size:30px}
+ .p10-mkt-preview-contact,.p10-mkt-contact-context{max-width:100%}
+ .p10-mkt-mail-action{width:100%;justify-content:center;padding:14px}
+ .p10-mkt-product-evidence{padding-top:28px}
+}
