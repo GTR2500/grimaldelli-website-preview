@@ -356,7 +356,9 @@
      '<div class="p10-social-grid">'+selection.map(x=>card(x,lookup.get(x.id),language,t)).join("")+'</div>'+
      '<p class="p10-social-source">'+esc(t.source)+'</p></div></section>';
     const anchor=isHome?app.querySelector(".social-teaser-section"):null;
+    const projectsSlot=isPortfolio?app.querySelector("#p10-projects-social-slot"):null;
     if(anchor)anchor.insertAdjacentHTML("beforebegin",html);
+    else if(projectsSlot)projectsSlot.insertAdjacentHTML("beforeend",html);
     else app.insertAdjacentHTML("beforeend",html);
     const section=app.querySelector("#p10-social-showcase");
     if(!section)return false;
