@@ -453,3 +453,38 @@ outline:2px solid #ea7228;outline-offset:2px}
  .lightbox figure{width:94vw;height:min(72vh,650px)}
  .lightbox .lightbox-mode{bottom:15px}
 }
+
+/* P10 2026-11-13: sector navigation without a duplicate overview page. */
+.nav-solutions-menu{position:relative}
+.nav-solutions-menu summary{display:inline-flex;gap:5px;align-items:center;list-style:none;font-size:11px;text-transform:uppercase;font-weight:700;letter-spacing:.11em;padding:20px 0;cursor:pointer;position:relative;white-space:nowrap}
+.nav-solutions-menu summary::-webkit-details-marker{display:none}
+.nav-solutions-menu summary:after{content:"";height:2px;position:absolute;bottom:14px;left:0;width:0;background:var(--orange);transition:width .24s}
+.nav-solutions-menu[open] summary:after,.nav-solutions-menu.active summary:after{width:100%}
+.nav-solutions-menu .drop-menu{left:-18px;right:auto;width:260px;z-index:4;max-height:min(380px,75vh);overflow-y:auto}
+.nav-solutions-menu[open] .drop-menu{opacity:1;pointer-events:auto;transform:none}
+.nav-solutions-menu summary:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.mobile-menu{overflow-y:auto}
+.mobile-solutions-toggle{width:100%;background:transparent;border:0;color:inherit;display:flex;align-items:center;justify-content:space-between;text-align:left;font-size:clamp(26px,6.5vw,50px);font-weight:650;letter-spacing:-.04em;border-bottom:1px solid var(--line);padding:0 0 12px}
+.mobile-solutions-toggle>span:last-child{color:var(--orange);font-size:30px;font-weight:400}
+.mobile-sector-links{display:grid;gap:10px;padding:4px 10px 17px 19px;border-left:3px solid var(--orange)}
+.mobile-sector-links[hidden]{display:none!important}
+.mobile-sector-links a{display:block;font-size:clamp(17px,4vw,24px);font-weight:580;padding:8px 2px}
+.solution-detail-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:28px}
+.solution-detail-actions .button-primary,.solution-detail-actions .button-outline{margin:0}
+.solutions-section#settori{scroll-margin-top:95px}
+/* Realizzazioni: compact filters and actual project media, without the catalog-image gallery. */
+.p10-projects-filter{background:#f5f3ed;padding:38px 0 18px;color:#182620}
+.p10-projects-filter-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}
+.p10-projects-filter-head h2{font-size:clamp(27px,3.3vw,44px);letter-spacing:-.055em;line-height:1.1;margin:0;font-weight:600}
+.p10-projects-filter-head p{font-size:13px;color:#59675d;line-height:1.6;margin:0;max-width:360px}
+.p10-projects-tabs{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.p10-projects-tab{background:transparent;border:1px solid #bbc5bb;color:#26382f;padding:12px 15px;font-size:12px;font-weight:700;line-height:1.3;letter-spacing:.01em}
+.p10-projects-tab:hover,.p10-projects-tab:focus-visible{border-color:#c86b30}
+.p10-projects-tab.is-active{background:#1d3027;color:#fff;border-color:#1d3027}
+.p10-projects-filter-status{font-size:12px;color:#637369;margin:16px 0 0;min-height:19px}
+.p10-projects-content{background:#f5f3ed}
+.p10-projects-content .p10-social-showcase,.p10-projects-content .p10-energy-portfolio{scroll-margin-top:88px}
+.p10-projects-content [hidden]{display:none!important}
+@media(max-width:1250px){.nav-solutions-menu summary{font-size:10px}}
+@media(max-width:1100px){.nav-solutions-menu summary{font-size:11px}}
+@media(max-width:700px){.p10-projects-filter-head{display:block}.p10-projects-filter-head p{margin-top:10px}.p10-projects-tab{padding:11px 12px;font-size:12px}.p10-projects-filter{padding-top:25px}.solution-detail-actions{display:flex;flex-direction:column;align-items:stretch}}
